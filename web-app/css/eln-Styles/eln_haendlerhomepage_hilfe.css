@@ -1,0 +1,18 @@
+/*
+	---------------------------------
+	**   Stylesheets Hilfetexte    **
+	---------------------------------
+	Erstellt: Elko Panzyk, 2004
+	(c) 2004 S&S Internetsysteme GmbH
+	Alle Rechte vorbehalten.
+	---------------------------------
+*/ 
+body {padding: 0px 0px 0px 0px;}
+/* Überschrift */
+#Ueberschrift Table {width:620px; margin: 5px 0px 5px 0px}
+#Ueberschrift td.C11 
+{font-family: Arial, Helvetica, sans-serif; color: #CC0000; font-size: 19px; font-weight: bold}
+#Ueberschrift td.C12 {}
+
+/* Hilfe Texte */
+#Hilfe p {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000; padding: 1px 10px 1px 10px }

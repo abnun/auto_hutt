@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module relativePaths="false" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="GrailsWeb">
+      <configuration>
+        <webroots>
+          <root url="file://$MODULE_DIR$/plugins/image-tools-1.0.4/web-app" relative="/" />
+        </webroots>
+        <sourceRoots />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/plugins/image-tools-1.0.4">
+      <sourceFolder url="file://$MODULE_DIR$/plugins/image-tools-1.0.4/src/groovy" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="grails-1.1" level="application" />
+    <orderEntry type="module-library" exported="">
+      <library name="Grails User Library">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/plugins/image-tools-1.0.4/lib" />
+          <root url="file://$MODULE_DIR$/plugins/hibernate-1.1/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/plugins/hibernate-1.1/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/plugins/image-tools-1.0.4/lib" recursive="false" />
+      </library>
+    </orderEntry>
+  </component>
+</module>
+

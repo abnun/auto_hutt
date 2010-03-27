@@ -1,0 +1,274 @@
+/*
+	---------------------------------
+	** Stylesheets Kontaktaufnahme **
+	---------------------------------
+	Erstellt: Elko Panzyk, 2004
+	(c) 2004 S&S Internetsysteme GmbH
+	Alle Rechte vorbehalten.
+	---------------------------------
+*/ 
+
+/* 
+Modell:
+R1 = Hintergrund Zeile 1
+C11 = C(1)(1) Zeile 1 - Zelle 1
+*/
+body {padding: 0px 15px 0px 0px;}
+/* Überschrift */
+#Ueberschrift Table {width:620px; margin: 5px 0px 5px 0px}
+#Ueberschrift td.C11 
+{font-family: Arial, Helvetica, sans-serif; color: #CC0000; font-size: 19px; font-weight: bold}
+#Ueberschrift td.C12 {}
+
+
+/* Fahrzeug Zusammenfassung */
+/* Standardlinks Tabelle */
+#Tabellenausgabe a {color: #cc0000; text-decoration: underline}
+#Tabellenausgabe a:Hover {color: #0000cc; text-decoration: underline}
+
+/* Sortierlinks Tabellenkopf */
+#Tabellenausgabe .LnkHL {font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight:bold; color: #FFFFFF; text-decoration: none}
+#Tabellenausgabe .LnkHL:Hover {color: #FFFF00; text-decoration: underline}
+
+.Ao    { color: #BB0000; font-size:11px; text-decoration: none ; font-weight: bold}
+
+/* Tabelle */
+#Tabellenausgabe Table.Geruest {width:100%; border : 1px solid #FFFFFF;}
+
+/* Farbe Tabellen-Überschrift */
+#Tabellenausgabe .R0 { BACKGROUND-COLOR: #116c04}
+
+#Tabellenausgabe TD.C01,
+#Tabellenausgabe TD.C02,
+#Tabellenausgabe TD.C03,
+#Tabellenausgabe TD.C04,
+#Tabellenausgabe TD.C05,
+#Tabellenausgabe TD.C06 {font-weight:bold; color: #FFFFFF; text-decoration: none}
+
+#Tabellenausgabe TD.C05,
+#Tabellenausgabe TD.C06 {text-align: right;}
+
+
+/* Farben der Tabellenzeilen */
+#Tabellenausgabe .R1,
+#Tabellenausgabe .R3 { BACKGROUND-COLOR: #d9edd6}
+#Tabellenausgabe .R2 { BACKGROUND-COLOR: #c0e2bc}
+
+#Tabellenausgabe .R4,
+#Tabellenausgabe .R6 { BACKGROUND-COLOR: #f6fbf6}
+#Tabellenausgabe .R5 { BACKGROUND-COLOR: #ebf6e9}
+
+/* Grundformat */
+#Tabellenausgabe TD {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; vertical-align: middle;}
+
+/* Bild */
+#Tabellenausgabe TD.C11,
+#Tabellenausgabe TD.C41 {vertical-align: top; width:60px;}
+
+/* Fahrzeugname */
+#Tabellenausgabe TD.C12,
+#Tabellenausgabe TD.C42 {font-size: 13px;}
+
+/* Highlight */
+#Tabellenausgabe TD.C14,
+#Tabellenausgabe TD.C44 {}
+
+/* Preis */
+#Tabellenausgabe TD.C15,
+#Tabellenausgabe TD.C45 {font-size: 13px;font-weight: bold;text-align: right;}
+
+/* Angebotsnummer */
+#Tabellenausgabe TD.C16,
+#Tabellenausgabe TD.C46 {text-align: right;}
+
+/* Fahrzeugstatus */
+#Tabellenausgabe TD.C14,
+#Tabellenausgabe TD.C44 {font-size: 10px;color: #0074C1;text-align: right;}
+
+/* Laufleistung,Türen,PSKW */
+#Tabellenausgabe TD.C52,
+#Tabellenausgabe TD.C22 {}
+
+/* Fahrzeugstatus */
+#Tabellenausgabe TD.C26,
+#Tabellenausgabe TD.C56 {text-align: right;}
+
+/* Werbezeile */
+#Tabellenausgabe TD.C32,
+#Tabellenausgabe TD.C62 {}
+
+/* Werbezeile */
+#Tabellenausgabe TD.C36,
+#Tabellenausgabe TD.C66 {font-size: 10px;color: #0074C1;text-align: right;}
+
+/* Trennlinie */
+#Tabellenausgabe TR.TR {BACKGROUND-COLOR: #FFFFFF}
+
+#Tabellenausgabe TD.TR1,
+#Tabellenausgabe TD.TR2 
+{Height: 1px; border-color: #009900 #FFFFFF #FFFFFF #FFFFFF; border-style: solid; 
+ border-top-width: 1px; border-bottom-width:0px;}
+
+/* Schatten */
+#Tabellenausgabe table.SH {width:98%; margin-left:1%}
+#Tabellenausgabe .SH1 {background-image: url("http://www.eurocarmarket.de/images/graybar.gif");}
+
+
+/* Standard Schatten */
+table.SH {width:98%; margin-left:1%}
+.SH1 {background-image: url("http://www.eurocarmarket.de/images/graybar.gif");}
+
+/* Hinweistext */
+/* Geruest */
+#Hinweis Table.Geruest {width:100%; border : 1px solid #FFFFFF;}
+
+/* Überschrift */
+#Hinweis tr.R0 {BACKGROUND-COLOR: #e1e1e1}
+
+/* Hinweistext */
+#Hinweis td.C01 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #717171; font-weight: bold;letter-spacing : 1px; padding:1px 1px 2px 1px}
+
+/* Legendenteil */
+#Hinweis tr.R1 {BACKGROUND-COLOR: #e1e1e1}
+#Hinweis td.C11 {width:3%; padding:1px 2px 1px 2px}
+#Hinweis td.C12 {width:97%; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000; 
+padding: 1px 2px 2px 2px; vertical-align: top;}
+
+/* Wichtig Stern */
+#Hinweis .redb {  font-weight: bold; color: #FF0000; font-family: "Courier New", Courier, mono; font-size: 13px}
+
+/* Trennlinie */
+#Hinweis TR.TR {BACKGROUND-COLOR: #FFFFFF}
+#Hinweis TD.TR1
+{Height: 1px; border-color: #535353 #FFFFFF #FFFFFF #FFFFFF; border-style: solid; 
+ border-top-width: 1px; border-bottom-width:0px;}
+
+/* Schatten */
+#Hinweis table.SH {width:98%; margin-left:1%}
+#Hinweis .SH1 {background-image: url("http://www.eurocarmarket.de/images/graybar.gif");}
+
+/* Kundenformular */
+#Kunde Table.Geruest {width:100%; border : 1px solid #FFFFFF;}
+#Kunde .R0 { BACKGROUND-COLOR: #116c04}
+#Kunde .C01 {font-weight:bold; color: #FFFFFF; text-decoration: none}
+
+#Kunde .R1,
+#Kunde .R3,
+#Kunde .R5,
+#Kunde .R7,
+#Kunde .R9 { BACKGROUND-COLOR: #c0e2bc }
+
+#Kunde .R2,
+#Kunde .R4,
+#Kunde .R6,
+#Kunde .R8 { BACKGROUND-COLOR: #d9edd6 }
+
+#Kunde td {font-family: Arial, Helvetica, sans-serif; font-size: 13px;}
+
+/* Beschreibungstexte (Name, Vorname,  Anschrift ... in Zeilen) */
+#Kunde .C11,
+#Kunde .C21,
+#Kunde .C31,
+#Kunde .C41,
+#Kunde .C51,
+#Kunde .C61,
+#Kunde .C71,
+#Kunde .C81,
+#Kunde .C91 { color: #000000; font-weight: bold; padding:1px 3px 1px 2px;}
+
+/* Zellen mit den Eingabefeldern */
+#Kunde .C12,
+#Kunde .C22,
+#Kunde .C32,
+#Kunde .C42,
+#Kunde .C52,
+#Kunde .C62,
+#Kunde .C72,
+#Kunde .C82,
+#Kunde .C92 { padding:1px 3px 1px 2px;}
+
+/* Eingabe-Felder: Vorname, Name, Strasse, Telefon1, Telefon2, Fax, Email */
+#Kunde .vn,
+#Kunde .nn,
+#Kunde .st,
+#Kunde .t1,
+#Kunde .t2,
+#Kunde .tf,
+#Kunde .em { width: 400px;}
+
+/* Land, PLZ, Ort */
+#Kunde .la { width: 60px;}
+#Kunde .pz { width: 70px;}
+#Kunde .ort { width: 270px;}
+
+/* Trennlinie */
+#Kunde TR.TR {BACKGROUND-COLOR: #FFFFFF}
+
+#Kunde TD.TR1,
+#Kunde TD.TR2 
+{Height: 1px; border-color: #009900 #FFFFFF #FFFFFF #FFFFFF; border-style: solid; 
+ border-top-width: 1px; border-bottom-width:0px;}
+
+/* Roter Hinweismarker */
+#Kunde .redb {  font-weight: bold; color: #FF0000; font-family: "Courier New", Courier, mono; font-size: 13px}
+
+/* Schatten */
+#Kunde table.SH {width:98%; margin-left:1%}
+#Kunde .SH1 {background-image: url("http://www.eurocarmarket.de/images/graybar.gif");}
+
+
+/* Alter & Beruf Angaben */
+#AlterBeruf table.SH {width:98%; margin-left:1%}
+#AlterBeruf .SH1 {background-image: url("http://www.eurocarmarket.de/images/graybar.gif");}
+
+#AlterBeruf Table.Geruest {width:100%; border : 1px solid #FFFFFF;}
+#AlterBeruf .R0 { BACKGROUND-COLOR: #116c04}
+#AlterBeruf .C01 {font-weight:bold; color: #FFFFFF; text-decoration: none;padding:1px 3px 1px 2px}
+
+#AlterBeruf td {font-family: Arial, Helvetica, sans-serif; font-size: 13px;}
+#AlterBeruf .C11,
+#AlterBeruf .C21 { color: #000000; font-weight: bold; padding:1px 3px 1px 2px}
+#AlterBeruf .C12,
+#AlterBeruf .C22 { padding:1px 3px 1px 2px}
+#AlterBeruf .R1 { BACKGROUND-COLOR: #c0e2bc }
+#AlterBeruf .R2 { BACKGROUND-COLOR: #d9edd6 }
+
+/* Trennzeile */
+#AlterBeruf TR.TR {BACKGROUND-COLOR: #FFFFFF}
+#AlterBeruf TD.TR1,
+#AlterBeruf TD.TR2 
+{Height: 1px; border-color: #009900 #FFFFFF #FFFFFF #FFFFFF; border-style: solid; 
+ border-top-width: 1px; border-bottom-width:0px;}
+
+/* Bemerkungsblock */
+#Bemerkung table.SH {width:98%; margin-left:1%}
+#Bemerkung .SH1 {background-image: url("http://www.eurocarmarket.de/images/graybar.gif");}
+
+#Bemerkung Table.Geruest {width:100%; border : 1px solid #FFFFFF;}
+#Bemerkung .R0 { BACKGROUND-COLOR: #116c04}
+#Bemerkung .C01 {font-weight:bold; color: #FFFFFF; text-decoration: none;padding:1px 3px 1px 2px}
+
+#Bemerkung td {font-family: Arial, Helvetica, sans-serif; font-size: 13px;}
+#Bemerkung .C11 { color: #000000; font-weight: bold; padding:1px 3px 1px 2px}
+#Bemerkung .R1 { BACKGROUND-COLOR: #c0e2bc }
+#Bemerkung .Be { width: 100%;}
+
+/* Trennzeile */
+#Bemerkung TR.TR {BACKGROUND-COLOR: #FFFFFF}
+#Bemerkung TD.TR1,
+#Bemerkung TD.TR2 
+{Height: 1px; border-color: #009900 #FFFFFF #FFFFFF #FFFFFF; border-style: solid; 
+ border-top-width: 1px; border-bottom-width:0px;}
+ 
+#Schalterleiste table {width:100%}
+#Schalterleiste td {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; vertical-align: top;}
+#Schalterleiste td.C02 {text-align:right;}
+
+/* Headline 2 */
+h2 {font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #cc0000; padding-bottom: 0px; margin-bottom: 0px}
+/* Einleitungstext */
+p  {font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; margin-top: 10px;}
+
+
+/* Statistiken Fuss */
+#Recht td.C11 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #727272; padding:5px 0px 5px 0px}

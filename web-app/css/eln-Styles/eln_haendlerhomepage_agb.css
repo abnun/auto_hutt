@@ -1,0 +1,84 @@
+/*
+	---------------------------------
+	**  Stylesheets Detailausgabe  **
+	---------------------------------
+	Erstellt: Elko Panzyk, 2004
+	(c) 2004 S&S Internetsysteme GmbH
+	Alle Rechte vorbehalten.
+	---------------------------------
+	
+	table.Geruest = width:{breite} in % oder px=Pixel
+*/ 
+
+/* Druckschalter */
+@media screen
+{
+.Druckschalter {text-align:center;}
+}
+
+@media print
+{
+.Druckschalter {display:none;}
+}
+
+body {padding: 10px 10px 0px 10px;}
+/* Überschrift (Fahrzeugbeschreibung) */
+#Ueberschrift Table {width:480px; margin: 5px 0px 5px 0px}
+#Ueberschrift td.C11 
+{font-family: Arial, Helvetica, sans-serif; color: #CC0000; font-size: 19px; font-weight: bold}
+#Ueberschrift td.C12 {}
+
+
+/* Händlerbox */
+#Haendler table.Geruest {width:100%; margin-bottom: 5px;border-color: #009900 #009900 #009900 #009900; border-style: solid; border-width:1px 1px 1px 1px;}
+#Haendler table.TF {width:100%}
+#Haendler table.AP {width:100%}
+
+/* Linkfarben Mail & Homepage */
+#Haendler a.mail,
+#Haendler a.home {color: #CC0000;}
+#Haendler td.C01 {padding:1px 3px 1px 3px; font-family: Arial, Helvetica, sans-serif; letter-spacing: 1px;
+font-size: 11px; color:#004400; font-weight:bold; border-color: #009900 #009900 #009900 #009900; border-style: solid; border-width:0px 0px 1px 0px;}
+#Haendler td.C11 {width:60%;padding:1px 3px 1px 8px;}
+#Haendler td.C12 {width:40%;padding:1px 4px 1px 2px;}
+#Haendler td.C22 {padding:1px 3px 1px 8px;}
+#Haendler td {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000;}
+
+#Haendler td.TFC11, 
+#Haendler td.TFC21,
+#Haendler td.TFC31,
+#Haendler td.APC11, 
+#Haendler td.APC21,
+#Haendler td.APC31,
+#Haendler td.APC41 {font-weight:bold;font-size: 11px; color:#004400; padding:1px 1px 1px 1px;}
+
+#Haendler td.APC11, 
+#Haendler td.APC21,
+#Haendler td.APC31,
+#Haendler td.APC41 {padding:1px 0px 1px 0px; width:30%}
+
+#Haendler td.TFC12,
+#Haendler td.TFC22,
+#Haendler td.TFC32,
+#Haendler td.APC12,
+#Haendler td.APC22,
+#Haendler td.APC32,
+#Haendler td.APC42   {font-size: 13px;padding:1px 1px 1px 1px;}
+
+
+#AGB table.Geruest {width:100%; margin-bottom: 5px;border-color: #009900 #009900 #009900 #009900; border-style: solid; border-width:1px 1px 1px 1px;}
+#AGB table.USchrift {width:70%;}
+
+#AGB td {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; vertical-align: top;}
+#AGB tr.GR0 {}
+#AGB tr.GR1 {}
+#AGB td.GC11 {padding: 2px 2px 2px 5px}
+#AGB td.GC01 {padding:1px 2px 1px 3px; font-family: Arial, Helvetica, sans-serif; letter-spacing: 1px; font-size: 11px; color:#004400;}
+
+#Schalterleiste table {width:100%}
+#Schalterleiste td {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; vertical-align: top;}
+
+/* Fusszeile mit statistischen Daten */
+#Recht td.C11 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #727272; padding:5px 0px 5px 0px}
+
+/* EOF */

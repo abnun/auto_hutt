@@ -1,0 +1,499 @@
+body {
+	/*padding: 0px 15px 0px 0px;*/
+	background-color: #AAA7A7;
+}
+
+/* Ueberschrift */
+#Ueberschrift Table {
+	width: 620px;
+	margin: 5px 0px 5px 0px
+}
+
+#Ueberschrift td.C11 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 19px;
+	font-weight: bold;
+	margin:20px 0 15px;
+}
+
+#Ueberschrift td.C12 {
+}
+
+/* Anker */
+#Schalterleiste table {
+	width: 100%
+}
+
+#Schalterleiste td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	vertical-align: top;
+}
+
+/* Legende */
+#Hinweis Table {
+	width: 100%;
+	border: 1px solid #FFFFFF;
+}
+
+/* Ueberschrift */
+#Hinweis tr.R0 {
+	BACKGROUND-COLOR: #e1e1e1
+}
+
+#Hinweis td.C01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #717171;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 1px 1px 2px 1px
+}
+
+/* Legendenteil */
+#Hinweis tr.R1 {
+	BACKGROUND-COLOR: #e1e1e1
+}
+
+#Hinweis td.C11 {
+	width: 3%;
+	padding: 1px 2px 1px 2px
+}
+
+#Hinweis td.C12 {
+	width: 97%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	padding: 1px 2px 2px 2px;
+	vertical-align: top;
+}
+
+#Hinweis .redb {
+	font-weight: bold;
+	color: #FF0000;
+	font-family: "Courier New", Courier, mono;
+	font-size: 13px
+}
+
+#Hinweis TR.TR {
+	BACKGROUND-COLOR: #FFFFFF
+}
+
+#Hinweis TD.TR1 {
+	Height: 1px;
+	border-color: #4B4B49 #FFFFFF #FFFFFF #FFFFFF;
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+}
+
+#Zwiebel Table.Geruest {
+	width: 100%;
+}
+
+#Zwiebel td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+#Zwiebel .C01 {
+	font-size: 14px;
+}
+
+/* alle Fahrzeuge */
+#Zwiebel .FWC12 {
+}
+
+#Zwiebel .FWC11 {
+	padding: 0px 1px 0px 5px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #CC0000
+}
+
+/* Anzahl */
+#Zwiebel .C11,
+	#Zwiebel .C13,
+	#Zwiebel .C15,
+	#Zwiebel .C17 {
+	color: green;
+	font-weight: bold;
+	text-align: Right
+}
+
+/* Auto */
+#Zwiebel .C12,
+	#Zwiebel .C14,
+	#Zwiebel .C16,
+	#Zwiebel .C18 {
+	color: #000000
+}
+
+/* Auto-Link */
+#Zwiebel .C12a,
+	#Zwiebel .C14a,
+	#Zwiebel .C16a,
+	#Zwiebel .C18a {
+	color: #000000;
+}
+
+#Zwiebel table.SH {
+	width: 98%;
+	margin-left: 1%
+}
+
+#Zwiebel .SH1 {
+	background: #AAA7A7;
+}
+
+/* Schatten */
+#Basis table.SH {
+	width: 98%;
+	margin-left: 1%
+}
+
+#Basis .SH1 {
+	background: #AAA7A7;
+}
+
+#Basis Table.Geruest {
+	width: 100%;
+	border: 1px solid #FFFFFF;
+}
+
+#Basis .R0 {
+	BACKGROUND-COLOR: #4B4B49;
+}
+
+#Basis .C01 {
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none
+}
+
+#Basis .R1,
+	#Basis .R3,
+	#Basis .R5 {
+	BACKGROUND: #DDDDDD none repeat scroll 0 0;
+}
+
+#Basis .R2,
+	#Basis .R4 {
+	BACKGROUND: #F7F7F7 none repeat scroll 0 0;
+}
+
+#Basis td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+#Basis .C11,
+	#Basis .C21,
+	#Basis .C31,
+	#Basis .C41,
+	#Basis .C51 {
+	width: 25%;
+	color: #003366;
+	font-weight: bold;
+	padding: 1px 2px 1px 3px
+}
+
+#Basis .C12,
+	#Basis .C22,
+	#Basis .C32,
+	#Basis .C42,
+	#Basis .C52 {
+	width: 25%;
+	padding: 1px 3px 1px 2px
+}
+
+#Basis .C13,
+	#Basis .C23,
+	#Basis .C33,
+	#Basis .C43,
+	#Basis .C53 {
+	width: 25%;
+	padding: 1px 3px 1px 2px
+}
+
+#Basis .C14,
+	#Basis .C24,
+	#Basis .C34,
+	#Basis .C44,
+	#Basis .C54 {
+	width: 25%;
+	padding: 1px 3px 1px 2px
+}
+
+#Basis .C42,
+	#Basis .C43 {
+	font-size: 11px;
+	color: #cc0000;
+	padding: 0px 3px 1px 2px
+}
+
+#Basis .Hersteller {
+	width: 50%
+}
+
+#Basis .Modell {
+	width: 50%
+}
+
+/* Trennline */
+#Basis TR.TR {
+	BACKGROUND-COLOR: #4B4B49
+}
+
+#Basis TD.TR1 {
+	Height: 1px;
+	border-color: #4B4B49 #FFFFFF #FFFFFF #FFFFFF;
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+}
+
+#Basis .redb {
+	font-weight: bold;
+	color: #FF0000;
+	font-family: "Courier New", Courier, mono;
+	font-size: 13px
+}
+
+/* Schatten */
+#Sonstiges table.SH {
+	width: 98%;
+	margin-left: 1%
+}
+
+#Sonstiges  .SH1 {
+	background: #AAA7A7;
+}
+
+#Sonstiges  Table.Geruest {
+	width: 100%;
+	border: 1px solid #FFFFFF;
+}
+
+#Sonstiges  .R0 {
+	BACKGROUND-COLOR: #4B4B49;
+}
+
+#Sonstiges  .C01 {
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none
+}
+
+#Sonstiges  .R1,
+	#Sonstiges  .R3,
+	#Sonstiges  .R5,
+	#Sonstiges  .R7,
+	#Sonstiges  .R9 {
+	BACKGROUND: #DDDDDD none repeat scroll 0 0;
+}
+
+#Sonstiges  .R2,
+	#Sonstiges  .R4,
+	#Sonstiges  .R6,
+	#Sonstiges  .R8 {
+	BACKGROUND: #F7F7F7 none repeat scroll 0 0;
+}
+
+#Sonstiges  td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+#Sonstiges  .C11,
+	#Sonstiges  .C21,
+	#Sonstiges  .C31,
+	#Sonstiges  .C41 {
+	width: 25%;
+	color: #003366;
+	font-weight: bold;
+	padding: 1px 3px 1px 3px
+}
+
+#Sonstiges  .C12,
+	#Sonstiges  .C22,
+	#Sonstiges  .C32,
+	#Sonstiges  .C42 {
+	width: 25%;
+	padding: 1px 3px 1px 2px
+}
+
+#Sonstiges  .C13,
+	#Sonstiges  .C23,
+	#Sonstiges  .C33,
+	#Sonstiges  .C43 {
+	width: 25%;
+	padding: 1px 3px 1px 2px
+}
+
+#Sonstiges  .C14,
+	#Sonstiges  .C24,
+	#Sonstiges  .C34,
+	#Sonstiges  .C44 {
+	width: 25%;
+	padding: 1px 3px 1px 2px
+}
+
+#Sonstiges  TR.TR {
+	BACKGROUND-COLOR: #FFFFFF
+}
+
+#Sonstiges  TD.TR1,
+	#Sonstiges  TD.TR2 {
+	Height: 1px;
+	border-color: #4B4B49 #FFFFFF #FFFFFF #FFFFFF;
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+}
+
+#Sonstiges  .redb {
+	font-weight: bold;
+	color: #FF0000;
+	font-family: "Courier New", Courier, mono;
+	font-size: 13px
+}
+
+/* Schatten */
+#Details table.SH {
+	width: 98%;
+	margin-left: 1%
+}
+
+#Details  .SH1 {
+	background: #AAA7A7;
+}
+
+#Details  Table.Geruest {
+	width: 100%;
+	border: 1px solid #FFFFFF;
+}
+
+#Details  .R0 {
+	BACKGROUND-COLOR: #4B4B49;
+}
+
+#Details  .C01 {
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none
+}
+
+#Details  .R1,
+	#Details  .R3,
+	#Details  .R5,
+	#Details  .R7,
+	#Details  .R9 {
+	BACKGROUND: #DDDDDD none repeat scroll 0 0;
+}
+
+#Details  .R2,
+	#Details  .R4,
+	#Details  .R6,
+	#Details  .R8 {
+	BACKGROUND: #F7F7F7 none repeat scroll 0 0;
+}
+
+#Details  td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+#Details  .C11,
+	#Details  .C21,
+	#Details  .C31,
+	#Details  .C41 {
+	width: 25%;
+	color: #003366;
+	font-weight: bold;
+	padding: 1px 3px 1px 3px
+}
+
+#Details  .C12,
+	#Details  .C22,
+	#Details  .C32,
+	#Details  .C42 {
+	width: 25%;
+	padding: 1px 3px 1px 2px
+}
+
+#Details  .C13,
+	#Details  .C23,
+	#Details  .C33,
+	#Details  .C43 {
+	width: 25%;
+	padding: 1px 3px 1px 2px
+}
+
+#Details  .C14,
+	#Details  .C24,
+	#Details  .C34,
+	#Details  .C44 {
+	width: 25%;
+	padding: 1px 3px 1px 2px
+}
+
+#Details  TR.TR {
+	BACKGROUND-COLOR: #FFFFFF
+}
+
+#Details  TD.TR1,
+	#Details  TD.TR2 {
+	Height: 1px;
+	border-color: #4B4B49 #FFFFFF #FFFFFF #FFFFFF;
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+}
+
+#Details  .redb {
+	font-weight: bold;
+	color: #FF0000;
+	font-family: "Courier New", Courier, mono;
+	font-size: 13px
+}
+
+#Schalterleiste table {
+	width: 100%
+}
+
+#Schalterleiste td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	vertical-align: top;
+}
+
+#Schalterleiste td.C02 {
+	text-align: right;
+}
+
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #cc0000;
+	padding-bottom: 0px;
+	margin-bottom: 0px
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	margin-top: 10px;
+}
+
+#Recht td.C11 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #727272;
+	padding: 5px 0px 5px 0px
+}

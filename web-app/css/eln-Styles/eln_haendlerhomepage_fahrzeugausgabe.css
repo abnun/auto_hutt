@@ -1,0 +1,552 @@
+/*
+	---------------------------------
+	** Stylesheets Fahrzeugausgabe **
+	---------------------------------
+	Erstellt: Elko Panzyk, 2004
+	(c) 2004 S&S Internetsysteme GmbH
+	Alle Rechte vorbehalten.
+	---------------------------------
+*/
+
+/*
+Modell:
+R1 = Hintergrund Zeile 1
+C11 = C(1)(1) Zeile 1 - Zelle 1
+*/
+body {
+	padding: 0px 15px 0px 0px;
+	background-color: #AAA7A7;
+}
+
+/* Ueberschrift */
+#Ueberschrift Table {
+	width: 620px;
+	margin: 5px 0px 5px 0px
+}
+
+#Ueberschrift td.C11 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 19px;
+	font-weight: bold;
+	/*display: block;*/
+}
+
+#Ueberschrift td.C12 {
+}
+
+/* Reiter Lagerfahrzeuge/Bestelbeispiele/Alle ... */
+/* Text */
+#Reiter Table {
+	width: 100%
+}
+
+#Reiter .c11,
+	#Reiter .c13 {
+	padding: 1px 0px 3px 14px;
+	letter-spacing: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none
+}
+
+#Reiter a.a_0 {
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
+}
+
+#Reiter a.a_0:HOVER {
+	text-decoration: none;
+	color: #FFFF00;
+	font-weight: bold;
+}
+
+#Reiter a.a_1 {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+/* Start */
+#Reiter .c20_0,
+	#Reiter .c28_0 {
+	background: #ffffff url("http://www.ecm24.de/images/elnreiter/S0.gif") repeat;
+	padding: 0px 0px 0px 0px;
+	text-decoration: none
+}
+
+#Reiter .c20_1,
+	#Reiter .c28_1 {
+	background: #ffffff url("http://www.ecm24.de/images/elnreiter/S1.gif") repeat;
+	padding: 0px 0px 0px 0px;
+	text-decoration: none
+}
+
+/* Abschluss */
+#Reiter .c26_0,
+	#Reiter .c214_0 {
+	background: #ffffff url("http://www.ecm24.de/images/elnreiter/E0.gif") repeat;
+	padding: 0px 0px 0px 0px;
+	text-decoration: none
+}
+
+#Reiter .c26_1,
+	#Reiter .c214_1 {
+	background: #ffffff url("http://www.ecm24.de/images/elnreiter/E1.gif") repeat;
+	padding: 0px 0px 0px 0px;
+	text-decoration: none
+}
+
+/* Mittelstege 00=AusAus, 11=AnAn, 10=AnAus, 01=AusAn */
+#Reiter .c22_00,
+	#Reiter .c24_00,
+	#Reiter .c210_00,
+	#Reiter .c212_00 {
+	background: #ffffff url("http://www.ecm24.de/images/elnreiter/M00.gif") repeat;
+	padding: 0px 0px 0px 0px;
+	text-decoration: none
+}
+
+#Reiter .c22_11,
+	#Reiter .c24_11,
+	#Reiter .c210_11,
+	#Reiter .c212_11 {
+	background: #ffffff url("http://www.ecm24.de/images/elnreiter/M11.gif") repeat;
+	padding: 0px 0px 0px 0px;
+	text-decoration: none
+}
+
+#Reiter .c22_10,
+	#Reiter .c24_10,
+	#Reiter .c210_10,
+	#Reiter .c212_10 {
+	background: #ffffff url("http://www.ecm24.de/images/elnreiter/M10.gif") repeat;
+	padding: 0px 0px 0px 0px;
+	text-decoration: none
+}
+
+#Reiter .c22_01,
+	#Reiter .c24_01,
+	#Reiter .c210_01,
+	#Reiter .c212_01 {
+	background: #ffffff url("http://www.ecm24.de/images/elnreiter/M01.gif") repeat;
+	padding: 0px 0px 0px 0px;
+	text-decoration: none
+}
+
+/* Reiter nicht Aktiv */
+#Reiter .c21_0,
+	#Reiter .c23_0,
+	#Reiter .c25_0,
+	#Reiter .c29_0,
+	#Reiter .c211_0,
+	#Reiter .c213_0 {
+	background: #ff7f00 url("http://www.ecm24.de/images/elnreiter/T0.gif") repeat;
+	padding: 0px 0px 0px 0px;
+	letter-spacing: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #6c6c6c;
+	text-decoration: none
+}
+
+/* Reiter Aktiv */
+#Reiter .c21_1,
+	#Reiter .c23_1,
+	#Reiter .c25_1,
+	#Reiter .c29_1,
+	#Reiter .c211_1,
+	#Reiter .c213_1 {
+	background: #116c04 url("http://www.ecm24.de/images/elnreiter/T1.gif") repeat;
+	padding: 0px 0px 0px 0px;
+	letter-spacing: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #6c6c6c;
+	text-decoration: none
+}
+
+#Reiter .c22,
+	#Reiter .c24,
+	#Reiter .c26,
+	#Reiter .c10,
+	#Reiter .c12,
+	#Reiter .c14 {
+}
+
+/* Standardlinks Tabelle */
+#Tabellenausgabe a {
+	color: #cc0000;
+	text-decoration: underline
+}
+
+#Tabellenausgabe a:Hover {
+	color: #007700;
+	text-decoration: underline
+}
+
+/* Sortierlinks Tabellenkopf */
+#Tabellenausgabe .LnkHL {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none
+}
+
+#Tabellenausgabe .LnkHL:Hover {
+	color: #FFFF00;
+	text-decoration: underline
+}
+
+.Ao {
+	color: #BB0000;
+	font-size: 11px;
+	text-decoration: none;
+	font-weight: bold
+}
+
+/* Tabelle */
+#Tabellenausgabe Table.Geruest {
+	width: 100%
+}
+
+/* Farbe Tabellen-Ueberschrift */
+#Tabellenausgabe .R0 {
+	BACKGROUND-COLOR: #4B4B49;
+}
+
+#Tabellenausgabe TD.C01,
+	#Tabellenausgabe TD.C02,
+	#Tabellenausgabe TD.C03,
+	#Tabellenausgabe TD.C04,
+	#Tabellenausgabe TD.C05,
+	#Tabellenausgabe TD.C06 {
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none
+}
+
+#Tabellenausgabe TD.C05,
+	#Tabellenausgabe TD.C06 {
+	text-align: right;
+}
+
+/* Farben der Tabellenzeilen */
+#Tabellenausgabe .R1,
+	#Tabellenausgabe .R3 {
+	BACKGROUND: #F7F7F7 none repeat scroll 0 0
+}
+
+#Tabellenausgabe .R2 {
+	BACKGROUND: #DDDDDD none repeat scroll 0 0
+}
+
+#Tabellenausgabe .R4,
+	#Tabellenausgabe .R6 {
+	BACKGROUND: #DDDDDD none repeat scroll 0 0
+}
+
+#Tabellenausgabe .R5 {
+	BACKGROUND: #F7F7F7 none repeat scroll 0 0
+}
+
+/* Grundformat */
+#Tabellenausgabe TD {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	vertical-align: middle;
+}
+
+/* Bild */
+#Tabellenausgabe TD.C11,
+	#Tabellenausgabe TD.C41 {
+	vertical-align: top;
+	width: 60px;
+}
+
+/* Fahrzeugname */
+#Tabellenausgabe TD.C12,
+	#Tabellenausgabe TD.C42 {
+	font-size: 13px;
+}
+
+#Tabellenausgabe td.C12 a:link, #Tabellenausgabe td.C12 a:visited, #Tabellenausgabe td.C42 a:link, #Tabellenausgabe td.C42 a:visited  {
+	color: #4B4B49;
+}
+
+#Tabellenausgabe td.C12 a:focus, #Tabellenausgabe td.C12 a:hover, #Tabellenausgabe td.C42 a:focus, #Tabellenausgabe td.C42 a:hover  {
+	color: #FFCC00;
+}
+
+/* Highlight */
+#Tabellenausgabe TD.C14,
+	#Tabellenausgabe TD.C44 {
+}
+
+/* Preis */
+#Tabellenausgabe TD.C15,
+	#Tabellenausgabe TD.C45 {
+	font-size: 13px;
+	font-weight: bold;
+	text-align: right;
+}
+
+/* Angebotsnummer */
+#Tabellenausgabe TD.C16,
+	#Tabellenausgabe TD.C46 {
+	text-align: right;
+}
+
+/* Fahrzeugstatus */
+#Tabellenausgabe TD.C14,
+	#Tabellenausgabe TD.C44 {
+	font-size: 10px;
+	color: #0074C1;
+	text-align: right;
+}
+
+/* Laufleistung,Tueren,PSKW */
+#Tabellenausgabe TD.C52,
+	#Tabellenausgabe TD.C22 {
+}
+
+/* Fahrzeugstatus */
+#Tabellenausgabe TD.C26,
+	#Tabellenausgabe TD.C56 {
+	text-align: right;
+}
+
+/* Werbezeile */
+#Tabellenausgabe TD.C32,
+	#Tabellenausgabe TD.C62 {
+}
+
+/* Werbezeile */
+#Tabellenausgabe TD.C36,
+	#Tabellenausgabe TD.C66 {
+	font-size: 10px;
+	color: #0074C1;
+	text-align: right;
+}
+
+/* Trennlinie */
+#Tabellenausgabe TR.TR {
+	BACKGROUND-COLOR: #4B4B49
+}
+
+#Tabellenausgabe TD.TR1,
+	#Tabellenausgabe TD.TR2 {
+	Height: 1px;
+	border-color: #4B4B49 #FFFFFF #FFFFFF #FFFFFF;
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+}
+
+/* Schatten */
+#Tabellenausgabe table.SH {
+	width: 98%;
+	margin-left: 1%
+}
+
+#Tabellenausgabe .SH1 {
+	background: #AAA7A7;
+}
+
+/* Anker */
+#Schalterleiste table {
+	width: 100%
+}
+
+#Schalterleiste td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	vertical-align: top;
+}
+
+/* Schatten Standard */
+table.SH {
+	width: 98%;
+	margin-left: 1%
+}
+
+.SH1 {
+	background-image: url("http://www.eurocarmarket.de/images/graybar.gif");
+}
+
+/* Legende */
+#LEGENDE Table.Geruest {
+	width: 100%;
+	border: 1px solid #FFFFFF;
+}
+
+/* Ueberschrift */
+#LEGENDE tr.R0 {
+	BACKGROUND-COLOR: #e1e1e1
+}
+
+#LEGENDE td.C01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #717171;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 1px 1px 2px 1px
+}
+
+/* Legendenteil */
+#LEGENDE tr.R1 {
+	BACKGROUND-COLOR: #e1e1e1
+}
+
+#LEGENDE td.C11 {
+	width: 3%;
+	padding: 1px 2px 1px 2px
+}
+
+#LEGENDE td.C12 {
+	width: 97%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	padding: 1px 2px 2px 2px;
+	vertical-align: top;
+}
+
+#LEGENDE td.C12 a:link, #LEGENDE td.C12 a:visited, #LEGENDE td.C42 a:link, #LEGENDE td.C42 a:visited {
+	color: #4B4B49;
+}
+
+#LEGENDE td.C12 a:focus, #LEGENDE td.C12 a:hover, #LEGENDE td.C42 a:focus, #LEGENDE td.C42 a:hover  {
+	color: #FFCC00;
+}
+
+#LEGENDE TR.TR {
+	BACKGROUND-COLOR: #FFFFFF
+}
+
+#LEGENDE TD.TR1 {
+	Height: 1px;
+	border-color: #4B4B49 #FFFFFF #FFFFFF #FFFFFF;
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+}
+
+/* Schatten */
+#LEGENDE table.SH {
+	width: 98%;
+	margin-left: 1%
+}
+
+#LEGENDE .SH1 {
+	background-image: url("http://www.eurocarmarket.de/images/graybar.gif");
+}
+
+/* Filter */
+#Filter Table.Geruest {
+	width: 100%;
+	border: 1px solid #FFFFFF;
+}
+
+#Filter Table.Selector {
+	width: 100%;
+}
+
+/* Ueberschrift */
+#Filter td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+}
+
+#Filter tr.R0 {
+	BACKGROUND-COLOR: #e1e1e1
+}
+
+#Filter td.C01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #717171;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 1px 1px 2px 1px
+}
+
+/* Legendenteil */
+#Filter tr.R1 {
+	BACKGROUND-COLOR: #e1e1e1
+}
+
+#Filter td.C11 {
+	width: 3%;
+	padding: 1px 2px 1px 2px
+}
+
+#Filter td.C12 {
+	width: 97%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	padding: 1px 2px 2px 2px;
+	vertical-align: top;
+}
+
+#Filter td.C12 a:link, #Filter td.C12 a:link, #Filter td.C42 a:link, #Filter td.C42 a:link {
+	color: #4B4B49;
+}
+
+#Filter td.C12 a:focus, #Filter td.C12 a:hover  {
+	color: #FFCC00;
+}
+
+/* Filter Zellen, 1 Zeile */
+#Filter td.SC11,
+	#Filter td.SC12,
+	#Filter td.SC13,
+	#Filter td.SC14 {
+	width: 25%
+}
+
+/* Filter Selector-Boxen */
+#Filter .fi01,
+	#Filter .fi02,
+	#Filter .fi03,
+	#Filter .fi04 {
+	width: 95%
+}
+
+#Filter TR.TR {
+	BACKGROUND-COLOR: #4B4B49;
+}
+
+#Filter TD.TR1 {
+	Height: 1px;
+	border-color: #4B4B49 #FFFFFF #FFFFFF #FFFFFF;
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+}
+
+/* Schatten */
+#Filter table.SH {
+	width: 98%;
+	margin-left: 1%
+}
+
+#Filter .SH1 {
+	background-image: url("http://www.eurocarmarket.de/images/graybar.gif");
+}
+
+#Recht td.C11 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #727272;
+	padding: 5px 0px 5px 0px
+}

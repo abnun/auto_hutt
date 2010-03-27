@@ -1,0 +1,165 @@
+/*
+	---------------------------------------------
+	** Stylesheets Kontaktaufnahme Bestätigung **
+	---------------------------------------------
+	Erstellt: Elko Panzyk, 2004
+	(c) 2004 S&S Internetsysteme GmbH
+	Alle Rechte vorbehalten.
+	---------------------------------------------
+*/ 
+
+/* 
+Modell:
+R1 = Hintergrund Zeile 1
+C11 = C(1)(1) Zeile 1 - Zelle 1
+*/
+body {padding: 0px 15px 0px 0px;}
+/* Überschrift */
+#Ueberschrift Table {width:620px; margin: 5px 0px 5px 0px}
+#Ueberschrift td.C11 
+{font-family: Arial, Helvetica, sans-serif; color: #CC0000; font-size: 19px; font-weight: bold}
+#Ueberschrift td.C12 {}
+
+/* Standardlinks Tabelle */
+#Tabellenausgabe a {color: #cc0000; text-decoration: underline}
+#Tabellenausgabe a:Hover {color: #0000cc; text-decoration: underline}
+
+/* Sortierlinks Tabellenkopf */
+#Tabellenausgabe .LnkHL {font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight:bold; color: #FFFFFF; text-decoration: none}
+#Tabellenausgabe .LnkHL:Hover {color: #FFFF00; text-decoration: underline}
+
+.Ao    { color: #BB0000; font-size:11px; text-decoration: none ; font-weight: bold}
+
+/* Tabelle Fahrzeugzusammenfassung */
+#Tabellenausgabe Table.Geruest {width:100%; border : 1px solid #FFFFFF;}
+
+/* Farbe Tabellen-Überschrift */
+#Tabellenausgabe .R0 { BACKGROUND-COLOR: #116c04}
+
+/* Tabellen-Überschrift */
+#Tabellenausgabe TD.C01,
+#Tabellenausgabe TD.C02,
+#Tabellenausgabe TD.C03,
+#Tabellenausgabe TD.C04,
+#Tabellenausgabe TD.C05,
+#Tabellenausgabe TD.C06 {font-weight:bold; color: #FFFFFF; text-decoration: none}
+
+#Tabellenausgabe TD.C05,
+#Tabellenausgabe TD.C06 {text-align: right;}
+
+
+/* Farben der Tabellenzeilen */
+#Tabellenausgabe .R1,
+#Tabellenausgabe .R3 { BACKGROUND-COLOR: #d9edd6}
+#Tabellenausgabe .R2 { BACKGROUND-COLOR: #c0e2bc}
+
+#Tabellenausgabe .R4,
+#Tabellenausgabe .R6 { BACKGROUND-COLOR: #f6fbf6}
+#Tabellenausgabe .R5 { BACKGROUND-COLOR: #ebf6e9}
+
+/* Grundformat */
+#Tabellenausgabe TD {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; vertical-align: middle;}
+
+/* Bild */
+#Tabellenausgabe TD.C11,
+#Tabellenausgabe TD.C41 {vertical-align: top; width:60px;}
+
+/* Fahrzeugname */
+#Tabellenausgabe TD.C12,
+#Tabellenausgabe TD.C42 {font-size: 13px;}
+
+/* Highlight */
+#Tabellenausgabe TD.C14,
+#Tabellenausgabe TD.C44 {}
+
+/* Preis */
+#Tabellenausgabe TD.C15,
+#Tabellenausgabe TD.C45 {font-size: 13px;font-weight: bold;text-align: right;}
+
+/* Angebotsnummer */
+#Tabellenausgabe TD.C16,
+#Tabellenausgabe TD.C46 {text-align: right;}
+
+/* Fahrzeugstatus */
+#Tabellenausgabe TD.C14,
+#Tabellenausgabe TD.C44 {font-size: 10px;color: #0074C1;text-align: right;}
+
+/* Laufleistung,Türen,PSKW */
+#Tabellenausgabe TD.C52,
+#Tabellenausgabe TD.C22 {}
+
+/* Fahrzeugstatus */
+#Tabellenausgabe TD.C26,
+#Tabellenausgabe TD.C56 {text-align: right;}
+
+/* Werbezeile */
+#Tabellenausgabe TD.C32,
+#Tabellenausgabe TD.C62 {}
+
+/* Werbezeile */
+#Tabellenausgabe TD.C36,
+#Tabellenausgabe TD.C66 {font-size: 10px;color: #0074C1;text-align: right;}
+
+/* Trennlinie */
+#Tabellenausgabe TR.TR {BACKGROUND-COLOR: #FFFFFF}
+
+#Tabellenausgabe TD.TR1,
+#Tabellenausgabe TD.TR2 
+{Height: 1px; border-color: #009900 #FFFFFF #FFFFFF #FFFFFF; border-style: solid; 
+ border-top-width: 1px; border-bottom-width:0px;}
+
+/* Schatten */
+#Tabellenausgabe table.SH {width:98%; margin-left:1%}
+#Tabellenausgabe .SH1 {background-image: url("http://www.eurocarmarket.de/images/graybar.gif");}
+
+/* Schatten Standard */
+table.SH {width:98%; margin-left:1%}
+.SH1 {background-image: url("http://www.eurocarmarket.de/images/graybar.gif");}
+
+/* Schalterleiste */
+#Schalterleiste table {width:100%}
+#Schalterleiste td {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; vertical-align: top;}
+#Schalterleiste td.C02 {text-align:right;}
+
+/* Händlerdetailbox */
+#Haendler table.Geruest {width:100%; margin-bottom: 5px;border-color: #009900 #009900 #009900 #009900; border-style: solid; border-width:1px 1px 1px 1px;}
+#Haendler table.TF {width:100%}
+#Haendler table.AP {width:100%}
+
+/* Link Mail, Homepage */
+#Haendler a.mail,
+#Haendler a.home {color: #CC0000;}
+/* Händleranschrift */
+#Haendler td.C11 {width:65%;padding:1px 3px 1px 3px;}
+/* Telefon/Fax .. */
+#Haendler td.C12 {width:35%;padding:1px 2px 1px 2px;vertical-align: top;}
+#Haendler td {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000;}
+
+/* Telefon, Fax, Ansprechpartner, Homepage, Email */
+#Haendler td.TFC11, 
+#Haendler td.TFC21,
+#Haendler td.TFC31,
+#Haendler td.APC11, 
+#Haendler td.APC21,
+#Haendler td.APC31   {font-weight:bold;font-size: 11px; color:#004400; padding:1px 1px 1px 1px;}
+
+/* Ansprechpartner */
+#Haendler td.APC11, 
+#Haendler td.APC21,
+#Haendler td.APC31 {padding:1px 3px 1px 3px;}
+
+#Haendler td.TFC12,
+#Haendler td.TFC22,
+#Haendler td.TFC32,
+#Haendler td.APC12,
+#Haendler td.APC22,
+#Haendler td.APC32   {font-size: 13px;padding:1px 1px 1px 1px;}
+
+/* Überschrift */
+h2 {font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #cc0000; padding-bottom: 0px; margin-bottom: 0px}
+/* Standard Text */
+p  {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000; margin-top: 10px;}
+
+
+
+#Recht td.C11 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #727272; padding:5px 0px 5px 0px}

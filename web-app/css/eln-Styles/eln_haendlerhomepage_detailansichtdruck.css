@@ -1,0 +1,270 @@
+/*
+	---------------------------------
+	**  Stylesheets Detailausgabe  **
+	---------------------------------
+	Erstellt: Elko Panzyk, 2004
+	(c) 2004 S&S Internetsysteme GmbH
+	Alle Rechte vorbehalten.
+	---------------------------------
+	
+	table.Geruest = width:{breite} in % oder px=Pixel
+*/ 
+
+/* Druckschalter */
+@media screen
+{
+.Druckschalter {text-align:center;}
+}
+
+@media print
+{
+.Druckschalter {display:none;}
+}
+
+body {padding: 10px 10px 0px 10px;}
+/* Überschrift (Fahrzeugbeschreibung) */
+#Ueberschrift Table {width:620px; margin: 5px 0px 5px 0px}
+#Ueberschrift td.C11 
+{font-family: Arial, Helvetica, sans-serif; color: #CC0000; font-size: 19px; font-weight: bold}
+#Ueberschrift td.C12 {}
+
+
+#Ueberschrift2 Table {width:100%; margin-Bottom: 10px}
+
+#Ueberschrift2 tr.R1 {}
+#Ueberschrift2 td {font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #CC0000; font-weight:bold;vertical-align:top;}
+
+#Ueberschrift2 a.HInfo {color: #CC0000; font-size: 12px; text-decoration: none;}
+
+/* AngebotNr */
+#Ueberschrift2 td.C11 {width: 80%}
+#Ueberschrift2 td.C12 {width: 20%;text-align: right;}
+/* Angebot gültig */
+#Ueberschrift2 td.C21 {font-family: Verdana,Arial, Helvetica, sans-serif; font-size: 11px; color: #000000;font-weight:normal;}
+/* (Grundpreis) */
+#Ueberschrift2 td.C22 {text-align: right;font-family: Verdana,Arial, Helvetica, sans-serif; font-size: 11px; color: #000000;font-weight:normal;}
+
+
+/* Händlerbox */
+#Haendler table.Geruest {width:100%; margin-bottom: 5px;border-color: #009900 #009900 #009900 #009900; border-style: solid; border-width:1px 1px 1px 1px;}
+#Haendler table.TF {width:100%}
+#Haendler table.AP {width:100%}
+
+/* Linkfarben Mail & Homepage */
+#Haendler a.mail,
+#Haendler a.home {color: #CC0000;}
+#Haendler td.C11 {width:60%;padding:1px 3px 1px 3px;}
+#Haendler td.C12 {width:40%;padding:1px 2px 1px 2px;}
+#Haendler td {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000;}
+
+#Haendler td.TFC11, 
+#Haendler td.TFC21,
+#Haendler td.TFC31,
+#Haendler td.APC11, 
+#Haendler td.APC21,
+#Haendler td.APC31   {font-weight:bold;font-size: 11px; color:#004400; padding:1px 1px 1px 1px;}
+
+#Haendler td.APC11, 
+#Haendler td.APC21,
+#Haendler td.APC31 {padding:1px 3px 1px 3px;}
+
+#Haendler td.TFC12,
+#Haendler td.TFC22,
+#Haendler td.TFC32,
+#Haendler td.APC12,
+#Haendler td.APC22,
+#Haendler td.APC32   {font-size: 13px;padding:1px 1px 1px 1px;}
+
+
+/* Technische Daten */
+#Techdaten table.Geruest {width:100%; border : 1px solid #FFFFFF;}
+
+/* Trennlinie */
+#Techdaten TR.TR {BACKGROUND-COLOR: #FFFFFF}
+#Techdaten TD.TR1,
+#Techdaten TD.TR2 {Height: 1px; border-color: #009900 #FFFFFF #FFFFFF #FFFFFF; 
+border-style: solid; border-top-width: 1px; border-bottom-width:0px;}
+
+/* Hintergründe */
+#Techdaten .R0 { BACKGROUND-COLOR: #116c04}
+
+#Techdaten .R1,
+#Techdaten .R3 { BACKGROUND-COLOR: #d9edd6 }
+#Techdaten .R2 { BACKGROUND-COLOR: #c0e2bc }
+
+#Techdaten .R4,
+#Techdaten .R6 { BACKGROUND-COLOR: #ebf6e9}
+#Techdaten .R5 { BACKGROUND-COLOR: #f6fbf6}
+
+/* Schriftarten */
+#Techdaten TD {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000;}
+#Techdaten TD.C01 {font-weight:bold; font-size: 12px; color: #FFFFFF; text-decoration: none}
+#Techdaten TD.C11 {}
+#Techdaten TD.C21,
+#Techdaten TD.C31,
+#Techdaten TD.C41,
+#Techdaten TD.C51,
+#Techdaten TD.C61 {padding:1px 2px 1px 2px}
+/* Fett formatierte Texte */
+#Techdaten b {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #004400; font-weight: bold;}
+
+/* Schatten */
+#Techdaten table.SH {width:94%; margin-left:3%}
+#Techdaten .SH1 {background-image: url("http://www.eurocarmarket.de/images/graybar.gif");}
+
+
+
+/* Hauptgerüst für Händlerblock, Abstand, Technische Daten*/
+Table.Geruest {width:100%}
+TD.C1 {width:100%}
+TD.C2 {weight: 10px;}
+TD.C3 {weight: 200px;}
+
+
+/* Bemerkungen Block */
+#Bemerkungen table.Geruest {width:100%;border : 1px solid #FFFFFF;}
+
+/* Schatten */
+#Bemerkungen table.SH {width:98%; margin-left:1%}
+#Bemerkungen .SH1 {background-image: url("http://www.eurocarmarket.de/images/graybar.gif");}
+
+/* Trennlinie */
+#Bemerkungen TR.TR {BACKGROUND-COLOR: #FFFFFF}
+
+#Bemerkungen TD.TR1,
+#Bemerkungen TD.TR2 
+{Height: 1px; border-color: #0081d7 #FFFFFF #FFFFFF #FFFFFF; border-style: solid; 
+ border-top-width: 1px; border-bottom-width:0px;}
+
+#Bemerkungen .R0 { BACKGROUND-COLOR: #116c04}
+#Bemerkungen .R1 { BACKGROUND-COLOR: #d9edd6}
+
+#Bemerkungen TD {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000;}
+#Bemerkungen TD.C01 {font-weight:bold; font-size: 12px; color: #FFFFFF; text-decoration: none}
+#Bemerkungen TD.C11 {padding:1px 2px 5px 2px}
+
+/*
+	--------------------------------
+	Grundpreis/Zubehör Preis Formate
+	--------------------------------
+*/
+
+#Zubehoerrechner table.Geruest {width:100%; border : 1px solid #FFFFFF;}
+
+/* Trennlinie */
+#Zubehoerrechner TR.TR {BACKGROUND-COLOR: #FFFFFF}
+
+/* Trennlinien */
+#Zubehoerrechner TD.TR1,
+#Zubehoerrechner TD.TR2 
+{Height: 1px; border-color: #009900 #FFFFFF #FFFFFF #FFFFFF; border-style: solid; 
+ border-top-width: 1px; border-bottom-width:0px;}
+
+/* Hintergrundfarben */
+#Zubehoerrechner .R0 { BACKGROUND-COLOR: #116c04;}
+#Zubehoerrechner .R1 { BACKGROUND-COLOR: #c0e2bc;}
+#Zubehoerrechner .R2 { BACKGROUND-COLOR: #ebf6e9;}
+#Zubehoerrechner .R3 { BACKGROUND-COLOR: #f6fbf6;}
+#Zubehoerrechner .R4 { BACKGROUND-COLOR: #d9edd6;}
+#Zubehoerrechner .R5 { BACKGROUND-COLOR: #d9edd6;}
+
+/* Standardtext-Formatierung */
+#Zubehoerrechner TD {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000;}
+/* Kopfzeile */
+#Zubehoerrechner TD.C01 {font-weight:bold; font-size: 12px; color: #FFFFFF; text-decoration: none}
+
+#Zubehoerrechner TD.C11,
+#Zubehoerrechner TD.C21,
+#Zubehoerrechner TD.C31 {font-weight:bold; font-size: 12px; color: #004400}
+#Zubehoerrechner TD.C41 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #990066; padding:1px 1px 5px 1px}
+
+/* Zahlenausgabe - Rechner */
+#Zubehoerrechner .rnumb {width:95px;  font-family: "Courier New", Courier, mono; font-size: 13px; text-align: right; font-weight: bold; color: #000000}
+
+/* Schatten */
+#Zubehoerrechner table.SH {width:98%; margin-left:1%}
+#Zubehoerrechner .SH1 {background-image: url("http://www.eurocarmarket.de/images/graybar.gif");}
+
+
+
+/* Serienzubehoer */
+/* Gerüst */
+#Serie Table.Geruest {width:100%; border : 1px solid #FFFFFF;}
+
+/* Linke Tabelle */
+#Serie Table.R {width:100%;}
+/* Rechte Tabelle */
+#Serie Table.L {width:100%;}
+
+/* Trennlinie */
+#Serie TR.TR {BACKGROUND-COLOR: #FFFFFF}
+#Serie TD.TR1,
+#Serie TD.TR2 
+{Height: 1px; border-color: #009900 #FFFFFF #FFFFFF #FFFFFF; border-style: solid; 
+ border-top-width: 1px; border-bottom-width:0px;}
+
+/* Tabellenkopf */
+#Serie .R0 { BACKGROUND-COLOR: #116c04}
+#Serie TD {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000;}
+#Serie TD.C01 {font-weight:bold; font-size: 12px; color: #FFFFFF; text-decoration: none}
+
+#Serie .R1 { BACKGROUND-COLOR: #c0e2bc }
+#Serie TD.C11 {width:50%; padding:0px 2px 2px 2px; border-color: #009900 #FFFFFF #FFFFFF #009900; border-style: solid; border-width:0px 1px 0px 0px;}
+#Serie TD.C12 {width:50%; padding:0px 2px 2px 2px; border-color: #009900 #FFFFFF #FFFFFF #009900; border-style: solid; border-width:0px 0px 0px 1px;}
+
+#Serie .ZR1 { BACKGROUND-COLOR: #c0e2bc}
+#Serie .ZR2 { BACKGROUND-COLOR: #d9edd6}
+
+/* Schatten */
+#Serie table.SH {width:98%; margin-left:1%}
+#Serie .SH1 {background-image: url("http://www.eurocarmarket.de/images/graybar.gif");}
+
+
+
+/* Zubehör */
+/* Grundgerüst */
+#Zubehoer Table.Geruest {width:100%;border : 1px solid #FFFFFF;}
+#Zubehoer Table.R {width:100%;}
+#Zubehoer Table.L {width:100%;}
+/* Trennlinie */
+#Zubehoer TR.TR {BACKGROUND-COLOR: #FFFFFF}
+#Zubehoer TD.TR1,
+#Zubehoer TD.TR2 
+{Height: 1px; border-color: #009900 #FFFFFF #FFFFFF #FFFFFF; border-style: solid; 
+ border-top-width: 1px; border-bottom-width:0px;}
+
+/* Tabellenkopf */
+#Zubehoer .R0 { BACKGROUND-COLOR: #116c04}
+#Zubehoer TD {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000;}
+#Zubehoer TD.C01 {font-weight:bold; font-size: 12px; color: #FFFFFF; text-decoration: none}
+
+#Zubehoer .R1 { BACKGROUND-COLOR: #c0e2bc}
+#Zubehoer TD.C11 {width:50%; padding:0px 2px 5px 2px; border-color: #009900 #FFFFFF #FFFFFF #009900; border-style: solid; border-width:0px 1px 0px 0px;}
+#Zubehoer TD.C12 {width:50%; padding:0px 2px 5px 2px; border-color: #009900 #FFFFFF #FFFFFF #009900; border-style: solid; border-width:0px 0px 0px 1px;}
+
+/* Checkbox Zellen */
+#Zubehoer .ZC11,
+#Zubehoer .ZC21 {width: 7%; vertical-align: top;}
+
+/* Beschreibung Zellen */
+#Zubehoer .ZC12,
+#Zubehoer .ZC22 {width: 78%;}
+
+/* Preis Zellen*/
+#Zubehoer .ZC13,
+#Zubehoer .ZC23 {width: 15%;vertical-align: top;}
+
+#Zubehoer .ZR1 { BACKGROUND-COLOR: #c0e2bc}
+#Zubehoer .ZR2 { BACKGROUND-COLOR: #d9edd6}
+
+/* Schatten */
+#Zubehoer table.SH {width:98%; margin-left:1%}
+#Zubehoer .SH1 {background-image: url("http://www.eurocarmarket.de/images/graybar.gif");}
+
+#Schalterleiste table {width:100%}
+#Schalterleiste td {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; vertical-align: top;}
+
+/* Fusszeile mit statistischen Daten */
+#Recht td.C11 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #727272; padding:5px 0px 5px 0px}
+
+/* EOF */
