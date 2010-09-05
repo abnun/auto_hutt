@@ -80,7 +80,7 @@ class InhaltController
 		[params: params]
 	}
 
-	def tuev_au =
+	def hauptuntersuchung_au =
 	{
 		// TODO?
 		[params: params]

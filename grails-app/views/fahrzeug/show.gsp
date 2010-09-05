@@ -148,7 +148,7 @@
                 Bild
             </h2>
                 <g:each var="bild" in="${fahrzeug.bilder}">
-                    <img src="${grailsApplication.config.grails.serverURL}${grailsApplication.config.media.dir}${bild.dateiName}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"/>
+                    <img src="${wm_photo_album.pathToImage(picture: bild)}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"/>
                 </g:each>
             </g:if>
 		</div>

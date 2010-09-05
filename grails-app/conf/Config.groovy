@@ -51,18 +51,23 @@ environments
 media.dir="/medias/"
 no.pic.available = "icon.no_photo_available.png"
 
+photo_album.default.thumbnail.width=79
+photo_album.default.thumbnail.height=59
+
+photo_album.default.big.width=400
+
 // log4j configuration
 log4j =
 {
 	appenders
 	{
-		console name:'stdout', layout:pattern(conversionPattern: '%d [%t] %-5p %c{2} %x - %m%n')
+		console name:'stdout', layout:pattern(conversionPattern: '%d{dd.MM.yyyy, HH:mm:ss} [%p] %c{2} %x - %m%n')
 	}
 
 	root
 	{
 		stdout
-		additivity = true		
+		additivity = true
 	}
 
 	error 'org.codehaus.groovy.grails.web.servlet', //  controllers

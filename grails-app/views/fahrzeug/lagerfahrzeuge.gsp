@@ -1,12 +1,12 @@
 <html>
     <head>
         <meta name="layout" content="main" />
-        <title>Neu-Fahrzeuge</title>
+        <title>Neu-Fahrzeuge ab Lager Leingarten</title>
     </head>
     <body>
 
 		<div class="body">
-            <h1>Neu-Fahrzeuge</h1>
+            <h1>Neu-Fahrzeuge ab Lager Leingarten</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

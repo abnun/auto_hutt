@@ -4,10 +4,12 @@ import org.springframework.web.multipart.MultipartFile
 import org.codehaus.groovy.grails.commons.ApplicationHolder
 import de.autohutt.domain.Bild
 import de.autohutt.domain.Fahrzeug
+import de.webmpuls.photo_album.Album
+import de.webmpuls.photo_album.Picture
 
 class FahrzeugController
 {
-	def imageService
+	def pictureService
 
 	def index =
 	{
@@ -237,15 +239,28 @@ class FahrzeugController
         MultipartFile file2 = request.getFile("picture2")
         MultipartFile file3 = request.getFile("picture3")
 
+		Album tmpAlbum = null
+
+		if(fahrzeug.gebraucht)
+		{
+			tmpAlbum = Album.withName("gebrauchtwagen").list().first()
+		}
+		else if(fahrzeug.neu)
+		{
+			tmpAlbum = Album.withName("neuwagen").list().first()
+		}
+
         if(file1 && !file1.isEmpty())
         {
-            Bild newMedia1 = imageService.createImage(file1, 1, fahrzeug.id)
+			String fileName = "${fahrzeug.id.toString()}_1"
 
-
-            if(!newMedia1.hasErrors() && newMedia1.save(flush: true))
+			Picture newMedia1 = null
+            if(pictureService.uploadPhotos(file1, "/" + tmpAlbum.getName(), "", fileName, tmpAlbum.id.toString()))
             {
                 log.debug("fahrzeug -> $fahrzeug")
-                fahrzeug.addToBilder(newMedia1)
+
+				newMedia1 = Picture.findByBaseNameAndAlbum(fileName, tmpAlbum)
+				fahrzeug.addToBilder(newMedia1)
                 if (!fahrzeug.hasErrors() && fahrzeug.save(flush: true))
                 {
                     flash.message = "Bilder erfolgreich gespeichert"
@@ -273,14 +288,17 @@ class FahrzeugController
 
         if(file2 && !file2.isEmpty())
         {
-            Bild newMedia2 = imageService.createImage(file2, 2, fahrzeug.id)
+			String fileName = "${fahrzeug.id.toString()}_2"
 
-
-            if(!newMedia2.hasErrors() && newMedia2.save(flush: true))
+			Picture newMedia2 = null
+            if(pictureService.uploadPhotos(file2, "/" + tmpAlbum.getName(), "", fileName, tmpAlbum.id.toString()))
             {
                 log.debug("fahrzeug -> $fahrzeug")
-                fahrzeug.addToBilder(newMedia2)
-                if (!fahrzeug.hasErrors() && fahrzeug.save(flush: true))
+
+				newMedia2 = Picture.findByBaseNameAndAlbum(fileName, tmpAlbum)
+				fahrzeug.addToBilder(newMedia2)
+
+				if (!fahrzeug.hasErrors() && fahrzeug.save(flush: true))
                 {
                     flash.message = "Bilder erfolgreich gespeichert"
                 }
@@ -307,14 +325,17 @@ class FahrzeugController
 
         if(file3 && !file3.isEmpty())
         {
-            Bild newMedia3 = imageService.createImage(file3, 3, fahrzeug.id)
+			String fileName = "${fahrzeug.id.toString()}_3"
 
-
-            if(!newMedia3.hasErrors() && newMedia3.save(flush: true))
+			Picture newMedia3 = null
+            if(pictureService.uploadPhotos(file3, "/" + tmpAlbum.getName(), "", fileName, tmpAlbum.id.toString()))
             {
                 log.debug("fahrzeug -> $fahrzeug")
-                fahrzeug.addToBilder(newMedia3)
-                if (!fahrzeug.hasErrors() && fahrzeug.save(flush: true))
+
+				newMedia3 = Picture.findByBaseNameAndAlbum(fileName, tmpAlbum)
+				fahrzeug.addToBilder(newMedia3)
+
+				if (!fahrzeug.hasErrors() && fahrzeug.save(flush: true))
                 {
                     flash.message = "Bilder erfolgreich gespeichert"
                 }

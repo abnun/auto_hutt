@@ -41,7 +41,7 @@
 					Sicherheits-Check
 				</li>
 				<li>
-					T&Uuml;V &amp; AU
+					Hauptuntersuchung &amp; AU
 				</li>
 				<li>
 					Fehlerdiagnose

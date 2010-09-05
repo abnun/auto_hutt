@@ -56,10 +56,10 @@
 
 		<div class="textjustify" style="font-weight: bold; font-size: 90%; padding-right: 10px;">
 			<div>
-				T&Uuml;V Abnahme nach  &sect; 29: HU nur Montag, Mittwoch und Freitag
+				Abnahme durch T&Uuml;V nach  &sect; 29: HU nur Montag, Mittwoch und Freitag
 			</div>
 			<div>
-				T&Uuml;V Abnahme nach  &sect; 19: Sonderabnahmen nach telefonischer Absprache
+				Abnahme durch T&Uuml;V nach  &sect; 19: Sonderabnahmen nach telefonischer Absprache
 			</div>
 			<div>
 				Abgasuntersuchungen nach &sect; 47a: (Diesel, G-Kat, U-Kat &amp; OBD) t&auml;glich w&auml;hrend der Gesch&auml;ftszeiten

@@ -1,3 +1,4 @@
+<%@ page import="de.webmpuls.photo_album.util.MediaUtils" %>
 <html>
     <head>
         <meta name="layout" content="main" />
@@ -35,7 +36,7 @@
 
                       	<g:if test="${bild.position == 1}">
 
-							<img src="${request.getContextPath()}${bild.dateiNameKlein}" alt="${bild.dateiNameKlein}" />
+							<img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.BIG)}" alt="${bild.dateiNameKlein}" />
 							<br />
 						  	<g:link action="deletePictures" id="${bild.id}" params="[fahrzeugId: fahrzeug.id]" onclick="confirm('Wirklich loeschen?');" >Bild l&ouml;schen</g:link>
 				  		</g:if>
@@ -57,7 +58,7 @@
 
                       <g:if test="${bild.position == 2}">
 
-						<img src="${request.getContextPath()}${bild.dateiNameKlein}" alt="${bild.dateiNameKlein}" />
+						<img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.THUMBNAIL)}" alt="${bild.dateiNameKlein}" />
 					  	<br/>
 					  	<g:link action="deletePictures" id="${bild.id}" params="[fahrzeugId: fahrzeug.id]" onclick="confirm('Wirklich loeschen?');" >Bild l&ouml;schen</g:link>
 
@@ -80,7 +81,7 @@
 
                       <g:if test="${bild.position == 3}">
 
-                        <img src="${request.getContextPath()}${bild.dateiNameKlein}" alt="${bild.dateiNameKlein}" />
+                        <img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.THUMBNAIL)}" alt="${bild.dateiNameKlein}" />
 						<br />
 						<g:link action="deletePictures" id="${bild.id}" params="[fahrzeugId: fahrzeug.id]" onclick="confirm('Wirklich loeschen?');" >Bild l&ouml;schen</g:link>
 

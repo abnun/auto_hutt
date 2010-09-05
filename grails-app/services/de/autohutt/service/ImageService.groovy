@@ -3,7 +3,7 @@ package de.autohutt.service
 import org.codehaus.groovy.grails.commons.ApplicationHolder
 import org.springframework.web.multipart.MultipartFile
 import de.autohutt.domain.Bild
-import org.grails.plugins.imagetools.ImageTool
+import de.webmpuls.photo_album.PictureService
 
 class ImageService
 {
@@ -12,7 +12,7 @@ class ImageService
 
     Bild createImage(MultipartFile file, int position, Long fahrzeugId)
     {
-		String origFileName = file.getOriginalFilename()
+		/*String origFileName = file.getOriginalFilename()
 
 		String endOfFileName = origFileName.substring(origFileName.lastIndexOf(".") + 1, origFileName.length())
 
@@ -32,6 +32,7 @@ class ImageService
             encoding = endOfFileName.toUpperCase()
         }
 
+		pictureService.uploadPhotos(file, )
         ImageTool imageTool = new ImageTool()
         imageTool.load(file.getBytes())
         imageTool.saveOriginal()
@@ -76,6 +77,7 @@ class ImageService
         media.dateiNameNormal = dateiNameNormal4DB
         media.position = position
 
-        return media
+        return media*/
+		return null
 	}
 }

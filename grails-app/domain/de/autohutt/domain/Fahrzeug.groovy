@@ -1,4 +1,7 @@
 package de.autohutt.domain
+
+import de.webmpuls.photo_album.Picture
+
 class Fahrzeug implements Serializable
 {
 	FahrzeugMarke marke
@@ -17,7 +20,7 @@ class Fahrzeug implements Serializable
 	Boolean gebraucht
 	Boolean neu
 
-	static hasMany = [bilder: Bild]
+	static hasMany = [bilder: Picture]
 
 	static mapping =
 	{

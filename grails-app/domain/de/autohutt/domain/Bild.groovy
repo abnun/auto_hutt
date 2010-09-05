@@ -1,4 +1,7 @@
 package de.autohutt.domain
+
+import de.webmpuls.photo_album.Picture
+
 class Bild
 {
 	String dateiNameKlein

@@ -1,4 +1,4 @@
-<%@ page import="de.autohutt.domain.Bild" %>
+<%@ page import="de.webmpuls.photo_album.util.MediaUtils; de.webmpuls.photo_album.Picture;" %>
 <html>
 <head>
     <meta name="layout" content="main"/>
@@ -19,6 +19,8 @@
 	}
 	</style>
 
+	<script type="text/javascript" src="${resource(dir: 'js/jquery/', file: 'jquery-1.4.2-min.js', plugin: 'jquery')}"></script>
+	<wm_photo_album:gallery_resources noGallery="true" />
 </head>
 <body>
 <div class="body">
@@ -34,14 +36,14 @@
         <tr>
 			<g:if test="${!fahrzeug.bilder?.isEmpty()}">
 				<%
-					fahrzeugBilder = fahrzeug.bilder.sort {Bild a, Bild b -> a.position <=> b.position}
+					fahrzeugBilder = fahrzeug.bilder.sort {Picture a, Picture b -> a.position <=> b.position}
 				%>
 				<td>
 				<g:each status="i" var="bild" in="${fahrzeugBilder}">
 					<g:if test="${i == 0}">
-						<a href="${request.getContextPath()}${bild.dateiNameGross}" class="highslide"
+						<a href="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.BIG, albumName: ((Picture)bild).album.getName())}" class="highslide"
 								onclick="return hs.expand(this, {wrapperClassName: 'highslide-no-border', dimmingOpacity: 0.75, align: 'center'})">
-							<img src="${request.getContextPath()}${bild.dateiNameNormal}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
+							<img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.NORMAL, albumName: ((Picture)bild).album.getName())}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
 									title="Klicken Sie hier, um eine vergr&ouml;&szlig;erte Ansicht des Bildes zu bekommen"/></a>
 						<div id="closebutton" class="highslide-overlay closebutton" onclick="return hs.close(this)" title="Schließen"></div>
 					</g:if>
@@ -201,9 +203,9 @@
                   <g:each status="i" var="bild" in="${fahrzeugBilder}">
                     <g:if test="${i > 0 && i <= 3}">
                       <td style="padding: 3px 0px;;">
-                        <a href="${request.getContextPath()}${bild.dateiNameGross}" class="highslide"
+                        <a href="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.BIG, albumName: ((Picture)bild).album.getName())}" class="highslide"
                                 onclick="return hs.expand(this, {wrapperClassName: 'highslide-no-border', dimmingOpacity: 0.75, align: 'center'})">
-                          <img src="${request.getContextPath()}${bild.dateiNameKlein}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
+                          <img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.THUMBNAIL, albumName: ((Picture)bild).album.getName())}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
                                   title="Klicken Sie hier, um eine vergr&ouml;&szlig;erte Ansicht des Bildes zu bekommen"/></a>
                         <!--<div class="highslide-caption"></div>-->
                         <div id="closebutton" class="highslide-overlay closebutton" onclick="return hs.close(this)" title="Schließen"></div>

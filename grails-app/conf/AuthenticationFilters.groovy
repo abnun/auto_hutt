@@ -15,7 +15,7 @@ class AuthenticationFilters
 			{
 				if(!session.user && !actionName.equals('show') && !actionName.equals('anzeigen') && !actionName.equals('gebrauchtfahrzeuge') && !actionName.equals('lagerfahrzeuge') && !actionName.equals('bestellfahrzeugeFreiKonfigurierbar') && !actionName.equals('fahrzeugeImVorlauf') && !actionName.equals('gebrauchtfahrzeuge3Bis5Jahre') && !actionName.equals('jahreswagen') && !actionName.equals('neuUndJahreswagenBis24Monate') && !actionName.equals('neuwagenOhneZulassung'))
 				{
-					println("no access -> $params")
+					log.info("no access -> $params")
 					session.oldController = params.controller
 					session.oldAction = params.action
 
@@ -24,7 +24,7 @@ class AuthenticationFilters
 				}
 				else
 				{
-					println("acces granted -> $params")
+					log.info("access granted -> $params")
 					return true
 				}
 			}
@@ -59,7 +59,22 @@ class AuthenticationFilters
 				}
 			}
 		}
-		picture(controller:'bild', action:'*')
+		album(controller:'album', action:'*')
+		{
+			before =
+			{
+				if(!session.user)
+				{
+					log.debug("params -> $params")
+					session.oldController = params.controller
+					session.oldAction = params.action
+
+					redirect(controller: 'authentication', action:'login')
+					return false
+				}
+			}
+		}
+		picture(controller:'picture', action:'*')
 		{
 			before =
 			{
