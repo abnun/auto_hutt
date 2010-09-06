@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title><g:layoutTitle default="Auto Hutt GmbH - 1a Autoservice"/></title>
+	<title>Auto Hutt GmbH | 1a Autoservice | <g:layoutTitle /></title>
 	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
 	<meta name="description" content="Willkommen auf www.autohutt.de - ihrem 1a Autoservicepartner in Leingarten. 
 	Wenn Sie 1a Leistungen bei Wartung, Reparatur oder Einbau erwarten, sind Sie bei uns richtig. Auch bei Ihrer
@@ -16,14 +16,18 @@
 
     <script type="text/javascript" src="${resource(dir: 'highslide', file: 'highslide.js')}"></script>
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'highslide', file: 'highslide.css')}"/>
-    <script type="text/javascript">
-		hs.registerOverlay({overlayId: 'closebutton',position: 'top right',fade: 2});
+    <g:javascript library="jquery"/>
+
+    <script type="text/javascript" src="${resource(dir: 'highslide', file: 'highslide.js')}"></script>
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'highslide', file: 'highslide.css')}"/>
+    %{--<script type="text/javascript">
+		//hs.registerOverlay({overlayId: 'closebutton',position: 'top right',fade: 2});
 		// remove the registerOverlay call to disable the close button
 		// fading the semi-transparent overlay looks bad in IE
 
-        hs.graphicsDir = '${resource(dir: 'highslide/graphics/')}';
-        hs.showCredits = false;
-    </script>
+        //hs.graphicsDir = '${resource(dir: 'highslide/graphics/')}';
+        //hs.showCredits = false;
+    </script>--}%
 
 	<style type="text/css">
 
@@ -66,9 +70,9 @@
 
 	<div id="headerDiv">
 		<map name="auto_hutt" id="auto_hutt">
-			<area shape="circle" coords="134,90,85" href="${resource(dir: '')}"  alt="" >
+			<area shape="circle" coords="134,90,85" href="${resource(dir: '')}"  alt="" title="Zurück zur Startseite">
 		</map>
-		<div class="logo"><img src="${resource(dir: 'images', file: 'auto_hutt_header_1000px.jpg')}" alt="Auto Hutt GmbH - 1a Autoservice" usemap="#auto_hutt" /></div>
+		<div class="logo"><img src="${resource(dir: 'images', file: 'auto_hutt_header_1000px.jpg')}" alt="Auto Hutt GmbH | 1a Autoservice" usemap="#auto_hutt" /></div>
 	</div>
 
 	<div id="naviDiv">
