@@ -88,11 +88,11 @@
 
 		<ul>
 
-			<li style="border-top: 1px solid white;">
+			%{--<li style="border-top: 1px solid white;">
 
 				<g:link controller="inhalt" action="lagerfahrzeuge_nl">Lagerfahrzeuge aus NL</g:link>
 
-			</li>
+			</li>--}%
 
 			<li>
 
