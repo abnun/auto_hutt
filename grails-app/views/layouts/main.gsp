@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title><g:layoutTitle default="Auto Hutt GmbH - 1a Autoservice"/></title>
+	<title>Auto Hutt GmbH | 1a Autoservice | <g:layoutTitle /></title>
 	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
 	<meta name="description" content="Willkommen auf www.autohutt.de - ihrem 1a Autoservicepartner in Leingarten. 
 	Wenn Sie 1a Leistungen bei Wartung, Reparatur oder Einbau erwarten, sind Sie bei uns richtig. Auch bei Ihrer
@@ -12,18 +12,18 @@
 
 	<g:layoutHead />
 
-	<g:javascript library="application"/>
+	%{--<g:javascript library="jquery" plugin="photo-album" />
 
     <script type="text/javascript" src="${resource(dir: 'highslide', file: 'highslide.js')}"></script>
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'highslide', file: 'highslide.css')}"/>
     <script type="text/javascript">
-		hs.registerOverlay({overlayId: 'closebutton',position: 'top right',fade: 2});
+		//hs.registerOverlay({overlayId: 'closebutton',position: 'top right',fade: 2});
 		// remove the registerOverlay call to disable the close button
 		// fading the semi-transparent overlay looks bad in IE
 
-        hs.graphicsDir = '${resource(dir: 'highslide/graphics/')}';
-        hs.showCredits = false;
-    </script>
+        //hs.graphicsDir = '${resource(dir: 'highslide/graphics/')}';
+        //hs.showCredits = false;
+    </script>--}%
 
 	<style type="text/css">
 
@@ -66,50 +66,55 @@
 
 	<div id="headerDiv">
 		<map name="auto_hutt" id="auto_hutt">
-			<area shape="circle" coords="134,90,85" href="${resource(dir: '')}"  alt="" >
+			<area shape="circle" coords="134,90,85" href="${resource(dir: '')}"  alt="" title="Zurück zur Startseite">
 		</map>
-		<div class="logo"><img src="${resource(dir: 'images', file: 'auto_hutt_header_1000px.jpg')}" alt="Auto Hutt GmbH - 1a Autoservice" usemap="#auto_hutt" /></div>
+		<div class="logo"><img src="${resource(dir: 'images', file: 'auto_hutt_header_1000px.jpg')}" alt="Auto Hutt GmbH | 1a Autoservice" usemap="#auto_hutt" /></div>
 	</div>
 
 	<div id="naviDiv">
 
 		<div class="textcenter">
-			<img src="${resource(dir: 'images', file: 'menue_header.gif')}" alt="Auto Hutt GmbH - 1a Autoservice" style="margin-top: 10px;" />
+			<img src="${resource(dir: 'images', file: 'menue_header.gif')}" alt="Auto Hutt GmbH | 1a Autoservice" style="margin-top: 10px;" />
 		</div>
 
 		<div>
 
 			<!--<br />-->
 			<h4 style="margin-top: 10px;">
-				Unser Service:
+				Fahrzeugangebot:
 			</h4>
 
 		</div>
 
 		<ul>
 
-			<li style="border-top: 1px solid white;">
+			<li>
 
-				<g:link controller="inhalt" action="lagerfahrzeuge_nl">Lagerfahrzeuge aus NL</g:link>
+				<g:link controller="fahrzeug" action="lagerfahrzeuge">EU-Neufahrzeuge ab Lager Leingarten</g:link>
 
 			</li>
 
 			<li>
 
-                <a href="http://www.apec-sales.de/index.php?parid=13&verify=498763028723452&c=3&P=1" target="_blank">Lagerfahrzeuge aus I</a>
+                <a href="http://www.apec-sales.de/index.php?parid=13&verify=498763028723452&c=3&P=1" target="_blank">EU-Neufahrzeuge ab Lager I</a>
 
             </li>
 
 			<li>
 
-				<g:link controller="inhalt" action="lagerfahrzeuge_i_f_dk">Lagerfahrzeuge aus I, F, DK</g:link>
+				<g:link controller="fahrzeug" action="neuwagenOhneZulassung">EU-Neufahrzeuge ab Lager I, F, DK</g:link>
 
             </li>
 
+			<li style="border-top: 1px solid white;">
+
+				<a href="http://server7.autrado.de/vp-autohutt.de/" target="_blank">EU-Neufahrzeuge ab Lager NL</a>
+
+			</li>
+
 			<li>
-
-				<g:link controller="inhalt" action="neufahrzeuge_eu">EU-Neufahrzeuge</g:link>
-
+				<!--<a href="http://www.eln.de/Fahrzeugangebote/frmFahrzeugangebote_ErweiterteSuche.php" target="_blank">Jahresfahrzeuge</a>-->
+				<g:link controller="inhalt" action="bestellFahrzeuge_eu">EU-Bestellfahrzeuge</g:link>
 			</li>
 
 			<li>
@@ -123,6 +128,18 @@
 
 			</li>
 
+		</ul>
+
+		<ul>
+
+			<div>
+
+				<h4>
+					Unser Service:
+				</h4>
+
+			</div>
+
 			<li>
 
 				<a href="http://www.dat.de/gebraucht.html" target="_blank">DAT Gebrauchtfahrzeugbewertung</a>
@@ -131,7 +148,8 @@
 
 			<li>
 
-				<g:link controller="inhalt" action="kreditrechner">Kreditrechner</g:link>
+				<a href="https://fibot.creditplus.de/fibot/frontend?startMask=MiniRechner&HNr=310460&kondition=pkwR01&anzahlung=ja&rsv=ja" target="_blank">Kreditrechner</a>
+				%{--<g:link controller="inhalt" action="kreditrechner">Kreditrechner</g:link>--}%
 
 			</li>
 
@@ -150,7 +168,7 @@
 
 			<li>
 
-				<g:link controller="inhalt" action="tuev_au">T&Uuml;V &amp; AU</g:link>
+				<g:link controller="inhalt" action="hauptuntersuchung_au">Hauptuntersuchung &amp; AU</g:link>
 
 			</li>
 
@@ -158,7 +176,6 @@
 
 		<div>
 
-			<br />
 			<h4>
 				Wie Sie uns erreichen:
 			</h4>

@@ -18,10 +18,10 @@
 <g:form action="setSessionUserByLogin" method="post" name="AuthenticationForm">
 
 	<div>
-		Benutzer: <g:textField name="user"/>
+		Benutzer:&nbsp;<span style="margin-left: 10px;"><g:textField name="user"/></span>
 	</div>
 	<div>
-		Passwort: <g:passwordField name="password"/>
+		Passwort:&nbsp;<span style="margin-left: 10px;"><g:passwordField name="password"/></span>
 	</div>
 	<div>
 		<input type="reset" value="Zur&uuml;cksetzen"/>

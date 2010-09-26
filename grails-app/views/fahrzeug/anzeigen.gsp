@@ -41,9 +41,9 @@
 				<td>
 				<g:each status="i" var="bild" in="${fahrzeugBilder}">
 					<g:if test="${i == 0}">
-						<a href="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.BIG, albumName: ((Picture)bild).album.getName())}" class="highslide"
+						<a href="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.NORMAL, albumName: ((Picture)bild).album.getName())}" class="highslide"
 								onclick="return hs.expand(this, {wrapperClassName: 'highslide-no-border', dimmingOpacity: 0.75, align: 'center'})">
-							<img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.NORMAL, albumName: ((Picture)bild).album.getName())}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
+							<img style="width: 400px;" src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.BIG, albumName: ((Picture)bild).album.getName())}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
 									title="Klicken Sie hier, um eine vergr&ouml;&szlig;erte Ansicht des Bildes zu bekommen"/></a>
 						<div id="closebutton" class="highslide-overlay closebutton" onclick="return hs.close(this)" title="Schließen"></div>
 					</g:if>

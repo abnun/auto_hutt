@@ -125,10 +125,15 @@
 					</a>
 				</li>
 				<li>
+					<a href="http://www.motul.de/" title="Motul (&Ouml;l)" target="_blank">
+						Motul (&Ouml;l)
+					</a>
+				</li>
+				%{--<li>
 					<a href="http://www.castrol.de/" title="Castrol (&Ouml;l)" target="_blank">
 						Castrol (&Ouml;l)
 					</a>
-				</li>
+				</li>--}%
 				<li>
 					<a href="http://www.bosch.de/start/content/language1/start/magazin_start.htm" title="Bosch" target="_blank">
 						Bosch
@@ -140,8 +145,8 @@
 					</a>
 				</li>
 				<li>
-					<a href="http://www.waeco.de/" title="Waeco" target="_blank">
-						Waeco
+					<a href="http://www.waeco.de/" title="Waeco (Sitzheizung, PDC)" target="_blank">
+						Waeco (Sitzheizung, PDC)
 					</a>
 				</li>
 				<li>
@@ -150,26 +155,33 @@
 					</a>
 				</li>
 				<li>
-					<a href="http://www.hjsleistritz.com/index_js.php" title="Leistritz (Abgasanlagen)" target="_blank">
-						Leistritz (Abgasanlagen)
+					<a href="http://www.ernst-hagen.de" title="Ernst (Auspuffanlagen)" target="_blank">
+						Ernst (Auspuffanlagen)
 					</a>
 				</li>
 				<li>
-					<a href="http://www.bosal.de/" title="Bosal (Abgasanlagen)" target="_blank">
-						Bosal (Abgasanlagen)
+					<a href="http://www.eberspaecher.com" title="Ebersp&auml;cher (Ru&szlig;filter)" target="_blank">
+						Ebersp&auml;cher (Ru&szlig;filter)
 					</a>
 				</li>
 				<li>
-					Boge (Stossd&auml;mpfer)
-				</li>
-				<li>
-					<a href="http://www.bilstein.de/index2.htm" title="Bilstein (Stossd&auml;mpfer)" target="_blank">
-						Bilstein (Stossd&auml;mpfer)
+					<a href="http://www.twintec.de/" title="Twintec (Ru&szlig;filter)" target="_blank">
+						Twintec (Ru&szlig;filter)
 					</a>
 				</li>
 				<li>
-					<a href="http://www.eibach.de/" title="Webasto (Standheizungen)" target="_blank">
-						Eibach (Federn)
+					<a href="http://www.hjs.com" title="HJS (Ru&szlig;filter)" target="_blank">
+						HJS (Ru&szlig;filter)
+					</a>
+				</li>
+				<li>
+					<a href="http://www.h-r.com" title="H&amp;R (Tieferlegung + Spurverbreiterung)" target="_blank">
+						H&amp;R (Tieferlegung + Spurverbreiterung)
+					</a>
+				</li>
+				<li>
+					<a href="http://www.eibach.de/" title="Eibach (Tieferlegung + Spurverbreiterung)" target="_blank">
+						Eibach (Tieferlegung + Spurverbreiterung)
 					</a>
 				</li>
 				<li>

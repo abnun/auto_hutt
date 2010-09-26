@@ -260,6 +260,7 @@ class FahrzeugController
                 log.debug("fahrzeug -> $fahrzeug")
 
 				newMedia1 = Picture.findByBaseNameAndAlbum(fileName, tmpAlbum)
+				newMedia1.position = 1
 				fahrzeug.addToBilder(newMedia1)
                 if (!fahrzeug.hasErrors() && fahrzeug.save(flush: true))
                 {
@@ -296,6 +297,7 @@ class FahrzeugController
                 log.debug("fahrzeug -> $fahrzeug")
 
 				newMedia2 = Picture.findByBaseNameAndAlbum(fileName, tmpAlbum)
+				newMedia2.position = 2
 				fahrzeug.addToBilder(newMedia2)
 
 				if (!fahrzeug.hasErrors() && fahrzeug.save(flush: true))
@@ -333,6 +335,7 @@ class FahrzeugController
                 log.debug("fahrzeug -> $fahrzeug")
 
 				newMedia3 = Picture.findByBaseNameAndAlbum(fileName, tmpAlbum)
+				newMedia3.position = 3
 				fahrzeug.addToBilder(newMedia3)
 
 				if (!fahrzeug.hasErrors() && fahrzeug.save(flush: true))
@@ -529,10 +532,10 @@ class FahrzeugController
     {
         log.debug("params -> $params")
 
-        if (Bild.exists(params.id))
+        if (Picture.exists(params.id))
 		{
 			log.debug("Bild mit der ID '" + params.id + "' soll geloescht werden")
-			Bild b = Bild.get(params.id)
+			Picture b = Picture.get(params.id)
 
 			Fahrzeug fahrzeug = Fahrzeug.get(params.fahrzeugId)
 			if(fahrzeug)
@@ -541,9 +544,9 @@ class FahrzeugController
 				fahrzeug.save(flush: true)
 			}
 			// Bild loeschen
-			if (Bild.exists(params.id))
+			if (Picture.exists(params.id))
 			{
-				b = Bild.get(params.id)
+				b = Picture.get(params.id)
 				b.delete(flush: true)
 			}
 			log.debug("Bild mit ID " + params.id + " geloescht!")

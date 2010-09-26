@@ -1,5 +1,6 @@
 <html>
     <head>
+		<title>Jahresfahrzeuge</title>
         <meta name="layout" content="main"/>
     </head>
 

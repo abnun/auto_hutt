@@ -115,4 +115,10 @@ class InhaltController
 		// TODO?
 		[params: params]
 	}
+
+	def bestellFahrzeuge_eu =
+	{
+		// TODO?
+		[params: params]
+	}
 }

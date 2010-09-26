@@ -1,4 +1,4 @@
-<%@ page import="de.webmpuls.photo_album.util.MediaUtils" %>
+<%@ page import="de.webmpuls.photo_album.Picture; de.webmpuls.photo_album.util.MediaUtils" %>
 <html>
     <head>
         <meta name="layout" content="main" />
@@ -36,7 +36,7 @@
 
                       	<g:if test="${bild.position == 1}">
 
-							<img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.BIG)}" alt="${bild.dateiNameKlein}" />
+							<img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.THUMBNAIL, albumName: ((Picture)bild).album.getName())}" alt="${bild}" />
 							<br />
 						  	<g:link action="deletePictures" id="${bild.id}" params="[fahrzeugId: fahrzeug.id]" onclick="confirm('Wirklich loeschen?');" >Bild l&ouml;schen</g:link>
 				  		</g:if>
@@ -58,7 +58,7 @@
 
                       <g:if test="${bild.position == 2}">
 
-						<img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.THUMBNAIL)}" alt="${bild.dateiNameKlein}" />
+						<img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.THUMBNAIL, albumName: ((Picture)bild).album.getName())}" alt="${bild}" />
 					  	<br/>
 					  	<g:link action="deletePictures" id="${bild.id}" params="[fahrzeugId: fahrzeug.id]" onclick="confirm('Wirklich loeschen?');" >Bild l&ouml;schen</g:link>
 
@@ -81,7 +81,7 @@
 
                       <g:if test="${bild.position == 3}">
 
-                        <img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.THUMBNAIL)}" alt="${bild.dateiNameKlein}" />
+                        <img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.THUMBNAIL, albumName: ((Picture)bild).album.getName())}" alt="${bild}" />
 						<br />
 						<g:link action="deletePictures" id="${bild.id}" params="[fahrzeugId: fahrzeug.id]" onclick="confirm('Wirklich loeschen?');" >Bild l&ouml;schen</g:link>
 
@@ -98,6 +98,10 @@
                     <span class="button"><g:submitButton class="save" name="savePictures" value="Bilder auf den Server laden"/></span>
 				</div>
 			</g:uploadForm>
+			<br />
+		<br />
+		<hr />
+		<g:link controller="fahrzeug" action="anzeigen" id="${fahrzeug.id}">&lt;&lt; Zum Fahrzeug "${fahrzeug}" zur&uuml;ck</g:link>
         </div>
     </body>
 </html>
