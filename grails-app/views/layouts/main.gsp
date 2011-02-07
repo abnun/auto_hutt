@@ -2,6 +2,7 @@
 <head>
 	<title>Auto Hutt GmbH | 1a Autoservice | <g:layoutTitle /></title>
 	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
+	<meta name="keywords" content="auto, hutt, neufahrzeuge, gebrauchtfahrzeuge, lagerfahrzeuge, hauptuntersuchung, au, inspektion, abschleppservice, tuning" />
 	<meta name="description" content="Willkommen auf www.autohutt.de - ihrem 1a Autoservicepartner in Leingarten. 
 	Wenn Sie 1a Leistungen bei Wartung, Reparatur oder Einbau erwarten, sind Sie bei uns richtig. Auch bei Ihrer
 	individuellen Fahrzeugsuche nach einem Neuen oder Gebrauchten sind wir Ihnen gerne behilflich und beraten Sie
