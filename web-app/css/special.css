@@ -92,7 +92,7 @@ ul {
 	float: left;
 	width: 290px;
 	/*height: 100%;*/
-	height: 558px;
+	height: 638px;
 	padding: 10px;
 	border: none;
 	border-right: 5px solid #4B4B49;
@@ -187,8 +187,8 @@ ul {
 	/*border-left: 1px solid #d9d9d9; */
 	border-right: 1px solid #666;
 	border-bottom: 1px solid #666;
-	min-height: 562px;
-	* height: 558px;
+	min-height: 642px;
+	* height: 642px;
 	width: 658px;
 	* width: 705px;
     /*width: 823px;

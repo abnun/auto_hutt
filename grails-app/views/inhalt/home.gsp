@@ -13,8 +13,8 @@
 		}
 
         #naviDiv {
-            height: 579px;
-	        * height: 599px;
+            height: 618px;
+	        * height: 639px;
 		}
 		</style>
 
