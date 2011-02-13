@@ -102,8 +102,7 @@
             </li>
 
 			<li>
-
-				<g:link controller="fahrzeug" action="neuwagenOhneZulassung">EU-Neufahrzeuge ab Lager I, F, DK</g:link>
+				<a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/124" target="_blank">EU-Neufahrzeuge ab Lager I, F, DK</a>
 
             </li>
 
@@ -111,22 +110,23 @@
 
 				<a href="http://server7.autrado.de/vp-autohutt.de/" target="_blank">EU-Neufahrzeuge ab Lager NL</a>
 
+			<li>
+				<a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/2" target="_blank">EU-Bestellfahrzeuge</a>
+			</li>
+			<li>
+				<a href="http://webspace1.ssis.de/22658eln/-/deutsche-bestellangebote.html" target="_blank">Deutsche Bestellfahrzeuge zu Top Konditionen</a>
+			</li>
+			<li>
+				<a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/1" target="_blank">Nutzfahrzeuge</a>
+			</li>
+			<li>
+				<a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/124" target="_blank">Jahresfahrzeuge</a>
+				%{--<g:link controller="inhalt" action="jahresfahrzeuge">Jahresfahrzeuge</g:link>--}%
 			</li>
 
 			<li>
-				<!--<a href="http://www.eln.de/Fahrzeugangebote/frmFahrzeugangebote_ErweiterteSuche.php" target="_blank">Jahresfahrzeuge</a>-->
-				<g:link controller="inhalt" action="bestellFahrzeuge_eu">EU-Bestellfahrzeuge</g:link>
-			</li>
-
-			<li>
-				<!--<a href="http://www.eln.de/Fahrzeugangebote/frmFahrzeugangebote_ErweiterteSuche.php" target="_blank">Jahresfahrzeuge</a>-->
-				<g:link controller="inhalt" action="jahresfahrzeuge">Jahresfahrzeuge</g:link>
-			</li>
-
-			<li>
-
-				<g:link controller="inhalt" action="gebrauchtfahrzeuge">Gebrauchtfahrzeuge</g:link>
-
+				<a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/124" target="_blank">Gebrauchtfahrzeuge</a>
+				%{--<g:link controller="inhalt" action="gebrauchtfahrzeuge">Gebrauchtfahrzeuge</g:link>--}%
 			</li>
 
 		</ul>
