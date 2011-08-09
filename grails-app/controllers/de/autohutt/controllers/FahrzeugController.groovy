@@ -478,12 +478,22 @@ class FahrzeugController
 
 	def anzeigen =
 	{
-        def fahrzeug = Fahrzeug.get( params.id )
+		def fahrzeug = null
+
+		if(params.id)
+		{
+         	fahrzeug = Fahrzeug.get( params.id )
+		}
+		else if(params.modell && params.marke)
+		{
+			fahrzeug = Fahrzeug.findByModellAndMarke(params.modell, params.marke)
+		}
 
         if(!fahrzeug)
 		{
-            flash.message = "Fahrzeug mit der ID ${params.id} konnte nicht gefunden werden!"
-            redirect(action:list)
+            flash.message = "Fahrzeug konnte nicht gefunden werden!"
+            
+			redirect(action:list)
         }
         else
 		{

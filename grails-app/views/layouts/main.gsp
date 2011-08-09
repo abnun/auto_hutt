@@ -114,7 +114,8 @@
 				<a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/2" target="_blank">EU-Bestellfahrzeuge</a>
 			</li>
 			<li>
-				<a href="http://webspace1.ssis.de/22658eln/-/deutsche-bestellangebote.html" target="_blank">Deutsche Bestellfahrzeuge zu Top Konditionen</a>
+				<g:link controller="inhalt" action="bestellfahrzeuge">Deutsche Bestellfahrzeuge zu Top Konditionen</g:link>
+				%{--<a href="http://webspace1.ssis.de/22658eln/-/deutsche-bestellangebote.html" target="_blank">Deutsche Bestellfahrzeuge zu Top Konditionen</a>--}%
 			</li>
 			<li>
 				<a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/1" target="_blank">Nutzfahrzeuge</a>
