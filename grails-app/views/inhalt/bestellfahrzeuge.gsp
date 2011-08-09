@@ -1,3 +1,4 @@
+<html>
 %{--
 <html>
     <head>
@@ -12,10 +13,8 @@
 
 	</body>
 </html>--}%
-
-<html>
     <head>
-		<title>Gebrauchtfahrzeuge</title>
+		<title>Bestellfahrzeuge zu Top Konditionen</title>
         <meta name="layout" content="main"/>
     </head>
 
