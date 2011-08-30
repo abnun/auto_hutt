@@ -1,8 +1,6 @@
 package de.autohutt.controllers
 
 import org.springframework.web.multipart.MultipartFile
-import org.codehaus.groovy.grails.commons.ApplicationHolder
-import de.autohutt.domain.Bild
 import de.autohutt.domain.Fahrzeug
 import de.webmpuls.photo_album.Album
 import de.webmpuls.photo_album.Picture
