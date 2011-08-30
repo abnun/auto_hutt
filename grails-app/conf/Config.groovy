@@ -56,6 +56,8 @@ photo_album.default.thumbnail.height=59
 
 photo_album.default.big.width=400
 
+photo_album.default.database.table.prefix = ""
+
 // log4j configuration
 log4j = {
     // Example of changing the log pattern for the default console
