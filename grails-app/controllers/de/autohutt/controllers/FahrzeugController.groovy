@@ -4,6 +4,7 @@ import org.springframework.web.multipart.MultipartFile
 import de.autohutt.domain.Fahrzeug
 import de.webmpuls.photo_album.Album
 import de.webmpuls.photo_album.Picture
+import de.autohutt.domain.FahrzeugMarke
 
 class FahrzeugController
 {
@@ -484,7 +485,12 @@ class FahrzeugController
 		}
 		else if(params.modell && params.marke)
 		{
-			fahrzeug = Fahrzeug.findByModellAndMarke(params.modell, params.marke)
+			FahrzeugMarke tmpMarke = FahrzeugMarke.findByName(params.marke)
+
+			if(tmpMarke)
+			{
+				fahrzeug = Fahrzeug.findByModellAndMarke(params.modell, tmpMarke)
+			}
 		}
 
         if(!fahrzeug)

@@ -36,31 +36,31 @@
 						<g:each in="${fahrzeugList}" status="i" var="fahrzeug">
 							<tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
 
-								<td><g:link action="anzeigen" id="${fahrzeug.id}">${fieldValue(bean:fahrzeug, field:'marke')}</g:link></td>
+								<td><g:link mapping="fahrzeugAnzeigen" params="[marke: fahrzeug.marke, modell: fahrzeug.modell]">${fieldValue(bean:fahrzeug, field:'marke')}</g:link></td>
 
 								%{--<td>${fieldValue(bean:fahrzeug, field:'marke')}</td>--}%
 
-								<td><g:link action="anzeigen" id="${fahrzeug.id}">${fieldValue(bean:fahrzeug, field:'modell')}</g:link></td>
+								<td><g:link mapping="fahrzeugAnzeigen" params="[marke: fahrzeug.marke, modell: fahrzeug.modell]">${fieldValue(bean:fahrzeug, field:'modell')}</g:link></td>
 
 								%{--<td>${fieldValue(bean:fahrzeug, field:'modell')}</td>--}%
 
-								<td><g:link action="anzeigen" id="${fahrzeug.id}">${fieldValue(bean:fahrzeug, field:'farbe')}</g:link></td>
+								<td><g:link mapping="fahrzeugAnzeigen" params="[marke: fahrzeug.marke, modell: fahrzeug.modell]">${fieldValue(bean:fahrzeug, field:'farbe')}</g:link></td>
 
 								%{--<td>${fieldValue(bean:fahrzeug, field:'farbe')}</td>--}%
 
-								<td><g:link action="anzeigen" id="${fahrzeug.id}">${fieldValue(bean:fahrzeug, field:'baujahr')}</g:link></td>
+								<td><g:link mapping="fahrzeugAnzeigen" params="[marke: fahrzeug.marke, modell: fahrzeug.modell]">${fieldValue(bean:fahrzeug, field:'baujahr')}</g:link></td>
 
 								%{--<td>${fieldValue(bean:fahrzeug, field:'baujahr')}</td>--}%
 
-								<td><g:link action="anzeigen" id="${fahrzeug.id}">${fieldValue(bean:fahrzeug, field:'kw')}</g:link></td>
+								<td><g:link mapping="fahrzeugAnzeigen" params="[marke: fahrzeug.marke, modell: fahrzeug.modell]">${fieldValue(bean:fahrzeug, field:'kw')}</g:link></td>
 
 								%{--<td>${fieldValue(bean:fahrzeug, field:'kw')}</td>--}%
 
-								<td><g:link action="anzeigen" id="${fahrzeug.id}">${fieldValue(bean:fahrzeug, field:'kmStand')}</g:link></td>
+								<td><g:link mapping="fahrzeugAnzeigen" params="[marke: fahrzeug.marke, modell: fahrzeug.modell]">${fieldValue(bean:fahrzeug, field:'kmStand')}</g:link></td>
 
 								%{--<td>${fieldValue(bean:fahrzeug, field:'kmStand')}</td>--}%
 
-								<td nowrap="nowrap"><g:link action="anzeigen" id="${fahrzeug.id}"><g:formatNumber number="${fahrzeug.preis}" format="###,##0',--'" /></g:link></td>
+								<td nowrap="nowrap"><g:link mapping="fahrzeugAnzeigen" params="[marke: fahrzeug.marke, modell: fahrzeug.modell]"><g:formatNumber number="${fahrzeug.preis}" format="###,##0',--'" /></g:link></td>
 
 								%{--<td>${fieldValue(bean:fahrzeug, field:'preis')}</td>--}%
 							</tr>

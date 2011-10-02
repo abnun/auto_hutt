@@ -2,6 +2,12 @@ class UrlMappings
 {
 	static mappings =
 	{
+
+		name fahrzeugAnzeigen: "/fahrzeug/anzeigen/$marke-$modell" {
+			controller = 'fahrzeug'
+			action = 'anzeigen'
+		}
+
 		"/"(controller: 'inhalt')
 
 		"/liste/$action"(controller: 'fahrzeug', action: 'index')
@@ -11,8 +17,6 @@ class UrlMappings
 		"/liste/lagerfahrzeuge"(controller: 'fahrzeug', action: 'lagerfahrzeuge')
 
 		"/login"(controller: 'authentication', action: 'index')
-
-		"/fahrzeug/anzeigen/$marke-$modell" (controller: 'fahrzeug', action: 'anzeigen')
 
 		"/$controller/$action?/$id?" {
 			constraints {
