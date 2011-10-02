@@ -3,7 +3,7 @@ class UrlMappings
 	static mappings =
 	{
 
-		name fahrzeugAnzeigen: "/fahrzeug/anzeigen/$marke-$modell" {
+		name fahrzeugAnzeigen: "/fahrzeug/anzeigen/$id/$marke-$modell" {
 			controller = 'fahrzeug'
 			action = 'anzeigen'
 		}
