@@ -97,7 +97,7 @@
 
 			<li>
 
-                <a href="http://www.apec-sales.de/index.php?parid=13&verify=498763028723452&c=3&P=1" target="_blank">EU-Neufahrzeuge ab Lager I</a>
+                <a href="http://www.partner.apec-sales.de/index.php?parid=759&verify=209876302872759&p=1" target="_blank">EU-Neufahrzeuge ab Lager I</a>
 
             </li>
 
