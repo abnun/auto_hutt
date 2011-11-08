@@ -21,6 +21,9 @@
 
 	<script type="text/javascript" src="${resource(dir: 'js/jquery/', file: 'jquery-1.4.2-min.js', plugin: 'jquery')}"></script>
 	<wm_photo_album:gallery_resources noGallery="true" />
+	<g:javascript>
+		hs.showCredits = false;
+	</g:javascript>
 </head>
 <body>
 <div class="body">
