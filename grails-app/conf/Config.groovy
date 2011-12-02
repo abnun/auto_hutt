@@ -89,7 +89,7 @@ photo_album.default.big.width=400
 
 photo_album.default.database.table.prefix = ""
 
-grails.plugin.databasemigration.updateOnStart = true
+grails.plugin.databasemigration.updateOnStart = false
 grails.plugin.databasemigration.updateOnStartFileNames = ["changelog.groovy"]
 
 // log4j configuration
