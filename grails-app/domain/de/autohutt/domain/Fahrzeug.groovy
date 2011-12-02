@@ -12,10 +12,15 @@ class Fahrzeug implements Serializable
 	Double preis
 	String baujahr
     String ausstattung
-    String kombiniert
+
+	String kombiniert
     String innerorts
     String ausserorts
     String co2
+	String fahrzeugmasse
+	String jahressteuer
+	String energietraegerkosten
+	String co2Effizienz
 
 	Boolean gebraucht
 	Boolean neu
@@ -37,13 +42,18 @@ class Fahrzeug implements Serializable
 		kw()
 		kmStand(nullable: true)
 		preis()
-        ausstattung()
+        ausstattung(maxSize: 1073741824)
 		gebraucht(nullable: true)
 		neu(nullable: true)
-        kombiniert(blank: false)
+
+		kombiniert(blank: false)
         innerorts(blank: false)
         ausserorts(blank: false)
         co2(blank: false)
+		fahrzeugmasse(blank: false)
+		jahressteuer(blank: false)
+		energietraegerkosten(blank: false)
+		co2Effizienz(blank: false)
    }
 
     public String toString()

@@ -134,6 +134,43 @@
                                 </td>
                             </tr>
 
+							<tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="fahrzeugmasse">Fahrzeugmasse:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'fahrzeugmasse','errors')}">
+                                    <input type="text" id="fahrzeugmasse" name="fahrzeugmasse" value="${fieldValue(bean:fahrzeug,field:'fahrzeugmasse')}"/>
+                                </td>
+                            </tr>
+
+							<tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="jahressteuer">Jahressteuer:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'jahressteuer','errors')}">
+                                    <input type="text" id="jahressteuer" name="jahressteuer" value="${fieldValue(bean:fahrzeug,field:'jahressteuer')}"/>
+                                </td>
+                            </tr>
+
+							<tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="energietraegerkosten">Energietr&auml;gerkosten:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'energietraegerkosten','errors')}">
+									<input type="text" id="energietraegerkosten" name="energietraegerkosten" value="${fieldValue(bean:fahrzeug,field:'energietraegerkosten')}"/>
+                                </td>
+                            </tr>
+
+							<tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="co2Effizienz">CO2-Effizienz:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'co2Effizienz','errors')}">
+                                    <g:select from="${['A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G']}" keys="${['aplus', 'a', 'b', 'c', 'd', 'e', 'f', 'g']}" name="co2Effizienz" value="${fahrzeug?.co2Effizienz}" ></g:select>
+									%{--<input type="text" id="co2Effizienz" name="co2Effizienz" value="${fieldValue(bean:fahrzeug,field:'co2Effizienz')}"/>--}%
+                                </td>
+                            </tr>
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="gebraucht">Gebraucht:</label>
