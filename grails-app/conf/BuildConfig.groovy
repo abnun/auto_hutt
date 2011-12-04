@@ -37,9 +37,6 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 
         // runtime 'mysql:mysql-connector-java:5.1.16'
-
-		// Add HSQLDB As A Runtime Dependency
-        runtime 'hsqldb:hsqldb:1.8.0.10'
     }
 
 	credentials {
