@@ -197,14 +197,14 @@
 			<br/>
 			<table cellpadding="0" cellspacing="0" style="border: none;">
 				<tr>
-					<th style="border: 1px solid white; border-top: none;" nowrap="nowrap">
+					<th colspan="2" style="border: 1px solid white; border-top: none;" nowrap="nowrap">
 						Weitere Bilder:
 					</th>
 				</tr>
 				<tr>
-					<td style="padding-top: 8px;">
-						<g:each status="i" var="bild" in="${fahrzeugBilder}">
-							<g:if test="${i > 0 && i <= 3}">
+					<g:each status="i" var="bild" in="${fahrzeugBilder}">
+						<g:if test="${i > 0 && i <= 3}">
+							<td style="padding-top: 8px;">
 								<a href="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.BIG, albumName: ((Picture) bild).album.getName())}" class="highslide"
 								   onclick="return hs.expand(this, {wrapperClassName: 'highslide-no-border', dimmingOpacity: 0.75, align: 'center'})">
 									<img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.THUMBNAIL, albumName: ((Picture) bild).album.getName())}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
@@ -212,10 +212,9 @@
 								</a>
 
 								<div id="closebutton" class="highslide-overlay closebutton" onclick="return hs.close(this)" title="Schließen"></div>
-								<br />
-							</g:if>
-						</g:each>
-					</td>
+							</td>
+						</g:if>
+					</g:each>
 				</tr>
 			</table>
 		</g:if>
@@ -291,7 +290,7 @@
 				</tr>
 				<tr>
 					<td style="border: 1px solid white;" colspan="2">
-						<img src="${resource(dir: '/medias/fahrzeug', file: 'co2effizienz_' + fahrzeug.co2Effizienz + '.png')}"
+						<img src="${resource(dir: '/medias/fahrzeug', file: 'co2effizienz_' + fahrzeug.co2Effizienz + '.png')}" />
 					</td>
 				</tr>
 			</table>
