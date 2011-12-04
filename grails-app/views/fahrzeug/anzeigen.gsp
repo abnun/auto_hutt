@@ -282,19 +282,21 @@
 				</tr>
 			</table>
 			<br/>
-			<table cellpadding="0" cellspacing="0" style="border: none; border-collapse: collapse;">
-				<tr style="border: 1px solid white;">
-					<th colspan="2" style="border: 1px solid white; border-top: none;" nowrap="nowrap">
-						CO2-Effizienz:
-					</th>
-				</tr>
-				<tr>
-					<td style="border: 1px solid white;" colspan="2">
-						<img src="${resource(dir: '/medias/fahrzeug', file: 'co2effizienz_' + fahrzeug.co2Effizienz + '.png')}" />
-					</td>
-				</tr>
-			</table>
-			<br/>
+			<g:if test="${['aplus', 'a', 'b', 'c', 'd', 'e', 'f', 'g'].contains(fahrzeug?.co2Effizienz)}">
+				<table cellpadding="0" cellspacing="0" style="border: none; border-collapse: collapse;">
+					<tr style="border: 1px solid white;">
+						<th colspan="2" style="border: 1px solid white; border-top: none;" nowrap="nowrap">
+							CO2-Effizienz:
+						</th>
+					</tr>
+					<tr>
+						<td style="border: 1px solid white;" colspan="2">
+							<img src="${resource(dir: '/medias/fahrzeug', file: 'co2effizienz_' + fahrzeug.co2Effizienz + '.png')}" />
+						</td>
+					</tr>
+				</table>
+				<br />
+			</g:if>
 		<g:if test="${session.user}">
 			<br />
 
