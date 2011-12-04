@@ -36,7 +36,7 @@
 <%
 	def fahrzeugBilder = []
 %>
-<table cellpadding="0" cellspacing="0" style="border: none; width: 650px;">
+<table cellpadding="0" cellspacing="0" style="border: none; width: 640px;">
 	<tr>
 		<g:if test="${!fahrzeug.bilder?.isEmpty()}">
 			<%
