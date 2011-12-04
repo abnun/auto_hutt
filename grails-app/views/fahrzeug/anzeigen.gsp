@@ -36,7 +36,7 @@
 <%
 	def fahrzeugBilder = []
 %>
-<table cellpadding="0" cellspacing="0" style="border: none; width: 610px;">
+<table cellpadding="0" cellspacing="0" style="border: none; width: 650px;">
 	<tr>
 		<g:if test="${!fahrzeug.bilder?.isEmpty()}">
 			<%
@@ -55,40 +55,6 @@
 					</g:if>
 				</g:each>
 				<br/>
-				<br/>
-				<table cellpadding="0" cellspacing="0" style="border: 1px solid white; border-collapse: collapse;">
-					<g:if test="${fahrzeug.ausstattung != null}">
-						<%
-							def fahrzeugAusstattungen = ((String) fahrzeug.ausstattung).tokenize(';')
-							int size = fahrzeugAusstattungen.size()
-							int halfSize = size / 2
-						%>
-						<tr style="border: 1px solid white;">
-							<th>
-								%{--<th colspan="14">--}%
-								Fahrzeugausstattung
-							</th>
-						</tr>
-						<tr style="border: 1px solid white;">
-							<td>
-								%{--<td colspan="7">--}%
-								<ul style="list-style-type:square;">
-									<g:each status="i" var="ausstattung" in="${fahrzeugAusstattungen}">
-										<li>
-											${ausstattung.trim()}
-										</li>
-									%{--<g:if test="${i / halfSize == 1}">
-									 </ul>
-									</td>
-									<td colspan="7">
-									 <ul style="list-style-type:square;">
-								 </g:if>--}%
-									</g:each>
-								</ul>
-							</td>
-						</tr>
-					</g:if>
-				</table>
 			</td>
 		</g:if>
 		<g:else>
@@ -188,14 +154,14 @@
 					</td>
 					<td style="border: 1px solid white;">
 						<b>
-							<g:formatNumber number="${fahrzeug.preis}" format="###,##0',--'" />
+							<g:formatNumber number="${fahrzeug.preis}" format="#,###,##0',--'" locale="${Locale.GERMAN}" />
 						</b>
 					</td>
 				</tr>
 			</table>
 		<g:if test="${fahrzeug.bilder?.size() > 1}">
 			<br/>
-			<table cellpadding="0" cellspacing="0" style="border: none;">
+			<table cellpadding="0" cellspacing="0" style="border: 1px solid white; border-collapse: collapse;">
 				<tr>
 					<th colspan="2" style="border: 1px solid white; border-top: none;" nowrap="nowrap">
 						Weitere Bilder:
@@ -218,6 +184,45 @@
 				</tr>
 			</table>
 		</g:if>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table cellpadding="0" cellspacing="0" style="border: 1px solid white; border-collapse: collapse;">
+				<g:if test="${fahrzeug.ausstattung != null}">
+					<%
+						def fahrzeugAusstattungen = ((String) fahrzeug.ausstattung).tokenize(';')
+						int size = fahrzeugAusstattungen.size()
+						int halfSize = size / 2
+					%>
+					<tr style="border: 1px solid white;">
+						<th>
+							%{--<th colspan="14">--}%
+							Fahrzeugausstattung
+						</th>
+					</tr>
+					<tr style="border: 1px solid white;">
+						<td>
+							%{--<td colspan="7">--}%
+							<ul style="list-style-type:square;">
+								<g:each status="i" var="ausstattung" in="${fahrzeugAusstattungen}">
+									<li>
+										${ausstattung.trim()}
+									</li>
+								%{--<g:if test="${i / halfSize == 1}">
+																	 </ul>
+																	</td>
+																	<td colspan="7">
+																	 <ul style="list-style-type:square;">
+																 </g:if>--}%
+								</g:each>
+							</ul>
+						</td>
+					</tr>
+				</g:if>
+			</table>
+		</td>
+		<td>
 			<table cellpadding="0" cellspacing="0" style="border: none; border-collapse: collapse;">
 				<tr style="border: 1px solid white;">
 					<th colspan="2" style="border: 1px solid white; border-top: none;" nowrap="nowrap">
@@ -229,7 +234,7 @@
 						<b>Kombiniert</b>
 					</td>
 					<td style="border: 1px solid white;">
-						${fahrzeug.kombiniert}l / 100
+						${fahrzeug.kombiniert}l/100km
 					</td>
 				</tr>
 				<tr>
@@ -237,7 +242,7 @@
 						<b>Innerorts</b>
 					</td>
 					<td style="border: 1px solid white;">
-						${fahrzeug.innerorts}l / 100
+						${fahrzeug.innerorts}l/100km
 					</td>
 				</tr>
 				<tr>
@@ -245,7 +250,7 @@
 						<b>Ausserorts</b>
 					</td>
 					<td style="border: 1px solid white;">
-						${fahrzeug.ausserorts}l / 100
+						${fahrzeug.ausserorts}l/100km
 					</td>
 				</tr>
 				<tr>
@@ -253,7 +258,7 @@
 						<b>CO2</b>
 					</td>
 					<td style="border: 1px solid white;">
-						${fahrzeug.co2}g / Km
+						${fahrzeug.co2}g/Km
 					</td>
 				</tr>
 				<tr>
@@ -266,22 +271,22 @@
 				</tr>
 				<tr>
 					<td style="border: 1px solid white;">
-						<b>Jahressteuer</b>
+						<b>Jahressteuer&nbsp;(&euro;)</b>
 					</td>
 					<td style="border: 1px solid white;">
-						${fahrzeug.jahressteuer} &euro;
+						<g:formatNumber number="${fahrzeug.jahressteuer}" format="0.00" locale="${Locale.GERMAN}" />
 					</td>
 				</tr>
 				<tr>
 					<td style="border: 1px solid white;">
-						<b>Energietr&auml;gerkosten</b>
+						<b>Energietr&auml;ger-kosten&nbsp;(&euro;)</b>
 					</td>
 					<td style="border: 1px solid white;">
-						${fahrzeug.energietraegerkosten} &euro;
+						<g:formatNumber number="${fahrzeug.energietraegerkosten}" format="0.00" locale="${Locale.GERMAN}" />
 					</td>
 				</tr>
 			</table>
-			<br/>
+			<br />
 			<g:if test="${['aplus', 'a', 'b', 'c', 'd', 'e', 'f', 'g'].contains(fahrzeug?.co2Effizienz)}">
 				<table cellpadding="0" cellspacing="0" style="border: none; border-collapse: collapse;">
 					<tr style="border: 1px solid white;">
@@ -297,49 +302,49 @@
 				</table>
 				<br />
 			</g:if>
-		<g:if test="${session.user}">
-			<br />
-
-			<div style="text-align: left;">
-				<g:link controller="fahrzeug" action="edit" id="${fahrzeug.id}">Stammdaten bearbeiten</g:link>
-				<br />
+			<g:if test="${session.user}">
 				<br />
 
-				<g:link controller="fahrzeug" action="uploadPictures" id="${fahrzeug.id}">Bilder bearbeiten</g:link>
-				<br />
-				<br />
+				<div style="text-align: left;">
+					<g:link controller="fahrzeug" action="edit" id="${fahrzeug.id}">Stammdaten bearbeiten</g:link>
+					<br />
+					<br />
 
-				<g:link controller="fahrzeug" action="list">Komplette Fahrzeugliste anzeigen</g:link>
-			</div>
-		</g:if>
-			%{--<g:if test="${fahrzeug.bilder?.size() > 1}">
-				<table cellpadding="0" cellspacing="0" style="border: 0px; margin-top: 5px;">
-					<tr>
-						<th colspan="2" style="border: 1px solid white; border-top: none;" nowrap="nowrap">
-							Weitere Bilder:
-						</th>
-					</tr>
-					<tr>
-						<g:each status="i" var="bild" in="${fahrzeugBilder}">
-							<g:if test="${i > 0 && i <= 3}">
-								<td style="padding: 3px 0px;;">
-									<a href="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.BIG, albumName: ((Picture) bild).album.getName())}" class="highslide"
-									   onclick="return hs.expand(this, {wrapperClassName: 'highslide-no-border', dimmingOpacity: 0.75, align: 'center'})">
-										<img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.THUMBNAIL, albumName: ((Picture) bild).album.getName())}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
-											 title="Klicken Sie hier, um eine vergr&ouml;&szlig;erte Ansicht des Bildes zu bekommen" />
-									</a>
-									<!--<div class="highslide-caption"></div>-->
-									<div id="closebutton" class="highslide-overlay closebutton" onclick="return hs.close(this)" title="Schließen"></div>
-									--}%%{--<img src="${request.getContextPath()}${bild.dateiName}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"/>--}%%{--
-									<br />
-									<br />
-								</td>
-							</g:if>
+					<g:link controller="fahrzeug" action="uploadPictures" id="${fahrzeug.id}">Bilder bearbeiten</g:link>
+					<br />
+					<br />
 
-						</g:each>
-					</tr>
-				</table>
-			</g:if>--}%
+					<g:link controller="fahrzeug" action="list">Komplette Fahrzeugliste anzeigen</g:link>
+				</div>
+			</g:if>
+		%{--<g:if test="${fahrzeug.bilder?.size() > 1}">
+			   <table cellpadding="0" cellspacing="0" style="border: 0px; margin-top: 5px;">
+				   <tr>
+					   <th colspan="2" style="border: 1px solid white; border-top: none;" nowrap="nowrap">
+						   Weitere Bilder:
+					   </th>
+				   </tr>
+				   <tr>
+					   <g:each status="i" var="bild" in="${fahrzeugBilder}">
+						   <g:if test="${i > 0 && i <= 3}">
+							   <td style="padding: 3px 0px;;">
+								   <a href="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.BIG, albumName: ((Picture) bild).album.getName())}" class="highslide"
+									  onclick="return hs.expand(this, {wrapperClassName: 'highslide-no-border', dimmingOpacity: 0.75, align: 'center'})">
+									   <img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.THUMBNAIL, albumName: ((Picture) bild).album.getName())}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
+											title="Klicken Sie hier, um eine vergr&ouml;&szlig;erte Ansicht des Bildes zu bekommen" />
+								   </a>
+								   <!--<div class="highslide-caption"></div>-->
+								   <div id="closebutton" class="highslide-overlay closebutton" onclick="return hs.close(this)" title="Schließen"></div>
+								   --}%%{--<img src="${request.getContextPath()}${bild.dateiName}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"/>--}%%{--
+								   <br />
+								   <br />
+							   </td>
+						   </g:if>
+
+					   </g:each>
+				   </tr>
+			   </table>
+		   </g:if>--}%
 		</td>
 	</tr>
 </table>
