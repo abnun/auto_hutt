@@ -261,6 +261,7 @@
 						${fahrzeug.co2}g/Km
 					</td>
 				</tr>
+				<g:if test="${false}">
 				<tr>
 					<td style="border: 1px solid white;">
 						<b>Fahrzeugmasse</b>
@@ -285,6 +286,7 @@
 						<g:formatNumber number="${fahrzeug.energietraegerkosten}" format="0.00" locale="${Locale.GERMAN}" />
 					</td>
 				</tr>
+				</g:if>
 			</table>
 			<br />
 			<g:if test="${['aplus', 'a', 'b', 'c', 'd', 'e', 'f', 'g'].contains(fahrzeug?.co2Effizienz)}">
