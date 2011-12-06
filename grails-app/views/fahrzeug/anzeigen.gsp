@@ -261,7 +261,7 @@
 						${fahrzeug.co2}g/Km
 					</td>
 				</tr>
-				<g:if test="${false}">
+				<g:if test="${true}">
 				<tr>
 					<td style="border: 1px solid white;">
 						<b>Fahrzeugmasse</b>
@@ -280,7 +280,7 @@
 				</tr>
 				<tr>
 					<td style="border: 1px solid white;">
-						<b>Energietr&auml;ger-kosten&nbsp;(&euro;)</b>
+						<b>Energietr&auml;ger-kosten <span style="font-size: x-small;">bei einer Laufleistung von 20.000 km</span>&nbsp;(&euro;)</b>
 					</td>
 					<td style="border: 1px solid white;">
 						<g:formatNumber number="${fahrzeug.energietraegerkosten}" format="0.00" locale="${Locale.GERMAN}" />
