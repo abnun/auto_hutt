@@ -166,7 +166,7 @@
                                     <label for="co2Effizienz">CO2-Effizienz:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'co2Effizienz','errors')}">
-                                    <g:select from="${['A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G']}" keys="${['aplus', 'a', 'b', 'c', 'd', 'e', 'f', 'g']}" name="co2Effizienz" value="${fahrzeug?.co2Effizienz}" ></g:select>
+                                    <g:select from="${['Keine Auswahl', 'A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G']}" keys="${['null', 'aplus', 'a', 'b', 'c', 'd', 'e', 'f', 'g']}" name="co2Effizienz" value="${fahrzeug?.co2Effizienz}" ></g:select>
 									%{--<input type="text" id="co2Effizienz" name="co2Effizienz" value="${fieldValue(bean:fahrzeug,field:'co2Effizienz')}"/>--}%
                                 </td>
                             </tr>
