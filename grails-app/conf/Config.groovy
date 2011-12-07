@@ -74,7 +74,7 @@ environments
     production {
         grails.logging.jul.usebridge = false
     
-        grails.serverURL = "http://www.autohutt.de"
+//        grails.serverURL = "http://www.autohutt.de"
         media.save.dir="/opt/tomcat/webapps/auto_hutt/medias/"
     }
 }

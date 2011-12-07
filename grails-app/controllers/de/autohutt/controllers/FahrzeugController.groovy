@@ -103,7 +103,7 @@ class FahrzeugController
 			if(!fahrzeug.hasErrors() && fahrzeug.save())
 			{
                 flash.message = "Fahrzeug '${fahrzeug.marke} ${fahrzeug.modell}' wurde ge&auml;ndert!"
-                redirect(action:anzeigen,id:fahrzeug.id)
+                redirect(action: 'anzeigen', id: fahrzeug.id, mapping: 'fahrzeugAnzeigen')
             }
             else
 			{
