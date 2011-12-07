@@ -41,7 +41,7 @@ class AuthenticationController
 			}
 			else
 			{
-				redirect(controller: "fahrzeug")
+				redirect(controller: "fahrzeug", action: 'list')
 			}
 		}
 		else

@@ -258,35 +258,42 @@
 						<b>CO2</b>
 					</td>
 					<td style="border: 1px solid white;">
-						${fahrzeug.co2}g/Km
+						${fahrzeug.co2}g/km
 					</td>
 				</tr>
-				<g:if test="${true}">
-				<tr>
-					<td style="border: 1px solid white;">
-						<b>Fahrzeugmasse</b>
-					</td>
-					<td style="border: 1px solid white;">
-						${fahrzeug.fahrzeugmasse}kg
-					</td>
-				</tr>
-				<tr>
-					<td style="border: 1px solid white;">
-						<b>Jahressteuer&nbsp;(&euro;)</b>
-					</td>
-					<td style="border: 1px solid white;">
-						<g:formatNumber number="${fahrzeug.jahressteuer}" format="0.00" locale="${Locale.GERMAN}" />
-					</td>
-				</tr>
-				<tr>
-					<td style="border: 1px solid white;">
-						<b>Energietr&auml;ger-kosten <span style="font-size: x-small;">bei einer Laufleistung von 20.000 km</span>&nbsp;(&euro;)</b>
-					</td>
-					<td style="border: 1px solid white;">
-						<g:formatNumber number="${fahrzeug.energietraegerkosten}" format="0.00" locale="${Locale.GERMAN}" />
-					</td>
-				</tr>
-				</g:if>
+                <g:if test="${fahrzeug.fahrzeugmasse != '0'}">
+                    <tr>
+                        <td style="border: 1px solid white;">
+                            <b>Fahrzeugmasse</b>
+                        </td>
+                        <td style="border: 1px solid white;">
+                            ${fahrzeug.fahrzeugmasse}kg
+                        </td>
+                    </tr>
+                </g:if>
+                <g:if test="${fahrzeug.jahressteuer != '0'}">
+                    <tr>
+                        <td style="border: 1px solid white;">
+                            <b>Jahressteuer&nbsp;(&euro;)</b>
+                        </td>
+                        <td style="border: 1px solid white;">
+                            <g:formatNumber number="${fahrzeug.jahressteuer}" format="0.00" locale="${Locale.GERMAN}"/>
+                        </td>
+                    </tr>
+                </g:if>
+                <g:if test="${fahrzeug.energietraegerkosten != '0'}">
+                    <tr>
+                        <td style="border: 1px solid white;">
+                            <b>Energietr&auml;ger-kosten <span
+                                    style="font-size: x-small;">bei einer Laufleistung von 20.000 km</span>&nbsp;(&euro;)
+                            </b>
+                        </td>
+                        <td style="border: 1px solid white;">
+                            <g:formatNumber number="${fahrzeug.energietraegerkosten}" format="0.00"
+                                            locale="${Locale.GERMAN}"/>
+                        </td>
+                    </tr>
+                </g:if>
 			</table>
 			<br />
 			<g:if test="${['aplus', 'a', 'b', 'c', 'd', 'e', 'f', 'g'].contains(fahrzeug?.co2Effizienz)}">
