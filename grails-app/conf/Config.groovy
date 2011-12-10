@@ -124,11 +124,12 @@ log4j = {
 	       'org.codehaus.groovy.grails.plugins', // plugins
 	       'org.codehaus.groovy.grails.orm.hibernate', // hibernate integration
 	       'org.springframework',
-	       'org.hibernate'
+	       'org.hibernate',
+            'grails.app.service.org.grails.plugin.resource'
 
-    warn   'org.mortbay.log'
+    warn    'org.mortbay.log'
 
-	debug	'grails.app'
+//	debug   'grails.app'
 }
 
 
