@@ -50,10 +50,10 @@ class Fahrzeug implements Serializable
         innerorts(blank: false)
         ausserorts(blank: false)
         co2(blank: false)
-		fahrzeugmasse(blank: false)
-		jahressteuer(blank: false)
-		energietraegerkosten(blank: false)
-		co2Effizienz(blank: false)
+		fahrzeugmasse(blank: true)
+		jahressteuer(blank: true)
+		energietraegerkosten(blank: true)
+		co2Effizienz(blank: true)
    }
 
     public String toString()

@@ -1,22 +1,13 @@
 <%@ page import="de.webmpuls.photo_album.util.MediaUtils; de.webmpuls.photo_album.Picture;" %>
 <html>
 <head>
-	<meta name="layout" content="main" />
-	<title>${fahrzeug.gebraucht ? 'Gebrauchtfahrzeug: ' : 'Neufahrzeug: '}${fahrzeug?.marke} ${fahrzeug?.modell} anzeigen</title>
+	<meta name="layout" content="html5boilerplate" />
+	<title>${fahrzeug.gebraucht ? 'Gebrauchtfahrzeug: ' : 'Neufahrzeug: '}${fahrzeug?.marke} ${fahrzeug?.modell}</title>
 
 	<style type="text/css">
 
 		/* ... file-local CSS props ... */
 
-	#naviDiv {
-		height: 940px;
-		*height: 938px;
-	}
-
-	#contentDiv {
-		height: 943px;
-		*height: 938px;
-	}
 	</style>
 
 	<script type="text/javascript" src="${resource(dir: 'js/jquery/', file: 'jquery-1.7.min.js', plugin: 'jquery')}"></script>

@@ -1,6 +1,6 @@
 <html>
     <head>
-        <meta name="layout" content="main" />
+        <meta name="layout" content="html5boilerplate" />
         <title>Fahrzeug-Liste</title>
 
         <g:javascript>

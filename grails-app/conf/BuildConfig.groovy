@@ -49,14 +49,18 @@ grails.project.dependency.resolution = {
 
     plugins {
         compile ":hibernate:$grailsVersion"
-        compile ":jquery:1.7"
-        compile ":resources:1.0.2"
+        compile ":jquery:1.7.1"
+        compile ":resources:1.1.6"
 
         build ":tomcat:$grailsVersion"
 
 		compile (":photo-album:0.8.1") {
 			transitive = false
 		}
+
+        compile ":html-five-boilerplate:1.0"
+        compile ":modernizr:1.7.2"
+        compile ':nine-sixty-grid-system:latest.integration'
 
 		runtime ":database-migration:1.0"
     }

@@ -1,7 +1,7 @@
 <html>
     <head>
 		<title>Bestellfahrzeuge zu Top Konditionen</title>
-        <meta name="layout" content="main"/>
+        <meta name="layout" content="html5boilerplate" />
     </head>
 
     <body>
@@ -22,4 +22,16 @@
 		</div>
 
 	</body>
+<r:script>
+    $(document).ready(function() {
+
+        var naviheight = $("#naviDiv").outerHeight(true);
+        var contentheight = $("#contentDiv").outerHeight(true);
+
+        if(contentheight < naviheight)
+        {
+            $("#contentDiv").height(naviheight - 20)
+        }
+    });
+</r:script>
 </html>

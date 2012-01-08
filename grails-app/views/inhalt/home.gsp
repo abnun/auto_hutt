@@ -1,23 +1,6 @@
 <html>
     <head>
-        <meta name="layout" content="main"/>
-
-        <style type="text/css">
-
-		/* ... file-local CSS props ... */
-
-		#contentDiv {
-			padding-right: 0px;
-            width: 668px;
-	        * width: 705px;
-		}
-
-        #naviDiv {
-            height: 618px;
-	        * height: 639px;
-		}
-		</style>
-
+        <meta name="layout" content="html5boilerplate" />
     </head>
 
     <body>
@@ -63,4 +46,16 @@
 		</div>
 
 	</body>
+<r:script>
+    $(document).ready(function() {
+
+        var naviheight = $("#naviDiv").outerHeight(true);
+        var contentheight = $("#contentDiv").outerHeight(true);
+
+        if(contentheight < naviheight)
+        {
+            $("#contentDiv").height(naviheight - 20)
+        }
+    });
+</r:script>
 </html>

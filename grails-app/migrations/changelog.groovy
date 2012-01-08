@@ -4,4 +4,6 @@ databaseChangeLog = {
 		// TODO add changes and preconditions here
 	}
 
+
+	include file: 'changelog-1.0.groovy'
 }

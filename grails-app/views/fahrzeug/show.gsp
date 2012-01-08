@@ -1,6 +1,6 @@
 <html>
     <head>
-        <meta name="layout" content="main" />
+        <meta name="layout" content="html5boilerplate" />
         <title>Fahrzeug ${fahrzeug?.marke} ${fahrzeug?.modell} anzeigen</title>
     </head>
     <body>

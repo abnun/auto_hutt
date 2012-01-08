@@ -1,7 +1,7 @@
 <%@ page import="de.webmpuls.photo_album.Picture; de.webmpuls.photo_album.util.MediaUtils" %>
 <html>
     <head>
-        <meta name="layout" content="main" />
+        <meta name="layout" content="html5boilerplate" />
         <title>Fahrzeug-Bild hochladen</title>
     </head>
     <body>
