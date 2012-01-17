@@ -254,7 +254,7 @@ class FahrzeugController
 			String fileName = "${fahrzeug.id.toString()}_1"
 
 			Picture newMedia1 = null
-            if(pictureService.uploadPhotos(file1, "/" + tmpAlbum.getName(), "", fileName, tmpAlbum.id.toString()))
+            if(pictureService.upload(file1, "/" + tmpAlbum.getName(), "", fileName, tmpAlbum.id.toString()))
             {
                 log.debug("fahrzeug -> $fahrzeug")
 
@@ -291,7 +291,7 @@ class FahrzeugController
 			String fileName = "${fahrzeug.id.toString()}_2"
 
 			Picture newMedia2 = null
-            if(pictureService.uploadPhotos(file2, "/" + tmpAlbum.getName(), "", fileName, tmpAlbum.id.toString()))
+            if(pictureService.upload(file2, "/" + tmpAlbum.getName(), "", fileName, tmpAlbum.id.toString()))
             {
                 log.debug("fahrzeug -> $fahrzeug")
 
@@ -329,7 +329,7 @@ class FahrzeugController
 			String fileName = "${fahrzeug.id.toString()}_3"
 
 			Picture newMedia3 = null
-            if(pictureService.uploadPhotos(file3, "/" + tmpAlbum.getName(), "", fileName, tmpAlbum.id.toString()))
+            if(pictureService.upload(file3, "/" + tmpAlbum.getName(), "", fileName, tmpAlbum.id.toString()))
             {
                 log.debug("fahrzeug -> $fahrzeug")
 
