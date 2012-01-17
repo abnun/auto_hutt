@@ -54,7 +54,7 @@ grails.project.dependency.resolution = {
 
         build ":tomcat:$grailsVersion"
 
-		compile (":photo-album:0.8.2") {
+		compile (":photo-album:0.9") {
 			transitive = false
 		}
 
