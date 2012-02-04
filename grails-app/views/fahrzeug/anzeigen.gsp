@@ -252,7 +252,7 @@
 						${fahrzeug.co2}g/km
 					</td>
 				</tr>
-                <g:if test="${fahrzeug.fahrzeugmasse != '0'}">
+                <g:if test="${fahrzeug.fahrzeugmasse && fahrzeug.fahrzeugmasse != '0'}">
                     <tr>
                         <td style="border: 1px solid white;">
                             <b>Fahrzeugmasse</b>
@@ -262,7 +262,7 @@
                         </td>
                     </tr>
                 </g:if>
-                <g:if test="${fahrzeug.jahressteuer != '0'}">
+                <g:if test="${fahrzeug.jahressteuer && fahrzeug.jahressteuer != '0'}">
                     <tr>
                         <td style="border: 1px solid white;">
                             <b>Jahressteuer&nbsp;(&euro;)</b>
@@ -272,7 +272,7 @@
                         </td>
                     </tr>
                 </g:if>
-                <g:if test="${fahrzeug.energietraegerkosten != '0'}">
+                <g:if test="${fahrzeug.energietraegerkosten && fahrzeug.energietraegerkosten != '0'}">
                     <tr>
                         <td style="border: 1px solid white;">
                             <b>Energietr&auml;ger-kosten <span
