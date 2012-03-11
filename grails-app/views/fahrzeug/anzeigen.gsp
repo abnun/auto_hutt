@@ -10,11 +10,11 @@
 
 	</style>
 
-	<script type="text/javascript" src="${resource(dir: 'js/jquery/', file: 'jquery-1.7.min.js', plugin: 'jquery')}"></script>
-	<wm_photo_album:gallery_resources noGallery="true" />
-	<g:javascript>
+	<r:require module="photo-album-gallery" />
+	<r:script>
 		hs.showCredits = false;
-	</g:javascript>
+        hs.graphicsDir = '${resource(dir: '/highslide/graphics/', plugin: 'photo-album')}'
+	</r:script>
 </head>
 
 <body>

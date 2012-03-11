@@ -27,6 +27,17 @@
 
     <g:layoutHead/>
     <r:require modules="auto-hutt"/>
+	<r:script disposition="head">
+		var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-7452991-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</r:script>
     <r:layoutResources/>
 </head>
 
@@ -35,7 +46,7 @@
     <header>
         <div class="container_12">
             <div class="grid_12 alpha" style="border: 1px solid #666;">
-                <map name="auto_hutt" id="auto_hutt"><area shape="circle" coords="134,90,85" href="${resource(dir: '')}"  alt="" title="Zurück zur Startseite"></map>
+                <map name="auto_hutt" id="auto_hutt"><area shape="circle" coords="134,90,85" href="${createLink(uri: '/')}"  alt="" title="Zurück zur Startseite"></map>
                 <r:img dir="images" file="auto_hutt_header_1000px.jpg" alt="Auto Hutt GmbH | 1a Autoservice" width="940" usemap="#auto_hutt" />
             </div>
         </div>
