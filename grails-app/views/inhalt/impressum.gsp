@@ -61,41 +61,96 @@
 	<br />
 
 	<div style="padding-right: 10px;">
-		<h3>Zu externen Links nehmen wir wie folgt Stellung</h3>
-		<p>
-			Wir m&ouml;chten ausdr&uuml;cklich betonen, dass wir keinerlei Einfluss auf die Gestaltung und die Inhalte
-			der gelinkten Seiten haben. Deshalb distanzieren wir uns hiermit ausdr&uuml;cklich von allen Inhalten aller
-			gelinkten Seiten auf dieser Website. Diese Erkl&auml;rung gilt f&uuml;r alle auf dieser Website ausgebrachten Links.
-		</p>
-		<h3>Datenschutzerkl&auml;rung</h3>
-		<p>
-			Bei jedem Zugriff eines Nutzers auf unser Internet-Angebot und bei jedem Abruf einer Datei werden Daten &uuml;ber
-			diesen Vorgang vor&uuml;bergehend in einer Protokolldatei gespeichert und verarbeitet. Vor der Speicherung wird
-			jeder Datensatz durch Ver&auml;nderung der IP-Adresse anonymisiert. Im einzelnen werden &uuml;ber jeden Zugriff/Abruf
-			folgende Daten gespeichert:
-		</p>
-		<div>
+        <p><strong>Haftung für Inhalte</strong></p>
 
-			<ul style="list-style-type: square;">
-				<li>anonymisierte IP-Adresse</li>
-				<li>Datum und Uhrzeit</li>
-				<li>aufgerufene Seite/Name der abgerufenen Datei</li>
-				<li>&uuml;bertragene Datenmenge</li>
-				<li>Meldung, ob der Zugriff/Abruf erfolgreich war</li>
+        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt.
+        Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte
+        können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für
+        eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+        Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
+        verpflichtet, übermittelte oder gespeicherte fremde Informationen zu
+        überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige
+        Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der
+        Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon
+        unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem
+        Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei
+        Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte
+        umgehend entfernen.</p>
 
-			</ul>
-		</div>
-		<br />
-		<p>
-			Diese Daten werden lediglich f&uuml;r statistische Zwecke und zur Verbesserung des Angebots ausgewertet und
-			anschlie&szlig;end gel&ouml;scht. Eine andere Verwendung oder Weitergabe an Dritte erfolgt nicht. Beim Aufruf
-			einzelner Seiten werden so genannte tempor&auml;re Cookies verwendet, um die Navigation zu erleichtern. Diese
-			Session Cookies beinhalten keine personenbezogenen Daten und verfallen nach Ablauf der Sitzung.
-			Postanschriften und E-Mail-Adressen, die im Rahmen von Anfragen oder Bestellungen von Informationsmaterial
-			angegeben werden, werden ausschlie&szlig;lich f&uuml;r die Korrespondenz beziehungsweise den Versand verwendet
-			und nicht an Dritte weitergegeben. Bei der Datenverarbeitung werden Ihre schutzw&uuml;rdigen Belange gem&auml;&szlig; 
-			den gesetzlichen Bestimmungen ber&uuml;cksichtigt.
-		</p>
+        <br />
+        <p><strong>Haftung für Links</strong></p>
+
+        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren
+        Inhalte wir keinen Einfluss haben. Deshalb können wir für diese
+        fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte
+        der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der
+        Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung
+        auf mögliche Rechtsverstöße überprüft. Rechtswidrige
+        Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente
+        inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte
+        einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen
+        werden wir derartige Links umgehend entfernen.</p>
+
+        <br />
+        <p><strong>Urheberrecht</strong></p>
+
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
+        unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und
+        jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen
+        der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads
+        und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen
+        Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden,
+        werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche
+        gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um
+        einen entsprechenden Hinweis.
+        Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+
+        <br />
+        <p><strong>Datenschutz</strong></p>
+
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf
+        unseren Seiten personenbezogene Daten (beispielsweise Name,
+        Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis.
+        Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.
+        </p>
+
+        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B.
+        bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann.
+        Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht
+        möglich.</p>
+
+        <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten
+        durch Dritte zur Übersendung von nicht ausdrücklich angeforderter
+        Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen.
+        Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte
+        im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails,
+        vor.</p>
+
+        <br />
+        <p><strong>Datenschutzerklärung für die Nutzung von Google Analytics</strong></p>
+
+        <p>Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. ("Google"). Google
+        Analytics verwendet sog. "Cookies", Textdateien, die auf Ihrem Computer gespeichert werden und die eine
+        Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über
+        Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort
+        gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite wird Ihre IP-Adresse von
+        Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des
+        Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt.</p>
+
+        <p>Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und
+        dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre
+        Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere
+        mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber
+        zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit
+        anderen Daten von Google zusammengeführt.</p>
+
+        <p>Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software
+        verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche
+        Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung
+        der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse)
+        an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das unter dem folgenden
+        Link verfügbare Browser-Plugin herunterladen und
+        installieren: <a href="http://tools.google.com/dlpage/gaoptout?hl=de">http://tools.google.com/dlpage/gaoptout?hl=de</a>.
 
 	</div>
 
