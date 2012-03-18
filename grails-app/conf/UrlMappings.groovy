@@ -16,6 +16,10 @@ class UrlMappings
 
 		"/liste/lagerfahrzeuge"(controller: 'fahrzeug', action: 'lagerfahrzeuge')
 
+        "/anfahrt" (controller: 'inhalt', action: 'anfahrt')
+        "/kontakt" (controller: 'inhalt', action: 'kontakt')
+        "/impressum" (controller: 'inhalt', action: 'impressum')
+
 		"/login"(controller: 'authentication', action: 'index')
 
 		"/$controller/$action?/$id?" {
