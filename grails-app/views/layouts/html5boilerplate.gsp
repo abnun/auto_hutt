@@ -78,7 +78,7 @@
 
                     <li>
 
-                        <a href="http://www.partner.apec-sales.de/index.php?parid=759&verify=209876302872759&p=1" target="_blank">EU-Neufahrzeuge ab Lager I</a>
+                        <a href="http://www.partner.apec-sales.de/index.php?parid=759&amp;verify=209876302872759&amp;p=1" target="_blank">EU-Neufahrzeuge ab Lager I</a>
 
                     </li>
 
@@ -113,16 +113,15 @@
 
                 </ul>
 
+                <div>
+
+                    <h4>
+                        Unser Service:
+                    </h4>
+
+                </div>
+
                 <ul>
-
-                    <div>
-
-                        <h4>
-                            Unser Service:
-                        </h4>
-
-                    </div>
-
                     <li>
 
                         <a href="http://www.dat.de/gebraucht.html" target="_blank">DAT Gebrauchtfahrzeugbewertung</a>
@@ -131,7 +130,7 @@
 
                     <li>
 
-                        <a href="https://fibot.creditplus.de/fibot/frontend?startMask=MiniRechner&HNr=310460&kondition=pkwR01&anzahlung=ja&rsv=ja" target="_blank">Kreditrechner</a>
+                        <a href="https://fibot.creditplus.de/fibot/frontend?startMask=MiniRechner&amp;HNr=310460&amp;kondition=pkwR01&amp;anzahlung=ja&amp;rsv=ja" target="_blank">Kreditrechner</a>
                         %{--<g:link controller="inhalt" action="kreditrechner">Kreditrechner</g:link>--}%
 
                     </li>

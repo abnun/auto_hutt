@@ -61,6 +61,7 @@ grails.project.dependency.resolution = {
         compile ":html-five-boilerplate:1.0"
         compile ":modernizr:1.7.2"
         compile ':nine-sixty-grid-system:latest.integration'
+        compile ":svn:1.0.2"
 
 		runtime ":database-migration:1.0"
     }
