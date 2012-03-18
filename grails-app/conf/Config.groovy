@@ -63,7 +63,7 @@ grails.hibernate.cache.queries = true
 grails.gsp.enable.reload=true
 
 // jsessionid anschalten
-grails.views.enable.jsessionid=true
+//grails.views.enable.jsessionid=true
 
 // set per-environment serverURL stem for creating absolute links
 environments
