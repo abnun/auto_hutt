@@ -94,6 +94,8 @@ photo_album.default.image.converting.string = "convert"
 //grails.plugin.databasemigration.updateOnStart = true
 //grails.plugin.databasemigration.updateOnStartFileNames = ["changelog.groovy"]
 
+grails.resources.adhoc.patterns = ["/uploads/*", "/images/*", "*.css", "*.js"]
+
 // log4j configuration
 log4j = {
     // Example of changing the log pattern for the default console
