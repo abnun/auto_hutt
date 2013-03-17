@@ -9,6 +9,12 @@ class AuthenticationFilters
 {
 	def filters =
 	{
+        all(controller: '*', action: '*')
+        {
+            log.info("${session.getId()} - ${request.getRequestURL()} - ${request.getContentType()} - ${request.getCharacterEncoding()} - ${request.getHeader("user-agent")}")
+            return true
+        }
+
 		car(controller:'fahrzeug', action:'*')
 		{
 			before =
@@ -93,10 +99,5 @@ class AuthenticationFilters
 				}
 			}
 		}
-
-        all(controller: "*", action: "*") {
-            log.info("${session.getId()} - ${request.getRequestURL()} - ${request.getContentType()} - ${request.getCharacterEncoding()} - ${request.getHeader("user-agent")}")
-            return true
-        }
 	}
 }
