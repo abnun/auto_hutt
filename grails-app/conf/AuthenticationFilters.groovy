@@ -29,6 +29,7 @@ class AuthenticationFilters
 				}
 			}
 		}
+
 		brand(controller:'fahrzeugMarke', action:'*')
 		{
 			before =
@@ -44,6 +45,7 @@ class AuthenticationFilters
 				}
 			}
 		}
+
 		excel(controller:'excel', action:'*')
 		{
 			before =
@@ -59,6 +61,7 @@ class AuthenticationFilters
 				}
 			}
 		}
+
 		album(controller:'album', action:'*')
 		{
 			before =
@@ -74,6 +77,7 @@ class AuthenticationFilters
 				}
 			}
 		}
+
 		picture(controller:'picture', action:'*')
 		{
 			before =
@@ -89,6 +93,7 @@ class AuthenticationFilters
 				}
 			}
 		}
+
         all(controller: "*", action: "*") {
             log.info("${session.getId()} - ${request.getRequestURL()} - ${request.getContentType()} - ${request.getCharacterEncoding()} - ${request.getHeader("user-agent")}")
             return true
