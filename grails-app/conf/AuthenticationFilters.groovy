@@ -11,8 +11,11 @@ class AuthenticationFilters
 	{
         all(controller: '*', action: '*')
         {
-            log.info("${session.getId()} - ${request.getRequestURL()} - ${request.getContentType()} - ${request.getCharacterEncoding()} - ${request.getHeader("user-agent")}")
-            return true
+            before =
+            {
+                log.info("${session.getId()} - ${request.getRequestURL()} - ${request.getContentType()} - ${request.getCharacterEncoding()} - ${request.getHeader("user-agent")}")
+                return true
+            }
         }
 
 		car(controller:'fahrzeug', action:'*')
