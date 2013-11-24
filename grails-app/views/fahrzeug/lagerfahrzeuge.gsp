@@ -1,3 +1,4 @@
+<%@ page import="de.webmpuls.photo_album.util.MediaUtils; de.webmpuls.photo_album.Picture" %>
 <html>
     <head>
         <meta name="layout" content="html5boilerplate" />
@@ -5,7 +6,7 @@
     </head>
     <body>
 
-		<div class="body">
+		<div class="body" style="margin: inherit">
             <h1>Neu-Fahrzeuge ab Lager Leingarten</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
@@ -16,7 +17,8 @@
 					<thead>
 						<tr>
 
-							<g:sortableColumn property="marke" title="Marke"/>
+							%{--<g:sortableColumn property="marke" title="Marke"/>--}%
+                            <th></th>
 
 							<g:sortableColumn property="modell" title="Modell"/>
 
@@ -36,11 +38,20 @@
 					<g:each in="${fahrzeugList}" status="i" var="fahrzeug">
 						<tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
 
-							<td><g:link mapping="fahrzeugAnzeigen" params="[id: fahrzeug.id, marke: fahrzeug.marke, modell: fahrzeug.modell]">${fieldValue(bean: fahrzeug, field: 'marke')}</g:link></td>
+                            <%
+                                def fahrzeugBilder = fahrzeug.bilder.isEmpty() ? [] : (fahrzeug.bilder.sort {Picture a, Picture b -> a.position <=> b.position})
+                            %>
+
+                            <g:if test="${fahrzeugBilder.isEmpty()}">
+                                <td><g:link mapping="fahrzeugAnzeigen" params="[id: fahrzeug.id, marke: fahrzeug.marke, modell: fahrzeug.modell]"><g:img dir="medias" file="icon.no_photo_available.png" alt="${fahrzeug?.marke} ${fahrzeug?.modell}" style="width: 80px;" /></g:link></td>
+                            </g:if>
+                            <g:else>
+                                <td><g:link mapping="fahrzeugAnzeigen" params="[id: fahrzeug.id, marke: fahrzeug.marke, modell: fahrzeug.modell]"><img src="${wm_photo_album.pathToImage(picture: fahrzeugBilder?.first(), size: MediaUtils.THUMBNAIL, albumName: ((Picture) fahrzeugBilder.first())?.album?.getName())}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}" /></g:link></td>
+                            </g:else>
 
 							%{--<td>${fieldValue(bean:fahrzeug, field:'marke')}</td>--}%
 
-							<td><g:link mapping="fahrzeugAnzeigen" params="[id: fahrzeug.id, marke: fahrzeug.marke, modell: fahrzeug.modell]">${fieldValue(bean: fahrzeug, field: 'modell')}</g:link></td>
+							<td><g:link mapping="fahrzeugAnzeigen" params="[id: fahrzeug.id, marke: fahrzeug.marke, modell: fahrzeug.modell]">${fieldValue(bean: fahrzeug, field: 'marke')} ${fieldValue(bean: fahrzeug, field: 'modell')}</g:link></td>
 
 							%{--<td>${fieldValue(bean:fahrzeug, field:'modell')}</td>--}%
 

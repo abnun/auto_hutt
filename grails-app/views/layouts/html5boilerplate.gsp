@@ -54,150 +54,149 @@
 
     <div id="main" role="main">
         <div class="container_12">
-            <div class="grid_3 alpha omega" id="naviDiv" style="width: 250px;">
-                <div class="textcenter">
-                    <img src="${resource(dir: 'images', file: 'menue_header.gif')}" alt="Auto Hutt GmbH | 1a Autoservice" style="margin-top: 10px;" />
-                </div>
-
-                <div>
-
-                    <!--<br />-->
-                    <h4 style="margin-top: 10px;">
-                        Fahrzeugangebot:
-                    </h4>
-
-                </div>
-
-                <ul>
-
-                    <li>
-
-                        <g:link controller="fahrzeug" action="lagerfahrzeuge">EU-Neufahrzeuge ab Lager Leingarten</g:link>
-
-                    </li>
-
-                    <li>
-
-                        <a href="http://www.partner.apec-sales.de/index.php?parid=759&amp;verify=209876302872759&amp;p=1" target="_blank">EU-Neufahrzeuge ab Lager I</a>
-
-                    </li>
-
-                    <li>
-                        <a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/124" target="_blank">EU-Neufahrzeuge ab Lager I, F, DK</a>
-
-                    </li>
-
-                    <li>
-
-                        <a href="http://server7.autrado.de/vp-autohutt.de/" target="_blank">EU-Neufahrzeuge ab Lager NL</a>
-
-                    <li>
-                        <a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/2" target="_blank">EU-Bestellfahrzeuge</a>
-                    </li>
-                    <li>
-                        <g:link controller="inhalt" action="bestellfahrzeuge">Deutsche Bestellfahrzeuge zu Top Konditionen</g:link>
-                        %{--<a href="http://webspace1.ssis.de/22658eln/-/deutsche-bestellangebote.html" target="_blank">Deutsche Bestellfahrzeuge zu Top Konditionen</a>--}%
-                    </li>
-                    <li>
-                        <a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/1" target="_blank">Nutzfahrzeuge</a>
-                    </li>
-                    <li>
-                        <a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/124" target="_blank">Jahresfahrzeuge</a>
-                        %{--<g:link controller="inhalt" action="jahresfahrzeuge">Jahresfahrzeuge</g:link>--}%
-                    </li>
-
-                    <li>
-                        %{--<a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/124" target="_blank">Gebrauchtfahrzeuge</a>--}%
-                        <g:link controller="inhalt" action="gebrauchtfahrzeuge">Gebrauchtfahrzeuge</g:link>
-                    </li>
-
-                </ul>
-
-                <div>
-
-                    <h4>
-                        Unser Service:
-                    </h4>
-
-                </div>
-
-                <ul>
-                    <li>
-
-                        <a href="http://www.dat.de/gebraucht.html" target="_blank">DAT Gebrauchtfahrzeugbewertung</a>
-
-                    </li>
-
-                    <li>
-
-                        <a href="https://fibot.creditplus.de/fibot/frontend?startMask=MiniRechner&amp;HNr=310460&amp;kondition=pkwR01&amp;anzahlung=ja&amp;rsv=ja" target="_blank">Kreditrechner</a>
-                        %{--<g:link controller="inhalt" action="kreditrechner">Kreditrechner</g:link>--}%
-
-                    </li>
-
-                    <li>
-
-                        <g:link controller="inhalt" action="leistungen">Leistungen</g:link>
-
-                    </li>
-
-                    <li>
-
-                        <a href="http://www.go1a.de/" target="_blank">Aktuelle Angebote</a>
-                        %{--<g:link controller="inhalt" action="aktuelle_angebote">Aktuelle Angebote</g:link>--}%
-
-                    </li>
-
-                    <li>
-
-                        <g:link controller="inhalt" action="hauptuntersuchung_au">Hauptuntersuchung &amp; AU</g:link>
-
-                    </li>
-
-                </ul>
-
-                <div>
-
-                    <h4>
-                        Wie Sie uns erreichen:
-                    </h4>
-
-                </div>
-
-                <ul>
-
-                    <li>
-
-                        <g:link controller="inhalt" action="kontakt">Kontakt &amp; &Ouml;ffnungszeiten</g:link>
-
-                    </li>
-
-                    <li>
-
-                        <g:link controller="inhalt" action="anfahrt">Anfahrt</g:link>
-
-                    </li>
-
-                </ul>
-
-                <ul>
-
-                    <li>
-
-                        <g:link controller="inhalt" action="impressum">Impressum</g:link>
-
-                    </li>
-
-                </ul>
-
-            </div>
-            <div class="grid_8 alpha" id="contentDiv" style="width: 655px;">
-                <g:if test="${params.action == 'home'}">
-                    <div id="addressDiv">
-                        <g:render template="/layouts/address"/>
+            <div class="grid_12 alpha omega" style="border: 1px solid #4B4B49; background-color: #AAA7A7;">
+                <div class="grid_4 alpha omega">
+                    <div id="naviDiv">
+                    <div class="textcenter">
+                        <img src="${resource(dir: 'images', file: 'menue_header.gif')}" alt="Auto Hutt GmbH | 1a Autoservice" style="margin-top: 10px;" />
                     </div>
-                </g:if>
-                <g:layoutBody/>
+
+                    <div>
+
+                        <!--<br />-->
+                        <h4 style="margin-top: 10px;">
+                            Fahrzeugangebot:
+                        </h4>
+
+                    </div>
+
+                    <ul>
+
+                        <li>
+
+                            <g:link controller="fahrzeug" action="lagerfahrzeuge">EU-Neufahrzeuge ab Lager Leingarten</g:link>
+
+                        </li>
+
+                        <li>
+
+                            <a href="http://www.partner.apec-sales.de/index.php?parid=759&amp;verify=209876302872759&amp;p=1" target="_blank">EU-Neufahrzeuge ab Lager I</a>
+
+                        </li>
+
+                        <li>
+                            <a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/124" target="_blank">EU-Neufahrzeuge ab Lager I, F, DK</a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="http://server7.autrado.de/vp-autohutt.de/" target="_blank">EU-Neufahrzeuge ab Lager NL</a>
+
+                        <li>
+                            <a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/2" target="_blank">EU-Bestellfahrzeuge</a>
+                        </li>
+                        <li>
+                            <g:link controller="inhalt" action="bestellfahrzeuge">Deutsche Bestellfahrzeuge zu Top Konditionen</g:link>
+                            %{--<a href="http://webspace1.ssis.de/22658eln/-/deutsche-bestellangebote.html" target="_blank">Deutsche Bestellfahrzeuge zu Top Konditionen</a>--}%
+                        </li>
+                        <li>
+                            <a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/1" target="_blank">Nutzfahrzeuge</a>
+                        </li>
+                        <li>
+                            <a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/124" target="_blank">Jahresfahrzeuge</a>
+                            %{--<g:link controller="inhalt" action="jahresfahrzeuge">Jahresfahrzeuge</g:link>--}%
+                        </li>
+
+                        <li>
+                            %{--<a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/124" target="_blank">Gebrauchtfahrzeuge</a>--}%
+                            <g:link controller="inhalt" action="gebrauchtfahrzeuge">Gebrauchtfahrzeuge</g:link>
+                        </li>
+
+                    </ul>
+
+                    <div>
+
+                        <h4>
+                            Unser Service:
+                        </h4>
+
+                    </div>
+
+                    <ul>
+                        <li>
+
+                            <a href="http://www.dat.de/gebraucht.html" target="_blank">DAT Gebrauchtfahrzeugbewertung</a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="https://fibot.creditplus.de/fibot/frontend?startMask=MiniRechner&amp;HNr=310460&amp;kondition=pkwR01&amp;anzahlung=ja&amp;rsv=ja" target="_blank">Kreditrechner</a>
+                            %{--<g:link controller="inhalt" action="kreditrechner">Kreditrechner</g:link>--}%
+
+                        </li>
+
+                        <li>
+
+                            <g:link controller="inhalt" action="leistungen">Leistungen</g:link>
+
+                        </li>
+
+                        <li>
+
+                            <a href="http://www.go1a.de/" target="_blank">Aktuelle Angebote</a>
+                            %{--<g:link controller="inhalt" action="aktuelle_angebote">Aktuelle Angebote</g:link>--}%
+
+                        </li>
+
+                        <li>
+
+                            <g:link controller="inhalt" action="hauptuntersuchung_au">Hauptuntersuchung &amp; AU</g:link>
+
+                        </li>
+
+                    </ul>
+
+                    <div>
+
+                        <h4>
+                            Wie Sie uns erreichen:
+                        </h4>
+
+                    </div>
+
+                    <ul>
+
+                        <li>
+
+                            <g:link controller="inhalt" action="kontakt">Kontakt &amp; &Ouml;ffnungszeiten</g:link>
+
+                        </li>
+
+                        <li>
+
+                            <g:link controller="inhalt" action="anfahrt">Anfahrt</g:link>
+
+                        </li>
+
+                    </ul>
+
+                    <ul>
+
+                        <li>
+
+                            <g:link controller="inhalt" action="impressum">Impressum</g:link>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+                </div>
+                <div class="grid_8 alpha omega" id="contentDiv">
+                    <g:layoutBody/>
+                </div>
             </div>
         </div>
     </div>

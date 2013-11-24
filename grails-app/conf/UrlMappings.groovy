@@ -22,7 +22,7 @@ class UrlMappings
 
 		"/login"(controller: 'authentication', action: 'index')
 
-		"/$controller/$action?/$id?" {
+        "/$controller/$action?/$id?(.${format})?" {
 			constraints {
 				// apply constraints here
 			}

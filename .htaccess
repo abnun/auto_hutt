@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www.autohutt.de [NC]
+RewriteRule ^(.*)$ http://www.autohutt.de/$1 [L,R=301]
+
+RewriteCond %{REQUEST_URI} !^favicon.ico$ [NC]
+RewriteRule ^(.*)favicon.ico http://83.169.46.238:8080/auto_hutt/static/images/favicon.ico [L,R=301]
+
+Redirect /login http://83.169.46.238:8080/auto_hutt/authentication/login
+Redirect /fahrzeug/list http://83.169.46.238:8080/auto_hutt/fahrzeug/list

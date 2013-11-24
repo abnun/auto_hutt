@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="auto_hutt local file DB" product="HSQL Database Engine" version="1.8.0" jdbc-version="3.0" driver-version="1.8.0" uuid="d57ea301-f90b-461a-a479-83c82f5c42e7">
+    <identifier-quote-string>"</identifier-quote-string>
+    <jdbc-driver>org.hsqldb.jdbcDriver</jdbc-driver>
+    <jdbc-url>jdbc:hsqldb:file:/Users/markus/Documents/Dropbox/projekte/firmen/webmpuls/grails_projects/auto_hutt/prodDb_temp;shutdown=true</jdbc-url>
+    <user-name>sa</user-name>
+    <libraries>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/dist/grails-bootstrap-1.3.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/dist/grails-core-1.3.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/dist/grails-crud-1.3.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/dist/grails-docs-1.3.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/dist/grails-gorm-1.3.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/dist/grails-osgi-1.3.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/dist/grails-resources-1.3.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/dist/grails-scripts-1.3.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/dist/grails-spring-1.3.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/dist/grails-test-1.3.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/dist/grails-web-1.3.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/dist/grails-webflow-1.3.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/ant-1.7.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/ant-junit-1.7.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/ant-launcher-1.7.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/ant-nodeps-1.7.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/ant-trax-1.7.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/antlr-2.7.6.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/aopalliance-1.0.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/aspectjrt-1.6.8.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/aspectjweaver-1.6.8.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/cglib-nodep-2.1_3.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/commons-beanutils-1.8.0.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/commons-cli-1.0.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/commons-codec-1.3.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/commons-collections-3.2.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/commons-dbcp-1.2.2.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/commons-el-1.0.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/commons-fileupload-1.2.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/commons-io-1.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/commons-lang-2.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/commons-pool-1.5.3.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/commons-validator-1.3.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/core-renderer-R8.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/dom4j-1.6.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/ehcache-core-1.7.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/ejb3-persistence-1.0.2.GA.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/gant_groovy1.7-1.9.2.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/gpars-0.9.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/groovy-all-1.7.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/hibernate-annotations-3.4.0.GA.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/hibernate-commons-annotations-3.1.0.GA.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/hibernate-core-3.3.1.GA.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/hibernate-ehcache-3.3.1.GA.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/hibernate-validator-3.1.0.GA.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/hsqldb-1.8.0.10.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/itext-2.0.8.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/ivy-2.1.0.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/jansi-1.2.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/javassist-3.11.0.GA.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/jcl-over-slf4j-1.5.8.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/jline-0.9.94.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/jsp-api-2.0.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/jsp-api-2.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/jsr107cache-1.0.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/jsr166y-070108.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/jstl-1.1.2.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/jta-1.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/jul-to-slf4j-1.5.8.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/junit-4.8.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/log4j-1.2.15.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/ognl-2.7.3.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.aop-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.asm-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.aspects-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.beans-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.binding-2.0.8.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.context-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.context.support-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.core-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.expression-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.instrument-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.instrument.tomcat-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.jdbc-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.jms-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.js-2.0.8.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.orm-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.oxm-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.test-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.transaction-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.web-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.web.servlet-3.0.3.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/org.springframework.webflow-2.0.8.RELEASE.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/oro-2.0.8.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/radeox-1.0-b2.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/serializer-2.7.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/servlet-api-2.5.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/sitemesh-2.4.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/slf4j-api-1.5.8.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/slf4j-log4j12-1.5.8.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/standard-1.1.2.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/svnkit-1.3.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/../../../../../../downloads/grails-1.3.4/lib/xpp3_min-1.1.3.4.O.jar!/</url>
+      </library>
+    </libraries>
+    <table name="ALBUM" schema="PUBLIC" catalog="" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <column name="VERSION" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <column name="DATE_CREATED" sqlType="TIMESTAMP" length="6" precision="0" nullable="false" jdbcType="93" />
+      <column name="DESCRIPTION" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="NAME" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12" />
+      <column name="VISIBLE" sqlType="BOOLEAN" length="0" precision="0" nullable="false" jdbcType="16" />
+      <primary-key name="SYS_PK_69" columns="id" />
+      <index name="SYS_IDX_68" unique="true" columns="ID" />
+      <index name="SYS_IDX_SYS_CT_67_70" unique="true" columns="NAME" />
+    </table>
+    <table name="FAHRZEUG" schema="PUBLIC" catalog="" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <column name="VERSION" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <column name="AUSSERORTS" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="AUSSTATTUNG" sqlType="VARCHAR" length="1073741824" precision="0" nullable="false" jdbcType="12" />
+      <column name="BAUJAHR" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="CO2" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="FARBE" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="GEBRAUCHT" sqlType="BOOLEAN" length="0" precision="0" nullable="true" jdbcType="16" />
+      <column name="INNERORTS" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="KM_STAND" sqlType="INTEGER" length="0" precision="0" nullable="true" jdbcType="4" />
+      <column name="KOMBINIERT" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="KW" sqlType="INTEGER" length="0" precision="0" nullable="false" jdbcType="4" />
+      <column name="MARKE_ID" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <column name="MODELL" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="NEU" sqlType="BOOLEAN" length="0" precision="0" nullable="true" jdbcType="16" />
+      <column name="PREIS" sqlType="DOUBLE" length="0" precision="0" nullable="false" jdbcType="8" />
+      <column name="CO2EFFIZIENZ" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="ENERGIETRAEGERKOSTEN" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="FAHRZEUGMASSE" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="JAHRESSTEUER" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="SYS_PK_47" columns="id" />
+      <foreign-key name="FK26EBCB82FC535C38" columns="MARKE_ID" ref-table="FAHRZEUG_MARKE" ref-schema="PUBLIC" ref-catalog="" ref-columns="ID" />
+      <index name="SYS_IDX_46" unique="true" columns="ID" />
+      <index name="SYS_IDX_80" unique="false" columns="MARKE_ID" />
+    </table>
+    <table name="FAHRZEUGAUSSTATTUNG" schema="PUBLIC" catalog="" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <column name="VERSION" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="SYS_PK_51" columns="id" />
+      <index name="SYS_IDX_50" unique="true" columns="ID" />
+    </table>
+    <table name="FAHRZEUG_MARKE" schema="PUBLIC" catalog="" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <column name="VERSION" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="SYS_PK_49" columns="id" />
+      <index name="SYS_IDX_48" unique="true" columns="ID" />
+    </table>
+    <table name="FAHRZEUG_PICTURE" schema="PUBLIC" catalog="" type="TABLE">
+      <column name="FAHRZEUG_BILDER_ID" sqlType="BIGINT" length="0" precision="0" nullable="true" jdbcType="-5" />
+      <column name="PICTURE_ID" sqlType="BIGINT" length="0" precision="0" nullable="true" jdbcType="-5" />
+      <foreign-key name="FK4D12D411F74FB8" columns="FAHRZEUG_BILDER_ID" ref-table="FAHRZEUG" ref-schema="PUBLIC" ref-catalog="" ref-columns="ID" />
+      <foreign-key name="FK4D12D4158ADB952" columns="PICTURE_ID" ref-table="PICTURE" ref-schema="PUBLIC" ref-catalog="" ref-columns="ID" />
+      <index name="SYS_IDX_72" unique="false" columns="FAHRZEUG_BILDER_ID" />
+      <index name="SYS_IDX_82" unique="false" columns="PICTURE_ID" />
+    </table>
+    <table name="PICTURE" schema="PUBLIC" catalog="" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <column name="VERSION" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <column name="ALBUM_ID" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <column name="BASE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="CAPTION" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="COVER_PICTURE" sqlType="BOOLEAN" length="0" precision="0" nullable="false" jdbcType="16" />
+      <column name="DATE_CREATED" sqlType="TIMESTAMP" length="6" precision="0" nullable="false" jdbcType="93" />
+      <column name="position" sqlType="INTEGER" length="0" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="SYS_PK_75" columns="id" />
+      <foreign-key name="FKDD905CFEFAC9ADB2" columns="ALBUM_ID" ref-table="ALBUM" ref-schema="PUBLIC" ref-catalog="" ref-columns="ID" />
+      <index name="SYS_IDX_74" unique="true" columns="ID" />
+      <index name="SYS_IDX_76" unique="false" columns="ALBUM_ID" />
+    </table>
+    <table name="PICTURE_COMMENT" schema="PUBLIC" catalog="" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <column name="VERSION" sqlType="BIGINT" length="0" precision="0" nullable="false" jdbcType="-5" />
+      <primary-key name="SYS_PK_79" columns="id" />
+      <index name="SYS_IDX_78" unique="true" columns="ID" />
+    </table>
+  </data-source>
+</component>

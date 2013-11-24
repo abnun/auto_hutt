@@ -1,26 +1,20 @@
-@artifact.package @import static org.junit.Assert.*
+@artifact.package@
+import grails.test.mixin.TestMixin
+import grails.test.mixin.support.GrailsUnitTestMixin
+import spock.lang.*
 
-import org.junit.*
+/**
+ * See the API for {@link grails.test.mixin.support.GrailsUnitTestMixin} for usage instructions
+ */
+@TestMixin(GrailsUnitTestMixin)
+class @artifact.name@ extends Specification {
 
-class @artifact.name @{
+    def setup() {
+    }
 
-@Before
+    def cleanup() {
+    }
 
-void setUp()
-{
-	// Setup logic here
-}
-
-@After
-void tearDown()
-{
-	// Tear down logic here
-}
-
-@Test
-void testSomething()
-{
-	fail "Implement me"
-}
-
+    void "test something"() {
+    }
 }

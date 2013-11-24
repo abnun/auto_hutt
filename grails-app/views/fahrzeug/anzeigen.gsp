@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<div class="body">
+<div class="body" style="margin: inherit;">
 <h1>${fahrzeug.gebraucht ? 'Gebrauchtfahrzeug: ' : 'Neufahrzeug: '}${fahrzeug?.marke} ${fahrzeug?.modell}</h1>
 <g:if test="${flash.message}">
 	<div class="message">${flash.message}</div>
@@ -27,7 +27,7 @@
 <%
 	def fahrzeugBilder = []
 %>
-<table cellpadding="0" cellspacing="0" style="border: none; width: 640px;">
+<table cellpadding="0" cellspacing="0" style="border: none; width: 620px;">
 	<tr>
 		<g:if test="${!fahrzeug.bilder?.isEmpty()}">
 			<%
@@ -38,7 +38,7 @@
 					<g:if test="${i == 0}">
 						<a href="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.NORMAL, albumName: ((Picture) bild).album.getName())}" class="highslide"
 						   onclick="return hs.expand(this, {wrapperClassName: 'highslide-no-border', dimmingOpacity: 0.75, align: 'center'})">
-							<img style="width: 400px;" src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.BIG, albumName: ((Picture) bild).album.getName())}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
+							<img style="width: 380px;" src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.BIG, albumName: ((Picture) bild).album.getName())}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
 								 title="Klicken Sie hier, um eine vergr&ouml;&szlig;erte Ansicht des Bildes zu bekommen" />
 						</a>
 

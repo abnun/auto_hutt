@@ -88,7 +88,7 @@ ul {
 	padding: 10px;
 	border-right: 5px solid #4B4B49;
 	border-bottom: 5px solid #4B4B49;
-	border-left: 1px solid #666;
+	/*border-left: 1px solid #666;*/
 	background-color: #ffcc00;
 }
 
@@ -168,9 +168,9 @@ ul {
 
 #contentDiv {
 	padding: 0px 0px 20px 10px;
-	border-right: 1px solid #666;
-	border-bottom: 1px solid #666;
-	background-color: #AAA7A7;
+    /*border-right: 1px solid #666;
+    border-bottom: 1px solid #666;
+    background-color: #AAA7A7;*/
 }
 
 #contentDiv iframe {
@@ -338,6 +338,7 @@ ul {
 	padding: 0px 10px 10px 10px;
 	margin: 0px 0px 10px 10px;
 	background-color: #ffcc00;
+    margin-right: -10px;
 }
 
 #addressDiv a:link,
@@ -359,5 +360,22 @@ ul {
     list-style: square;
 }
 
+.darkshadow {
+    -webkit-box-shadow: 1px 1px 21px #333333; /* webkit browser*/
+    -moz-box-shadow: 1px 1px 21px #333333; /* firefox */
+    box-shadow: 1px 1px 21px 0px #333333;
+}
+
+.hovershadow:hover {
+    -webkit-box-shadow: 1px 1px 21px black; /* webkit browser*/
+    -moz-box-shadow: 1px 1px 21px black; /* firefox */
+    box-shadow: 1px 1px 21px black;
+}
+
+.imageborder {
+    border: 10px solid #666;
+}
+
 ::-moz-selection{ background: #ffcc00; color:#666; text-shadow: none; }
 ::selection { background: #ffcc00; color:#666; text-shadow: none; }
+:-webkit-selection { background:#ffcc00; color:#666; text-shadow: none; }
