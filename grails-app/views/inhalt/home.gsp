@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="clear">&nbsp;</div>
-            <div class="grid_3 alpha omega" style="margin-top: 0px; margin-left: 45px;">
+            <div class="grid_3 alpha omega" style="margin-top: 3px; margin-left: 45px;">
                 <img src="${resource(dir: 'images', file: 'mehrmarken-center.jpg')}" alt="Mehrmarken Center" style="border: 1px solid black; width: 174px;"/>
             </div>
             <div class="clear" style="">&nbsp;</div>

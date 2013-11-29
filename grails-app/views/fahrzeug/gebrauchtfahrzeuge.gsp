@@ -13,7 +13,7 @@
             </g:if>
             <div class="list">
                 <g:if test="${!fahrzeugList.isEmpty()}">
-					<table style="width: 620px;">
+					<table style="width: 600px;">
 						<thead>
 							<tr>
 
