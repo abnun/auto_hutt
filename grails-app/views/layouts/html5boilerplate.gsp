@@ -45,7 +45,7 @@
 <div id="container" style="margin-top: 5px;">
     <header>
         <div class="container_12">
-            <div class="grid_12 alpha" style="border: 1px solid #666;">
+            <div class="grid_12" style="border: 1px solid #666;">
                 <map name="auto_hutt" id="auto_hutt"><area shape="circle" coords="134,90,85" href="${createLink(uri: '/')}"  alt="" title="Zurück zur Startseite"></map>
                 <r:img dir="images" file="auto_hutt_header_1000px.jpg" alt="Auto Hutt GmbH | 1a Autoservice" width="940" usemap="#auto_hutt" />
             </div>
@@ -54,8 +54,8 @@
 
     <div id="main" role="main">
         <div class="container_12">
-            <div class="grid_12 alpha omega" style="border: 1px solid #4B4B49; background-color: #AAA7A7;">
-                <div class="grid_4 alpha omega">
+            <div class="grid_12" style="border: 1px solid #4B4B49; background-color: #AAA7A7;">
+                <div class="grid_4 alpha">
                     <div id="naviDiv">
                     <div class="textcenter">
                         <img src="${resource(dir: 'images', file: 'menue_header.gif')}" alt="Auto Hutt GmbH | 1a Autoservice" style="margin-top: 10px;" />
@@ -194,7 +194,7 @@
 
                 </div>
                 </div>
-                <div class="grid_8 alpha omega" id="contentDiv">
+                <div class="grid_8 omega" id="contentDiv">
                     <g:layoutBody/>
                 </div>
             </div>

@@ -16,9 +16,12 @@
         </h1>
     </div>
 
-    <div style="clear: both"></div>
+    <div class="clear">&nbsp;</div>
 
-	<div style="width: 280px; float: right; padding-right: 10px;">
+    <div class="grid_5 alpha omega">
+        <img src="${resource(dir: 'images', file: 'verkaufsraum.jpg')}" alt="Verkaufsraum" />
+    </div>
+	<div class="grid_3 alpha omega">
 		<h3 style="margin-top: 0px;">
 			Verantwortlich f&uuml;r den Inhalt:
 		</h3>
@@ -52,11 +55,7 @@
 
 	</div>
 
-	<div class="textleft" style="width: 328px; margin-right: 10px; float:left; display: inline;">
-		<img src="${resource(dir: 'images', file: 'verkaufsraum.jpg')}" alt="Verkaufsraum" />
-	</div>
-
-	<div style="clear: both"></div>
+    <div class="clear">&nbsp;</div>
 
 	<br />
 
@@ -155,16 +154,4 @@
 	</div>
 
 </body>
-<r:script>
-    $(document).ready(function() {
-
-        var naviheight = $("#naviDiv").outerHeight(true);
-        var contentheight = $("#contentDiv").outerHeight(true);
-
-        if(contentheight < naviheight)
-        {
-            $("#contentDiv").height(naviheight - 20)
-        }
-    });
-</r:script>
 </html>

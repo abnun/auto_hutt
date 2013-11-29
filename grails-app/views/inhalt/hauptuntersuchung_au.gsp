@@ -5,40 +5,62 @@
 
     <body>
 
-		<div class="textcenter" style="float: left; margin: 10px 10px;">
+		<div class="grid_2 alpha" style="margin-top: 10px; text-align: center;">
 			<img src="${resource(dir: 'images', file: 'plakette.gif')}" alt="Plakette" style="margin-bottom: 10px;" />
 			<br />
 			<img src="${resource(dir: 'images', file: 'tuev_sued_logo.gif')}" alt="Plakette" />
 		</div>
 
-		<h1 class="textcenter">
-			Achtung!
-		</h1>
+        <div class="grid_6 alpha">
 
+            <div class="grid_2 prefix_2">
+                <h1>
+                    Achtung!
+                </h1>
+            </div>
+
+            <div class="clear">&nbsp;</div>
+            <br />
+            <br />
+
+            <div class="grid_4 prefix_1">
+                M&uuml;ssen Sie ihr Fahrzeug in diesem Monat zur
+            </div>
+
+            <div class="clear">&nbsp;</div>
+            <br />
+
+            <div class="grid_3">
+                <h2>
+                    Fahrzeuguntersuchung
+                </h2>
+            </div>
+
+            <div class="clear">&nbsp;</div>
+            <br />
+
+            <div class="grid_2 prefix_2" style="margin-left: 40px;">
+                oder
+            </div>
+
+            <div class="clear">&nbsp;</div>
+
+            <div class="grid_3 prefix_3">
+                <h2>
+                    Abgasuntersuchung
+                </h2>
+            </div>
+
+            <div class="clear">&nbsp;</div>
+            <br />
+
+            <div class="grid_4 prefix_2">
+                bringen?
+            </div>
+        </div>
+
+        <div class="clear">&nbsp;</div>
         <br />
-        <br />
-
-		<div class="textcenter">
-			M&uuml;ssen Sie ihr Fahrzeug in diesem Monat zur
-		</div>
-
-		<br />
-
-		<h2 class="textleft" style="margin-left: 180px;">
-			Fahrzeuguntersuchung
-		</h2>
-
-		<h2 class="textcenter" style="margin-left: 320px;">
-			Abgasuntersuchung
-		</h2>
-
-		<br />
-
-		<div class="textcenter">
-			bringen?
-		</div>
-
-		<div style="clear: both;"></div>
 
 		<div class="textjustify" style="padding-right: 10px;">
 			Sie wissen ja, dass Sie nach &sect; 29 der StVZO in bestimmten Abst&auml;nden ohne besondere Aufforderung
@@ -67,16 +89,4 @@
 		</div>
 
 	</body>
-<r:script>
-    $(document).ready(function() {
-
-        var naviheight = $("#naviDiv").outerHeight(true);
-        var contentheight = $("#contentDiv").outerHeight(true);
-
-        if(contentheight < naviheight)
-        {
-            $("#contentDiv").height(naviheight - 20)
-        }
-    });
-</r:script>
 </html>

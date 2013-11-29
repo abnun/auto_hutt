@@ -26,16 +26,4 @@
 		</div>
 
 	</body>
-<r:script>
-    $(document).ready(function() {
-
-        var naviheight = $("#naviDiv").outerHeight(true);
-        var contentheight = $("#contentDiv").outerHeight(true);
-
-        if(contentheight < naviheight)
-        {
-            $("#contentDiv").height(naviheight - 20)
-        }
-    });
-</r:script>
 </html>

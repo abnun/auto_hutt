@@ -4,7 +4,7 @@
     </head>
 
     <body>
-        <div class="grid_5">
+        <div class="grid_5 omega">
             <div class="textcenter">
                 <h1>
                     Willkommen auf www.autohutt.de
@@ -43,32 +43,24 @@
                 preiswert - schnell - termingerecht
             </div>
         </div>
-        <div class="grid_3 alpha omega">
-            <div class="grid_3 alpha omega">
+        <div class="grid_3 omega">
+            <div class="grid_3 omega" style="margin-left: 45px;">
                 <div id="addressDiv">
                     <g:render template="/layouts/address"/>
                 </div>
             </div>
             <div class="clear">&nbsp;</div>
-            <div class="grid_3 alpha omega textcenter" style="margin-top: 60px;">
-                <div>
-                    <img src="${resource(dir: 'images', file: 'eu_fahrzeuge.jpg')}" alt="Eu-Fahrzeuge" style="margin-bottom: 10px; border: 1px solid black;"/>
-                    <br/>
-                    <a href="http://www.bfi-ev.de" target="_blank"><img src="${resource(dir: 'images', file: 'bfi.jpg')}" alt="Bundesverband freier Kfz-Importeure" style="border: 1px solid black;"/></a>
-                </div>
+            <div class="grid_3 alpha omega" style="margin-top: 0px; margin-left: 45px;">
+                <img src="${resource(dir: 'images', file: 'mehrmarken-center.jpg')}" alt="Mehrmarken Center" style="border: 1px solid black; width: 174px;"/>
+            </div>
+            <div class="clear" style="">&nbsp;</div>
+            <div class="grid_3 alpha omega" style="margin-top: 0px; margin-left: 45px;">
+                <img src="${resource(dir: 'images', file: 'eu_fahrzeuge.jpg')}" alt="Eu-Fahrzeuge" style="border: 1px solid black; width: 174px;"/>
+            </div>
+            <div class="clear">&nbsp;</div>
+            <div class="grid_3 alpha omega" style="margin-top: 0px; margin-left: 45px;">
+                <a href="http://www.bfi-ev.de" target="_blank"><img src="${resource(dir: 'images', file: 'bfi.jpg')}" alt="Bundesverband freier Kfz-Importeure" style="border: 1px solid black; width: 174px;"/></a>
             </div>
         </div>
 	</body>
-<r:script>
-    $(document).ready(function() {
-
-        var naviheight = $("#naviDiv").outerHeight(true);
-        var contentheight = $("#contentDiv").outerHeight(true);
-
-        if(contentheight < naviheight)
-        {
-            $("#contentDiv").height(naviheight - 20)
-        }
-    });
-</r:script>
 </html>
