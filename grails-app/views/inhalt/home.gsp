@@ -38,6 +38,8 @@
                 Unsere St&auml;rken sind guter Service und qualifizierte Beratung.
                 <br />
                 <br />
+            </div>
+            <div class="textcenter">
                 Kompetent in Sachen Mechanik - Elektronik - Karosserie
                 <br />
                 preiswert - schnell - termingerecht
