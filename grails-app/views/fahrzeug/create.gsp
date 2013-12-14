@@ -1,201 +1,194 @@
-<%@ page import="de.autohutt.domain.FahrzeugMarke" %>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta name="layout" content="html5boilerplate" />
-        <title>Neues Fahrzeug erzeugen</title>
-    </head>
-    <body>
-        <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLink(controller: 'fahrzeug')}">Zur Fahrzeugliste</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Fahrzeug-Liste</g:link></span>
-        </div>
-        <div class="body">
-            <h1>Neues Fahrzeug erzeugen</h1>
-            <g:if test="${flash.message}">
-            <div class="message">${flash.message}</div>
-            </g:if>
-            <g:hasErrors bean="${fahrzeug}">
-            <div class="errors">
-                <g:renderErrors bean="${fahrzeug}" as="list" />
-            </div>
-            </g:hasErrors>
-            <g:form action="save" method="post" >
-                <div class="dialog">
-                    <table style="width: 620px;">
-                        <tbody>
+	<head>
+		<meta name="layout" content="html5boilerplate">
+		<g:set var="entityName" value="${message(code: 'fahrzeug.label', default: 'Fahrzeug')}" />
+		<title>Neues Fahrzeug erzeugen</title>
+	</head>
+	<body>
+		<a href="#create-fahrzeug" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<div class="nav" role="navigation">
+			<ul>
+				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+			</ul>
+		</div>
+		<div id="create-fahrzeug" class="content scaffold-create" role="main">
+			<h1>Neues Fahrzeug erzeugen</h1>
+			<g:if test="${flash.message}">
+			<div class="message" role="status">${flash.message}</div>
+			</g:if>
+			<g:hasErrors bean="${fahrzeugInstance}">
+			<ul class="errors" role="alert">
+				<g:eachError bean="${fahrzeugInstance}" var="error">
+				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+				</g:eachError>
+			</ul>
+			</g:hasErrors>
+			<g:form url="[resource:fahrzeugInstance, action:'save']" >
+				<fieldset class="form">
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="marke">Marke:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'marke','errors')}">
-                                    <g:select optionKey="id" from="${FahrzeugMarke.listOrderByName()}" name="marke.id" value="${fahrzeug?.marke?.id}" ></g:select>
-									<span><g:link controller="fahrzeugMarke" action="create">Neue Fahrzeugmarke erzeugen</g:link></span>
-								</td>
-                            </tr>
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'marke', 'error')} required">
+                        <label for="marke">
+                            <g:message code="fahrzeug.marke.label" default="Marke"/>
+                            <span class="required-indicator">*</span>
+                        </label>
+                        <g:select id="marke" name="marke.id" from="${de.autohutt.domain.FahrzeugMarke.listOrderByName()}" optionKey="id" required=""
+                                  value="${fahrzeugInstance?.marke?.id}" class="many-to-one"/>
+                        <span><g:link controller="fahrzeugMarke" action="create">Neue Fahrzeugmarke erzeugen</g:link></span>
+                    </div>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="modell">Modell:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'modell','errors')}">
-                                    <input type="text" id="modell" name="modell" value="${fieldValue(bean:fahrzeug,field:'modell')}"/>
-                                </td>
-                            </tr>
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'modell', 'error')} ">
+                        <label for="modell">
+                            <g:message code="fahrzeug.modell.label" default="Modell"/>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="farbe">Farbe:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'farbe','errors')}">
-                                    <input type="text" id="farbe" name="farbe" value="${fieldValue(bean:fahrzeug,field:'farbe')}"/>
-                                </td>
-                            </tr>
+                        </label>
+                        <g:textField name="modell" value="${fahrzeugInstance?.modell}"/>
+                    </div>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="baujahr">Baujahr:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'baujahr','errors')}">
-                                    <input type="text" id="baujahr" name="baujahr" value="${fieldValue(bean:fahrzeug,field:'baujahr')}"/>
-                                </td>
-                            </tr>
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'farbe', 'error')} ">
+                        <label for="farbe">
+                            <g:message code="fahrzeug.farbe.label" default="Farbe"/>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="kw">Kw:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'kw','errors')}">
-                                    <input type="text" id="kw" name="kw" value="${fieldValue(bean:fahrzeug,field:'kw')}" />
-                                </td>
-                            </tr>
+                        </label>
+                        <g:textField name="farbe" value="${fahrzeugInstance?.farbe}"/>
+                    </div>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="kmStand">Km Stand:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'kmStand','errors')}">
-                                    <input type="text" id="kmStand" name="kmStand" value="${fieldValue(bean:fahrzeug,field:'kmStand')}" />
-                                </td>
-                            </tr>
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'baujahr', 'error')} ">
+                        <label for="baujahr">
+                            <g:message code="fahrzeug.baujahr.label" default="Baujahr"/>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="preis">Preis:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'preis','errors')}">
-                                    <input type="text" id="preis" name="preis" value="${fahrzeug?.preis ? ((Double)fahrzeug?.preis).intValue() : ''}" />
-                                </td>
-                            </tr>
+                        </label>
+                        <g:textField name="baujahr" value="${fahrzeugInstance?.baujahr}"/>
+                    </div>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="ausstattung">Ausstattung:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'ausstattung','errors')}">
-                                  <g:textArea name="ausstattung" value="${fahrzeug?.ausstattung ? fahrzeug?.ausstattung : ''}" />
-                                </td>
-                            </tr>
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'kw', 'error')} required">
+                        <label for="kw">
+                            <g:message code="fahrzeug.kw.label" default="Kw"/>
+                            <span class="required-indicator">*</span>
+                        </label>
+                        <g:field name="kw" type="number" value="${fahrzeugInstance.kw}" required=""/>
+                    </div>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="kombiniert">Kombiniert:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'kombiniert','errors')}">
-                                    <input type="text" id="kombiniert" name="kombiniert" value="${fieldValue(bean:fahrzeug,field:'kombiniert')}"/>
-                                </td>
-                            </tr>
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'kmStand', 'error')} ">
+                        <label for="kmStand">
+                            <g:message code="fahrzeug.kmStand.label" default="Km Stand"/>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="innerorts">Innerorts:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'innerorts','errors')}">
-                                    <input type="text" id="innerorts" name="innerorts" value="${fieldValue(bean:fahrzeug,field:'innerorts')}"/>
-                                </td>
-                            </tr>
+                        </label>
+                        <g:field name="kmStand" type="number" value="${fahrzeugInstance.kmStand}"/>
+                    </div>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="ausserorts">Ausserorts:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'ausserorts','errors')}">
-                                    <input type="text" id="ausserorts" name="ausserorts" value="${fieldValue(bean:fahrzeug,field:'ausserorts')}"/>
-                                </td>
-                            </tr>
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'preis', 'error')} required">
+                        <label for="preis">
+                            <g:message code="fahrzeug.preis.label" default="Preis"/>
+                            <span class="required-indicator">*</span>
+                        </label>
+                        <g:field name="preis" value="${fieldValue(bean: fahrzeugInstance, field: 'preis')}" required=""/>
+                    </div>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="co2">CO2:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'co2','errors')}">
-                                    <input type="text" id="co2" name="co2" value="${fieldValue(bean:fahrzeug,field:'co2')}"/>
-                                </td>
-                            </tr>
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'ausstattung', 'error')} ">
+                        <label for="ausstattung">
+                            <g:message code="fahrzeug.ausstattung.label" default="Ausstattung"/>
 
-							<tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="fahrzeugmasse">Fahrzeugmasse:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'fahrzeugmasse','errors')}">
-                                    <input type="text" id="fahrzeugmasse" name="fahrzeugmasse" value="${fieldValue(bean:fahrzeug,field:'fahrzeugmasse')}"/>
-                                </td>
-                            </tr>
+                        </label>
+                        <g:textArea name="ausstattung" cols="40" rows="5" maxlength="1073741824" value="${fahrzeugInstance?.ausstattung}"/>
+                    </div>
 
-							<tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="jahressteuer">Jahressteuer:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'jahressteuer','errors')}">
-                                    <input type="text" id="jahressteuer" name="jahressteuer" value="${fieldValue(bean:fahrzeug,field:'jahressteuer')}"/>
-                                </td>
-                            </tr>
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'kombiniert', 'error')} required">
+                        <label for="kombiniert">
+                            <g:message code="fahrzeug.kombiniert.label" default="Kombiniert"/>
+                            <span class="required-indicator">*</span>
+                        </label>
+                        <g:textField name="kombiniert" required="" value="${fahrzeugInstance?.kombiniert}"/>
+                    </div>
 
-							<tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="energietraegerkosten">Energietr&auml;gerkosten:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'energietraegerkosten','errors')}">
-									<input type="text" id="energietraegerkosten" name="energietraegerkosten" value="${fieldValue(bean:fahrzeug,field:'energietraegerkosten')}"/>
-                                </td>
-                            </tr>
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'innerorts', 'error')} required">
+                        <label for="innerorts">
+                            <g:message code="fahrzeug.innerorts.label" default="Innerorts"/>
+                            <span class="required-indicator">*</span>
+                        </label>
+                        <g:textField name="innerorts" required="" value="${fahrzeugInstance?.innerorts}"/>
+                    </div>
 
-							<tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="co2Effizienz">CO2-Effizienz:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'co2Effizienz','errors')}">
-                                    <g:select from="${['A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G']}" keys="${['aplus', 'a', 'b', 'c', 'd', 'e', 'f', 'g']}" name="co2Effizienz" value="${fahrzeug?.co2Effizienz}" ></g:select>
-									%{--<input type="text" id="co2Effizienz" name="co2Effizienz" value="${fieldValue(bean:fahrzeug,field:'co2Effizienz')}"/>--}%
-                                </td>
-                            </tr>
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'ausserorts', 'error')} required">
+                        <label for="ausserorts">
+                            <g:message code="fahrzeug.ausserorts.label" default="Ausserorts"/>
+                            <span class="required-indicator">*</span>
+                        </label>
+                        <g:textField name="ausserorts" required="" value="${fahrzeugInstance?.ausserorts}"/>
+                    </div>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="gebraucht">Gebraucht:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'gebraucht','errors')}">
-                                    <g:checkBox name="gebraucht" value="${fahrzeug?.gebraucht}" ></g:checkBox>
-                                </td>
-                            </tr>
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'co2', 'error')} required">
+                        <label for="co2">
+                            <g:message code="fahrzeug.co2.label" default="CO2"/>
+                            <span class="required-indicator">*</span>
+                        </label>
+                        <g:textField name="co2" required="" value="${fahrzeugInstance?.co2}"/>
+                    </div>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="neu">Neu:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'neu','errors')}">
-                                    <g:checkBox name="neu" value="${fahrzeug?.neu}" ></g:checkBox>
-                                </td>
-                            </tr>
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'fahrzeugmasse', 'error')} ">
+                        <label for="fahrzeugmasse">
+                            <g:message code="fahrzeug.fahrzeugmasse.label" default="Fahrzeugmasse"/>
 
-                        </tbody>
-                    </table>
-                </div>
-                <g:hiddenField name="newCreate" value="true" />
-                <div class="buttons">
-                    <span class="button"><input class="save" type="submit" action="create" value="Neu erzeugen" /></span>
-                </div>
-            </g:form>
-        </div>
-    </body>
+                        </label>
+                        <g:textField name="fahrzeugmasse" value="${fahrzeugInstance?.fahrzeugmasse}"/>
+                    </div>
+
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'jahressteuer', 'error')} ">
+                        <label for="jahressteuer">
+                            <g:message code="fahrzeug.jahressteuer.label" default="Jahressteuer"/>
+
+                        </label>
+                        <g:textField name="jahressteuer" value="${fahrzeugInstance?.jahressteuer}"/>
+                    </div>
+
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'energietraegerkosten', 'error')} ">
+                        <label for="energietraegerkosten">
+                            <g:message code="fahrzeug.energietraegerkosten.label" default="Energietraegerkosten"/>
+
+                        </label>
+                        <g:textField name="energietraegerkosten" value="${fahrzeugInstance?.energietraegerkosten}"/>
+                    </div>
+
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'co2Effizienz', 'error')} ">
+                        <label for="co2Effizienz">
+                            <g:message code="fahrzeug.co2Effizienz.label" default="CO2-Effizienz"/>
+
+                        </label>
+                        %{--<g:textField name="co2Effizienz" value="${fahrzeugInstance?.co2Effizienz}"/>--}%
+                        <g:select from="${['A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G']}" keys="${['aplus', 'a', 'b', 'c', 'd', 'e', 'f', 'g']}" name="co2Effizienz" value="${fahrzeug?.co2Effizienz}" ></g:select>
+                    </div>
+
+                    %{--<div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'bilder', 'error')} ">
+                        <label for="bilder">
+                            <g:message code="fahrzeug.bilder.label" default="Bilder"/>
+
+                        </label>
+                        <g:select name="bilder" from="${de.webmpuls.photo_album.Picture.list()}" multiple="multiple" optionKey="id" size="5"
+                                  value="${fahrzeugInstance?.bilder*.id}" class="many-to-many"/>
+                    </div>--}%
+
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'gebraucht', 'error')} ">
+                        <label for="gebraucht">
+                            <g:message code="fahrzeug.gebraucht.label" default="Gebraucht"/>
+
+                        </label>
+                        <g:checkBox name="gebraucht" value="${fahrzeugInstance?.gebraucht}"/>
+                    </div>
+
+                    <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'neu', 'error')} ">
+                        <label for="neu">
+                            <g:message code="fahrzeug.neu.label" default="Neu"/>
+
+                        </label>
+                        <g:checkBox name="neu" value="${fahrzeugInstance?.neu}"/>
+                    </div>
+
+                </fieldset>
+				<fieldset class="buttons">
+					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+				</fieldset>
+			</g:form>
+		</div>
+	</body>
 </html>

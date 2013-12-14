@@ -1,185 +1,121 @@
+<%@ page import="de.webmpuls.photo_album.Picture; de.webmpuls.photo_album.util.MediaUtils; de.autohutt.domain.Fahrzeug" %>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta name="layout" content="html5boilerplate" />
-        <title>Fahrzeug-Liste</title>
+<head>
+    <meta name="layout" content="html5boilerplate">
+    <g:set var="entityName" value="${message(code: 'fahrzeug.label', default: 'Fahrzeug')}"/>
+    <title><g:message code="default.list.label" args="[entityName]"/></title>
 
-        <g:javascript>
-            function setAllCheckBoxes()
-            {
-                for (var i = 0; i < document.forms.TerminForm.length; ++i)
-                {
-                    if (document.forms.TerminForm.elements[i].type == 'checkbox' && document.forms.TerminForm.elements[i].checked != 'checked')
-                    {
-                        document.forms.TerminForm.elements[i].checked = 'checked';
-                    }
-                    else
-                    {
-                        document.forms.TerminForm.elements[i].checked = '';
-                    }
-                }
-            }
-        </g:javascript>
+    <r:style>
 
-        <style type="text/css">
+        /* ... file-local CSS props ... */
 
-		/* ... file-local CSS props ... */
-
-		#contentDiv {
-            width: 658px;
-	        * width: 705px;
-		}
-
-        #uberwrapperDiv {
-	        width: 1200px;
+        tr>td:first-child, tr>th:first-child {
+            padding-left: 0.5em;
+            padding-right: 0.5em;
         }
 
-        #headerDiv {
-          border: none;
+        tr>td:last-child, tr>th:last-child {
+            padding-left: 0.5em;
+            padding-right: 0.5em;
         }
-        </style>
-    </head>
-    <body>
-        <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLink(controller: 'fahrzeug')}">Zur Fahrzeugliste</a></span>
-            <span class="menuButton"><g:link class="create" action="create">Neues Fahrzeug erzeugen</g:link></span>
-            <span class="menuButton"><g:link class="create" controller="fahrzeugMarke" action="create">Neue Fahrzeugmarke erzeugen</g:link></span>
-        </div>
-        <div class="body">
-            <h1>Fahrzeug-Liste</h1>
-            <g:if test="${flash.message}">
-            <div class="message">${flash.message}</div>
-            </g:if>
-            <div class="list">
-                <g:if test="${!fahrzeugList.isEmpty()}">
-                <table>
-                    <thead>
-                        <tr style="margin-bottom: 10px;">
+    </r:style>
+</head>
 
-                            <th class="sortable">
-                                &nbsp;
-                            </th>
+<body>
+<a href="#list-fahrzeug" class="skip" tabindex="-1"><g:message code="default.link.skip.label"
+                                                               default="Skip to content&hellip;"/></a>
 
-                   	        %{--<g:sortableColumn property="id" title="Id" />--}%
-                        
-							<g:sortableColumn property="marke" title="Marke" />
+<div class="nav" role="navigation">
+    <ul>
+        <li><a class="home" href="${createLink(controller: 'fahrzeug')}">Zur Fahrzeugliste</a></li>
+        <li><g:link class="create" action="create">Neues Fahrzeug erzeugen</g:link></li>
+        <li><g:link class="create" action="create" controller="fahrzeugMarke">Neue Fahrzeugmarke erzeugen</g:link></li>
+    </ul>
+</div>
 
-						   	<g:sortableColumn property="modell" title="Modell" />
-                        
-                   	        <g:sortableColumn property="farbe" title="Farbe" />
-                        
-                   	        <g:sortableColumn property="baujahr" title="Baujahr" />
-                        
-                   	        <g:sortableColumn property="kw" title="Kw" />
-                        
-                   	        <g:sortableColumn property="kmStand" title="Km Stand" />
-                        
-                   	        <g:sortableColumn property="preis" title="Preis" />
-                        
-                   	        %{--<g:sortableColumn property="gebraucht" title="Gebraucht" />--}%
-                        
-                   	        %{--<g:sortableColumn property="neu" title="Neu" />--}%
-                        
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <g:form action="deleteSelected" method="post" name="FahrzeugForm">
-                    <g:each in="${fahrzeugList}" status="i" var="fahrzeug">
-						<tr>
-							<td colspan="8">
+<div id="list-fahrzeug" class="content scaffold-list" role="main">
+    <h1>Fahrzeug-Liste</h1>
+    <g:if test="${flash.message}">
+        <div class="message" role="status">${flash.message}</div>
+    </g:if>
+    <g:form action="deleteSelected" method="post" name="FahrzeugForm">
+    <table style="width: 600px;">
+        <tbody>
+        <g:each in="${fahrzeugInstanceList}" status="i" var="fahrzeugInstance">
+            <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
-								<br/>
-								<table border="1">
+                <td><g:checkBox name="${fahrzeugInstance.id.toString()}"/></td>
 
-									<tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
+                <%
+                    def fahrzeugBilder = fahrzeugInstance.bilder.isEmpty() ? [] : (fahrzeugInstance.bilder.sort {Picture a, Picture b -> a.position <=> b.position})
+                %>
+                <td style="width: 100px;">
+                    <g:if test="${fahrzeugBilder.isEmpty()}">
+                        <g:link mapping="fahrzeugAnzeigen"
+                                params="[id: fahrzeugInstance.id, marke: fahrzeugInstance.marke, modell: fahrzeugInstance.modell]"><g:img
+                                dir="medias" file="icon.no_photo_available.png"
+                                alt="${fahrzeugInstance?.marke}${fahrzeugInstance?.modell}"
+                                style="width: 80px;"/></g:link>
+                    </g:if>
+                    <g:else>
+                        <g:link mapping="fahrzeugAnzeigen"
+                                params="[id: fahrzeugInstance.id, marke: fahrzeugInstance.marke, modell: fahrzeugInstance.modell]"><img
+                                src="${wm_photo_album.pathToImage(picture: fahrzeugBilder?.first(), size: MediaUtils.THUMBNAIL, albumName: ((Picture) fahrzeugBilder.first())?.album?.getName())}"
+                                alt="${fahrzeugInstance?.marke} ${fahrzeugInstance?.modell}"
+                                style="width: 80px;"/></g:link>
+                    </g:else>
+                </td>
+                <td style="width: 200px;">
+                    <g:link mapping="fahrzeugAnzeigen" params="[id: fahrzeugInstance.id, marke: fahrzeugInstance.marke, modell: fahrzeugInstance.modell]">${fieldValue(bean: fahrzeugInstance, field: "marke")} ${fieldValue(bean: fahrzeugInstance, field: "modell")}</g:link>
 
-										<td><g:checkBox name="${fahrzeug.id.toString()}"/></td>
+                    <br />
+                    ${message(code: 'fahrzeug.baujahr.label', default: 'Baujahr')}: ${fieldValue(bean: fahrzeugInstance, field: 'baujahr')}
+                    <br />
+                    ${message(code: 'fahrzeug.kw.label', default: 'KW')}: ${fieldValue(bean: fahrzeugInstance, field: "kw")}
+                    <br />
+                    ${message(code: 'fahrzeug.kmStand.label', default: 'Km-Stand')}: ${fieldValue(bean: fahrzeugInstance, field: "kmStand")}
+                    <br />
+                    ${message(code: 'fahrzeug.farbe.label', default: 'Farbe')}: ${fieldValue(bean: fahrzeugInstance, field: "farbe")}
+                    <br />
+                    ${message(code: 'fahrzeug.gebraucht.label', default: 'Gebraucht')}: ${fieldValue(bean: fahrzeugInstance, field: "gebraucht") == 'true' ? 'ja' : 'nein'}
+                    <br />
+                    ${message(code: 'fahrzeug.neu.label', default: 'Neu')}: ${fieldValue(bean: fahrzeugInstance, field: "neu") == 'true' ? 'ja' : 'nein'}
+                </td>
 
-										%{--<td><g:link action="anzeigen" id="${fahrzeug.id}">${fieldValue(bean:fahrzeug, field:'id')}</g:link></td>--}%
+                <td>
+                    <br />
+                    ${message(code: 'fahrzeug.kombiniert.label', default: 'Kombiniert')}: ${fieldValue(bean: fahrzeugInstance, field: 'kombiniert')}l/100
+                    <br />
+                    ${message(code: 'fahrzeug.innerorts.label', default: 'Innerorts')}: ${fieldValue(bean: fahrzeugInstance, field: 'innerorts')}l/100
+                    <br />
+                    ${message(code: 'fahrzeug.ausserorts.label', default: 'Ausserorts')}: ${fieldValue(bean: fahrzeugInstance, field: 'ausserorts')}l/100
+                    <br />
+                    ${message(code: 'fahrzeug.co2.label', default: 'CO2')}: ${fieldValue(bean: fahrzeugInstance, field: 'co2')}g/Km
+                </td>
 
-										%{--<td>${fieldValue(bean:fahrzeug, field:'id')}</td>--}%
+                <td style="vertical-align: middle;">
+                    <span style="white-space: nowrap; font-style: italic;"><g:formatNumber number="${fahrzeugInstance.preis}" format="###,##0',--'"/></span>
+                </td>
 
-										<td><g:link action="anzeigen" id="${fahrzeug.id}">${fieldValue(bean: fahrzeug, field: 'marke')}</g:link></td>
+            </tr>
+        </g:each>
+        </tbody>
+    </table>
+    <table>
+        <g:if test="${!fahrzeugInstanceList.isEmpty()}">
+            <tr>
+                <td colspan="2" nowrap="nowrap">
+                    Markierte:&nbsp;&nbsp;&nbsp;<g:submitButton name="submit" value="Loeschen" />
+                </td>
+            </tr>
+        </g:if>
+    </table>
+    </g:form>
 
-										%{--<td>${fieldValue(bean:fahrzeug, field:'marke')}</td>--}%
-
-										<td><g:link action="anzeigen" id="${fahrzeug.id}">${fieldValue(bean: fahrzeug, field: 'modell')}</g:link></td>
-
-										%{--<td>${fieldValue(bean:fahrzeug, field:'modell')}</td>--}%
-
-										<td><g:link action="anzeigen" id="${fahrzeug.id}">${fieldValue(bean: fahrzeug, field: 'farbe')}</g:link></td>
-
-										%{--<td>${fieldValue(bean:fahrzeug, field:'farbe')}</td>--}%
-
-										<td><g:link action="anzeigen" id="${fahrzeug.id}">${fieldValue(bean: fahrzeug, field: 'baujahr')}</g:link></td>
-
-										%{--<td>${fieldValue(bean:fahrzeug, field:'baujahr')}</td>--}%
-
-										<td><g:link action="anzeigen" id="${fahrzeug.id}">${fieldValue(bean: fahrzeug, field: 'kw')}</g:link></td>
-
-										%{--<td>${fieldValue(bean:fahrzeug, field:'kw')}</td>--}%
-
-										<td><g:link action="anzeigen" id="${fahrzeug.id}">${fieldValue(bean: fahrzeug, field: 'kmStand')}</g:link></td>
-
-										%{--<td>${fieldValue(bean:fahrzeug, field:'kmStand')}</td>--}%
-
-										<td><g:link action="anzeigen" id="${fahrzeug.id}"><g:formatNumber number="${fahrzeug.preis}" format="###,##0',--'"/></g:link></td>
-										%{--<td><g:link action="anzeigen" id="${fahrzeug.id}"><g:formatNumber number="${fahrzeug.preis}" format="####0.##''" />,--</g:link></td>--}%
-
-										%{--<td>${fieldValue(bean:fahrzeug, field:'preis')}</td>--}%
-									</tr>
-									<tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-										<td colspan="2"><g:link action="anzeigen" id="${fahrzeug.id}">Gebraucht: ${fieldValue(bean: fahrzeug, field: 'gebraucht') == 'true' ? 'ja' : 'nein'}</g:link></td>
-
-										%{--<td>${fieldValue(bean:fahrzeug, field:'gebraucht')}</td>--}%
-
-										<td><g:link action="anzeigen" id="${fahrzeug.id}">Neu: ${fieldValue(bean: fahrzeug, field: 'neu') == 'true' ? 'ja' : 'nein'}</g:link></td>
-
-										%{--<td>${fieldValue(bean:fahrzeug, field:'neu')}</td>--}%
-
-										<td colspan="2"><g:link action="anzeigen" id="${fahrzeug.id}">Kombiniert: ${fieldValue(bean: fahrzeug, field: 'kombiniert')}l/100</g:link></td>
-
-										%{--<td>${fieldValue(bean:fahrzeugInstance, field:'kombiniert')}</td>--}%
-
-										<td><g:link action="anzeigen" id="${fahrzeug.id}">Innerorts: ${fieldValue(bean: fahrzeug, field: 'innerorts')}l/100</g:link></td>
-
-										%{--<td>${fieldValue(bean:fahrzeugInstance, field:'innerorts')}</td>--}%
-
-										<td><g:link action="anzeigen" id="${fahrzeug.id}">Ausserorts: ${fieldValue(bean: fahrzeug, field: 'ausserorts')}l/100</g:link></td>
-
-										%{--<td>${fieldValue(bean:fahrzeugInstance, field:'ausserorts')}</td>--}%
-
-										<td><g:link action="anzeigen" id="${fahrzeug.id}">CO2: ${fieldValue(bean: fahrzeug, field: 'co2')}g/Km</g:link></td>
-
-										%{--<td>${fieldValue(bean:fahrzeugInstance, field:'co2')}</td>--}%
-
-									</tr>
-
-								</table>
-
-							</td>
-						</tr>
-                    </g:each>
-					<g:if test="${!fahrzeugList.isEmpty()}">
-						<tr>
-                            <td colspan="2" nowrap="nowrap">
-                                Markierte:&nbsp;&nbsp;&nbsp;<g:submitButton name="submit" value="Loeschen" />
-                            </td>
-                            <!--<td>
-                                Alle
-                            </td>-->
-                            %{--<td>--}%
-                                %{--<g:submitButton name="submit" value="Loeschen" />--}%
-                            %{--</td>--}%
-                        </tr>
-					</g:if>
-                    </g:form>
-                    </tbody>
-                </table>
-                </g:if>
-            </div>
-            %{--<div class="paginateButtons">
-                <g:paginate total="${Fahrzeug.count()}" />
-            </div>--}%
-        </div>
-    </body>
+    %{--<div class="pagination">
+        <g:paginate total="${fahrzeugInstanceCount ?: 0}"/>
+    </div>--}%
+</div>
+</body>
 </html>

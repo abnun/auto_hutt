@@ -42,7 +42,7 @@
 </head>
 
 <body style="background-color: #D6D6D6; color: #000;">
-<div id="container" style="margin-top: 5px;">
+<div id="container">
     <header>
         <div class="container_12">
             <div class="grid_12" style="border: 1px solid #666;">

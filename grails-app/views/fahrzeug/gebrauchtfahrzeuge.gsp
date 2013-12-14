@@ -3,6 +3,16 @@
     <head>
         <meta name="layout" content="html5boilerplate" />
         <title>Gebrauchtfahrzeuge</title>
+
+        <r:style>
+            td, th {
+                font: 11px verdana, arial, helvetica, sans-serif;
+                line-height: 12px;
+                padding: 5px 6px;
+                text-align: left;
+                vertical-align: top;
+            }
+        </r:style>
     </head>
     <body>
 
@@ -41,13 +51,22 @@
                                 <%
                                     def fahrzeugBilder = fahrzeug.bilder.isEmpty() ? [] : (fahrzeug.bilder.sort {Picture a, Picture b -> a.position <=> b.position})
                                 %>
-
-                                <g:if test="${fahrzeugBilder.isEmpty()}">
-                                    <td><g:link mapping="fahrzeugAnzeigen" params="[id: fahrzeug.id, marke: fahrzeug.marke, modell: fahrzeug.modell]"><g:img dir="medias" file="icon.no_photo_available.png" alt="${fahrzeug?.marke} ${fahrzeug?.modell}" style="width: 80px;" /></g:link></td>
-                                </g:if>
-                                <g:else>
-                                    <td><g:link mapping="fahrzeugAnzeigen" params="[id: fahrzeug.id, marke: fahrzeug.marke, modell: fahrzeug.modell]"><img src="${wm_photo_album.pathToImage(picture: fahrzeugBilder?.first(), size: MediaUtils.THUMBNAIL, albumName: ((Picture) fahrzeugBilder.first())?.album?.getName())}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}" /></g:link></td>
-                                </g:else>
+                                <td style="width: 100px;">
+                                    <g:if test="${fahrzeugBilder.isEmpty()}">
+                                        <g:link mapping="fahrzeugAnzeigen"
+                                                params="[id: fahrzeug.id, marke: fahrzeug.marke, modell: fahrzeug.modell]"><g:img
+                                                dir="medias" file="icon.no_photo_available.png"
+                                                alt="${fahrzeug?.marke}${fahrzeug?.modell}"
+                                                style="width: 80px;"/></g:link>
+                                    </g:if>
+                                    <g:else>
+                                        <g:link mapping="fahrzeugAnzeigen"
+                                                params="[id: fahrzeug.id, marke: fahrzeug.marke, modell: fahrzeug.modell]"><img
+                                                src="${wm_photo_album.pathToImage(picture: fahrzeugBilder?.first(), size: MediaUtils.THUMBNAIL, albumName: ((Picture) fahrzeugBilder.first())?.album?.getName())}"
+                                                alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
+                                                style="width: 80px;"/></g:link>
+                                    </g:else>
+                                </td>
 
 								%{--<td>${fieldValue(bean:fahrzeug, field:'marke')}</td>--}%
 

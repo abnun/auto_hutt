@@ -46,7 +46,7 @@ class AuthenticationController
 		}
 		else
 		{
-			flash.message = "Login nicht erfolgreich, Username und Passwort ueberpruefen!"
+			flash.message = "Login nicht erfolgreich, Username und Passwort überprüfen!"
 			redirect(action: 'login')
 		}
 	}

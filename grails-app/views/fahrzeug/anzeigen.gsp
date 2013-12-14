@@ -4,11 +4,32 @@
 	<meta name="layout" content="html5boilerplate" />
 	<title>${fahrzeug.gebraucht ? 'Gebrauchtfahrzeug: ' : 'Neufahrzeug: '}${fahrzeug?.marke} ${fahrzeug?.modell}</title>
 
-	<style type="text/css">
+	<r:style>
 
 		/* ... file-local CSS props ... */
 
-	</style>
+        th:hover, tr:hover {
+            background: none;
+        }
+
+        th:hover {
+            background-color: #efefef;
+	        background-image: -moz-linear-gradient(top, #ffffff, #eaeaea);
+	        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #eaeaea));
+	        filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#ffffff', EndColorStr = '#eaeaea');
+	        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eaeaea')";
+        }
+
+        tr>td:first-child, tr>th:first-child {
+            padding-left: 0em;
+            padding-right: 0.5em;
+        }
+
+        tr>td:last-child, tr>th:last-child {
+            padding-left: 0.5em;
+            padding-right: 0em;
+        }
+	</r:style>
 
 	<r:require module="photo-album-gallery" />
 	<r:script>
@@ -27,7 +48,11 @@
 <%
 	def fahrzeugBilder = []
 %>
-<table cellpadding="0" cellspacing="0" style="border: none; width: 620px;">
+<table cellpadding="0" cellspacing="0" style="border: none; width: 600px;">
+    <colgroup>
+        <col width="400">
+        <col width="200">
+    </colgroup>
 	<tr>
 		<g:if test="${!fahrzeug.bilder?.isEmpty()}">
 			<%
@@ -50,11 +75,11 @@
 		</g:if>
 		<g:else>
 			<td>
-				<img src="${request.getContextPath()}${grailsApplication.config.media.dir}${grailsApplication.config.no.pic.available}" alt="Kein Bild verf&uuml;gbar"
+				<img style="width: 380px;" src="${request.getContextPath()}${grailsApplication.config.media.dir}${grailsApplication.config.no.pic.available}" alt="Kein Bild verf&uuml;gbar"
 					 title="Kein Bild verf&uuml;gbar" />
 			</td>
 		</g:else>
-		<td style="vertical-align: top; text-align: center;">
+		<td style="width: 200px;">
 			<table cellpadding="0" cellspacing="0" style="border: none; border-collapse: collapse;">
 				<tr style="border: 1px solid white; border-top: none;">
 					<th colspan="2" style="border: 1px solid white; border-top: none;">
@@ -161,15 +186,19 @@
 				<tr>
 					<g:each status="i" var="bild" in="${fahrzeugBilder}">
 						<g:if test="${i > 0 && i <= 3}">
-							<td style="padding-top: 8px;">
-								<a href="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.BIG, albumName: ((Picture) bild).album.getName())}" class="highslide"
-								   onclick="return hs.expand(this, {wrapperClassName: 'highslide-no-border', dimmingOpacity: 0.75, align: 'center'})">
-									<img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.THUMBNAIL, albumName: ((Picture) bild).album.getName())}" alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
-										 title="Klicken Sie hier, um eine vergr&ouml;&szlig;erte Ansicht des Bildes zu bekommen" />
-								</a>
+                            <td style="padding-top: 10px; padding-left: 0.6em;">
+                                <a href="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.BIG, albumName: ((Picture) bild).album.getName())}"
+                                   class="highslide"
+                                   onclick="return hs.expand(this, {wrapperClassName: 'highslide-no-border', dimmingOpacity: 0.75, align: 'center'})">
+                                    <img src="${wm_photo_album.pathToImage(picture: bild, size: MediaUtils.THUMBNAIL, albumName: ((Picture) bild).album.getName())}"
+                                         alt="${fahrzeug?.marke} ${fahrzeug?.modell}"
+                                         title="Klicken Sie hier, um eine vergr&ouml;&szlig;erte Ansicht des Bildes zu bekommen"
+                                         style="width: 80px;"/>
+                                </a>
 
-								<div id="closebutton" class="highslide-overlay closebutton" onclick="return hs.close(this)" title="Schließen"></div>
-							</td>
+                                <div id="closebutton" class="highslide-overlay closebutton"
+                                     onclick="return hs.close(this)" title="Schließen"></div>
+                            </td>
 						</g:if>
 					</g:each>
 				</tr>
@@ -179,7 +208,7 @@
 	</tr>
 	<tr>
 		<td>
-			<table cellpadding="0" cellspacing="0" style="border: 1px solid white; border-collapse: collapse;">
+			<table cellpadding="0" cellspacing="0" style="border: 1px solid white; border-collapse: collapse; width: 380px;">
 				<g:if test="${fahrzeug.ausstattung != null}">
 					<%
 						def fahrzeugAusstattungen = ((String) fahrzeug.ausstattung).tokenize(';')

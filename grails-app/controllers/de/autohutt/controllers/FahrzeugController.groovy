@@ -8,15 +8,15 @@ import de.autohutt.domain.FahrzeugMarke
 
 class FahrzeugController
 {
-	def pictureService
+    // the delete, save and update actions only accept POST requests
+    static allowedMethods = [delete:'POST', save:'POST', update:'POST']
+
+    def pictureService
 
 	def index =
 	{
 		redirect(action:list,params:params)
 	}
-
-    // the delete, save and update actions only accept POST requests
-    static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list =
 	{
@@ -32,7 +32,7 @@ class FahrzeugController
 		Collection fahrzeugList = Fahrzeug.list( params )
 		fahrzeugList = sortMarke(params, fahrzeugList)
 
-		[ fahrzeugList: fahrzeugList ]
+		[ fahrzeugInstanceList: fahrzeugList ]
     }
 
     def show =
@@ -368,9 +368,9 @@ class FahrzeugController
 	def create =
 	{
         def fahrzeug = new Fahrzeug()
-        fahrzeug.properties = params
+        //fahrzeug.properties = params
 
-		return ['fahrzeug':fahrzeug]
+		return ['fahrzeugInstance':fahrzeug]
     }
 
     def save =
