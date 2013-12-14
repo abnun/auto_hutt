@@ -53,7 +53,7 @@
             </div>
             <div class="clear">&nbsp;</div>
             <div class="grid_3 alpha omega" style="margin-top: 3px; margin-left: 45px;">
-                <img src="${resource(dir: 'images', file: 'mehrmarken-center.jpg')}" alt="Mehrmarken Center" style="border: 1px solid black; width: 174px;"/>
+                <a href="http://www.eln.de/22658eln" target="_blank"><img src="${resource(dir: 'images', file: 'mehrmarken-center.jpg')}" alt="Mehrmarken Center" style="border: 1px solid black; width: 174px;"/></a>
             </div>
             <div class="clear" style="">&nbsp;</div>
             <div class="grid_3 alpha omega" style="margin-top: 0px; margin-left: 45px;">
