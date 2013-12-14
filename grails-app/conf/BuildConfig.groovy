@@ -52,6 +52,7 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         // runtime 'mysql:mysql-connector-java:5.1.24'
         runtime "org.apache.ant:ant:1.8.4"
+        runtime "org.apache.ant:ant-launcher:1.8.4"
     }
 
     credentials {
