@@ -8,6 +8,11 @@ class FahrzeugMarke implements java.io.Serializable
 		cache true
   	}
 
+    static constraints =
+    {
+        name(unique: true)
+    }
+
 	public String toString()
 	{
 		return name;

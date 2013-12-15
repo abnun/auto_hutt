@@ -104,6 +104,9 @@ environments {
     }
 }
 
+// HACK for serverURL
+grails.config.locations = ["file:${userHome}/${appName}-config.groovy"]
+
 media.dir="/medias/"
 no.pic.available = "icon.no_photo_available.png"
 

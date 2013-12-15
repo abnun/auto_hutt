@@ -5,10 +5,11 @@
         <title>Fahrzeug-Bild hochladen</title>
     </head>
     <body>
-        <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLink(controller: 'fahrzeug')}">Zur Fahrzeugliste</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Fahrzeug-Liste</g:link></span>
-        </div>
+    <div class="nav" role="navigation">
+        <ul>
+            <li><a class="home" href="${createLink(controller: 'fahrzeug')}">Zur Fahrzeugliste</a></li>
+        </ul>
+    </div>
         <div class="body">
             <h1>Fahrzeug-Bild hochladen</h1>
 			<g:if test="${flash.message}">
@@ -19,17 +20,22 @@
                 <g:renderErrors bean="${fahrzeug}" as="list" />
             </div>
             </g:hasErrors>
+            <g:if test="${flash.error}">
+                <div class="errors" role="status">${flash.error}</div>
+            </g:if>
 			<br />
             <g:uploadForm action="bindPicturesToCar" method="post">
               <table cellpadding="0" cellspacing="0" border="0" style="width: 620px;">
                 <tr>
                   <td>
                     <p>
+                        <label for="picture1" id="label_picture1">
                       Bild f&uuml;r Position 1 w&auml;hlen:
+                        </label>
                     </p>
                   </td>
                   <td>
-                    <input type="file" name="picture1"/>
+                    <input type="file" name="picture1" id="picture1"/>
                   </td>
                   <td>
                     <g:each var="bild" in="${fahrzeug.bilder}">
@@ -47,11 +53,13 @@
                 <tr>
                   <td>
                     <p>
-                      Bild f&uuml;r Position 2 w&auml;hlen:
+                        <label for="picture2" id="label_picture2">
+                            Bild f&uuml;r Position 2 w&auml;hlen:
+                        </label>
                     </p>
                   </td>
                   <td>
-                    <input type="file" name="picture2"/>
+                    <input type="file" name="picture2" id="picture2"/>
                   </td>
                   <td>
                     <g:each var="bild" in="${fahrzeug.bilder}">
@@ -70,11 +78,13 @@
                 <tr>
                   <td>
                     <p>
+                        <label for="picture3" id="label_picture3">
                       Bild f&uuml;r Position 3 w&auml;hlen:
+                        </label>
                     </p>
                   </td>
                   <td>
-                    <input type="file" name="picture3"/>
+                    <input type="file" name="picture3" id="picture3"/>
                   </td>
                   <td>
                     <g:each var="bild" in="${fahrzeug.bilder}">

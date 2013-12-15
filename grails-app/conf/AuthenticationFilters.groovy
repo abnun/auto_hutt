@@ -22,7 +22,7 @@ class AuthenticationFilters
 		{
 			before =
 			{
-				if(!session.user && !actionName.equals('show') && !actionName.equals('anzeigen') && !actionName.equals('gebrauchtfahrzeuge') && !actionName.equals('lagerfahrzeuge') && !actionName.equals('bestellfahrzeugeFreiKonfigurierbar') && !actionName.equals('fahrzeugeImVorlauf') && !actionName.equals('gebrauchtfahrzeuge3Bis5Jahre') && !actionName.equals('jahreswagen') && !actionName.equals('neuUndJahreswagenBis24Monate') && !actionName.equals('neuwagenOhneZulassung'))
+				if(!session.user && !actionName.equals('anzeigen') && !actionName.equals('gebrauchtfahrzeuge') && !actionName.equals('lagerfahrzeuge') && !actionName.equals('bestellfahrzeugeFreiKonfigurierbar') && !actionName.equals('fahrzeugeImVorlauf') && !actionName.equals('gebrauchtfahrzeuge3Bis5Jahre') && !actionName.equals('jahreswagen') && !actionName.equals('neuUndJahreswagenBis24Monate') && !actionName.equals('neuwagenOhneZulassung'))
 				{
 					log.info("no access -> $params")
 					session.oldController = params.controller

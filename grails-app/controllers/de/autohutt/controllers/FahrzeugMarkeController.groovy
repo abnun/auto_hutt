@@ -16,7 +16,7 @@ class FahrzeugMarkeController
     def list =
 	{
         //if(!params.max) params.max = 10
-        [ fahrzeugMarkeList: FahrzeugMarke.list( params, cache: true ) ]
+        [ fahrzeugMarkeList: FahrzeugMarke.listOrderByName( params ) ]
     }
 
     def show =
@@ -41,7 +41,7 @@ class FahrzeugMarkeController
 		if(fahrzeugMarke)
 		{
             fahrzeugMarke.delete()
-            flash.message = "Fahrzeugmarke '${fahrzeugMarke.name}' gel&ouml;scht!"
+            flash.message = "Fahrzeugmarke '${fahrzeugMarke.name}' gelöscht!"
             redirect(action:list)
         }
         else
@@ -76,7 +76,7 @@ class FahrzeugMarkeController
 
 			if(!fahrzeugMarke.hasErrors() && fahrzeugMarke.save())
 			{
-                flash.message = "Fahrzeugmarke '${fahrzeugMarke.name}' wurde ge&auml;ndert!"
+                flash.message = "Fahrzeugmarke '${fahrzeugMarke.name}' wurde geändert!"
                 redirect(action:show,id:fahrzeugMarke.id)
             }
             else

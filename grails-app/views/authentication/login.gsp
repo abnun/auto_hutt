@@ -8,21 +8,37 @@
 
 <body>
 
-<h1>
-	Anmeldung erforderlich
-</h1>
-<p>
-	Bitte Benutzer und Passwort eingeben.
-</p>
+<div class="grid_5">
+    <h1>
+        Anmeldung erforderlich
+    </h1>
 
+    <p>
+        Bitte Benutzer und Passwort eingeben.
+    </p>
+    <br/>
+</div>
+<div class="clear">&nbsp;</div>
+
+<div class="grid_5">
 <g:form action="setSessionUserByLogin" method="post" name="AuthenticationForm">
 
-	<div>
-		Benutzer:&nbsp;<span style="margin-left: 10px;"><g:textField name="user"/></span>
+	<div class="grid_2">
+		Benutzer:
 	</div>
-	<div>
-		Passwort:&nbsp;<span style="margin-left: 10px;"><g:passwordField name="password"/></span>
+    <div class="grid_3">
+        <g:textField name="user"/>
+    </div>
+    <div class="clear">&nbsp;</div>
+    <br />
+    <div class="grid_2">
+		Passwort:
 	</div>
+    <div class="grid_3">
+        <g:passwordField name="password"/>
+    </div>
+    <div class="clear">&nbsp;</div>
+    <br />
 	<div>
 		<input type="reset" value="Zur&uuml;cksetzen"/>
 		<g:submitButton name="submit" value="Abschicken"/>

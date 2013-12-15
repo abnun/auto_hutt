@@ -57,7 +57,7 @@ class FahrzeugController
 		if(fahrzeug)
 		{
             fahrzeug.delete()
-            flash.message = "Fahrzeug ${params.id} gel&ouml;scht!"
+            flash.message = "Fahrzeug ${params.id} gelöscht!"
             redirect(action:list)
         }
         else
@@ -90,7 +90,7 @@ class FahrzeugController
 
 		if ( !checkAufGebrauchtUndNeu( params ) )
 		{
-			flash.message = "Fahrzeug kann nicht gleichzeitig gebraucht und neu sein!"
+//			flash.message = "Fahrzeug kann nicht gleichzeitig gebraucht und neu sein!"
 			render(view:'edit',model:[fahrzeug:fahrzeug])
 			return false
 		}
@@ -102,7 +102,7 @@ class FahrzeugController
 
 			if(!fahrzeug.hasErrors() && fahrzeug.save())
 			{
-                flash.message = "Fahrzeug '${fahrzeug.marke} ${fahrzeug.modell}' wurde ge&auml;ndert!"
+                flash.message = "Fahrzeug '${fahrzeug.marke} ${fahrzeug.modell}' wurde geändert!"
                 redirect(action: 'anzeigen', id: fahrzeug.id, mapping: 'fahrzeugAnzeigen', params: [marke: fahrzeug.marke, modell: fahrzeug.modell])
             }
             else
@@ -362,6 +362,7 @@ class FahrzeugController
             }
         }
 
+        flash.error = "Es sieht so aus, als wäre kein Bild ausgewählt?"
         redirect(action: 'uploadPictures', id: fahrzeug.id)
     }
 
@@ -400,7 +401,7 @@ class FahrzeugController
             {
               println it
             }
-            render(view:'create',model:[fahrzeug:fahrzeug])
+            render(view:'create',model:[fahrzeugInstance: fahrzeug])
             return false 
         }
     }

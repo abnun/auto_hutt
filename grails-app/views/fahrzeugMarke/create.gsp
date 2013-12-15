@@ -4,9 +4,11 @@
         <title>Neue Fahrzeugmarke erzeugen</title>
     </head>
     <body>
-        <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLink(controller: 'fahrzeug')}">Zur Fahrzeugliste</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Fahrzeugmarken-Liste</g:link></span>
+        <div class="nav" role="navigation">
+            <ul>
+                <li><a class="home" href="${createLink(controller: 'fahrzeug')}">Zur Fahrzeugliste</a></li>
+                <li><g:link class="list" action="list">Fahrzeugmarken-Liste</g:link></li>
+            </ul>
         </div>
         <div class="body">
             <h1>Neue Fahrzeugmarke erzeugen</h1>

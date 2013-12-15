@@ -5,11 +5,13 @@
         <title>Fahrzeug ${fahrzeug?.marke} ${fahrzeug?.modell} editieren</title>
     </head>
     <body>
-        <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLink(controller: 'fahrzeug')}">Zur Fahrzeugliste</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Fahrzeug-Liste</g:link></span>
-            <span class="menuButton"><g:link class="create" action="create">Neues Fahrzeug erzeugen</g:link></span>
-        </div>
+    <div class="nav" role="navigation">
+        <ul>
+            <li><a class="home" href="${createLink(controller: 'fahrzeug')}">Zur Fahrzeugliste</a></li>
+            <li><g:link class="create" action="create">Neues Fahrzeug erzeugen</g:link></li>
+            <li><g:link class="create" action="create" controller="fahrzeugMarke">Neue Fahrzeugmarke erzeugen</g:link></li>
+        </ul>
+    </div>
         <div class="body">
             <h1>Fahrzeug ${fahrzeug?.marke} ${fahrzeug?.modell} editieren</h1>
             <g:if test="${flash.message}">
@@ -31,7 +33,7 @@
                                     <label for="marke">Marke:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'marke','errors')}">
-                                    <g:select optionKey="id" from="${FahrzeugMarke.listOrderByName()}" name="marke.id" value="${fahrzeug?.marke?.id}" ></g:select>
+                                    <g:select optionKey="id" from="${FahrzeugMarke.listOrderByName()}" name="marke.id" value="${fahrzeug?.marke?.id}" />
                                 </td>
                             </tr> 
                         
@@ -166,7 +168,7 @@
                                     <label for="co2Effizienz">CO2-Effizienz:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'co2Effizienz','errors')}">
-                                    <g:select from="${['Keine Auswahl', 'A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G']}" keys="${['null', 'aplus', 'a', 'b', 'c', 'd', 'e', 'f', 'g']}" name="co2Effizienz" value="${fahrzeug?.co2Effizienz}" ></g:select>
+                                    <g:select from="${['Keine Auswahl', 'A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G']}" keys="${['-', 'aplus', 'a', 'b', 'c', 'd', 'e', 'f', 'g']}" name="co2Effizienz" value="${fahrzeug?.co2Effizienz}" ></g:select>
 									%{--<input type="text" id="co2Effizienz" name="co2Effizienz" value="${fieldValue(bean:fahrzeug,field:'co2Effizienz')}"/>--}%
                                 </td>
                             </tr>
