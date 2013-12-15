@@ -81,6 +81,10 @@
 		</g:else>
 		<td style="width: 200px;">
 			<table cellpadding="0" cellspacing="0" style="border: none; border-collapse: collapse;">
+                <colgroup>
+                    <col width="100">
+                    <col width="100">
+                </colgroup>
 				<tr style="border: 1px solid white; border-top: none;">
 					<th colspan="2" style="border: 1px solid white; border-top: none;">
 						Fahrzeugdaten:
@@ -169,7 +173,7 @@
 						<b>Preis&nbsp;(&euro;)</b>
 					</td>
 					<td style="border: 1px solid white;">
-						<b>
+						<b style="font-size: larger; font-weight: bold;">
 							<g:formatNumber number="${fahrzeug.preis}" format="#,###,##0',--'" locale="${Locale.GERMAN}" />
 						</b>
 					</td>
@@ -213,7 +217,7 @@
 				</g:if>
 			</table>
 		</td>
-		<td>
+		<td style="width: 200px;">
             <g:if test="${fahrzeug.bilder?.size() > 1}">
                 <table cellpadding="0" cellspacing="0" style="border: 1px solid white; border-collapse: collapse;">
                     <tr>
@@ -244,7 +248,11 @@
                 <br/>
             </g:if>
 			<table cellpadding="0" cellspacing="0" style="border: none; border-collapse: collapse;">
-				<tr style="border: 1px solid white;">
+				<colgroup>
+                    <col width="100">
+                    <col width="100">
+				</colgroup>
+                <tr style="border: 1px solid white;">
 					<th colspan="2" style="border: 1px solid white; border-top: none;" nowrap="nowrap">
 						Emissions-Werte:
 					</th>
