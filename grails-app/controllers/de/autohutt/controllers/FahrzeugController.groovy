@@ -249,6 +249,11 @@ class FahrzeugController
 			tmpAlbum = Album.withName("neuwagen").list().first()
 		}
 
+        if((!file1 || file1.isEmpty()) && (!file2 || file2.isEmpty()) && (file3 || file3.isEmpty()))
+        {
+            flash.error = "Es sieht so aus, als wäre kein Bild ausgewählt?"
+        }
+
         if(file1 && !file1.isEmpty())
         {
 			String fileName = "${fahrzeug.id.toString()}_1"
@@ -362,7 +367,6 @@ class FahrzeugController
             }
         }
 
-        flash.error = "Es sieht so aus, als wäre kein Bild ausgewählt?"
         redirect(action: 'uploadPictures', id: fahrzeug.id)
     }
 
