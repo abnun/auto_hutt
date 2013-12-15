@@ -21,13 +21,19 @@
 <div class="clear">&nbsp;</div>
 
 <div class="grid_5">
+    <g:if test="${flash.message}">
+        <div class="message" role="status">${flash.message}</div>
+    </g:if>
+    <g:if test="${flash.error}">
+        <div class="errors" role="status">${flash.error}</div>
+    </g:if>
 <g:form action="setSessionUserByLogin" method="post" name="AuthenticationForm">
 
 	<div class="grid_2">
 		Benutzer:
 	</div>
     <div class="grid_3">
-        <g:textField name="user"/>
+        <g:field name="user" type="text" size="50" required="" />
     </div>
     <div class="clear">&nbsp;</div>
     <br />
@@ -35,7 +41,7 @@
 		Passwort:
 	</div>
     <div class="grid_3">
-        <g:passwordField name="password"/>
+        <g:field name="password" type="password" size="50" required="" />
     </div>
     <div class="clear">&nbsp;</div>
     <br />

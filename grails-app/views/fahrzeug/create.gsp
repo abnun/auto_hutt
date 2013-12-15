@@ -25,6 +25,9 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
+            <g:if test="${flash.error}">
+                <div class="errors" role="status">${flash.error}</div>
+            </g:if>
 			<g:form url="[resource:fahrzeugInstance, action:'save']" >
 				<fieldset class="form">
 
@@ -43,7 +46,7 @@
                             <g:message code="fahrzeug.modell.label" default="Modell"/>
                             <span class="required-indicator">*</span>
                         </label>
-                        <g:field name="modell" type="text" value="${fahrzeugInstance?.modell}" required="" />
+                        <g:field name="modell" type="text" value="${fahrzeugInstance?.modell}" size="50" required="" />
                     </div>
 
                     <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'farbe', 'error')} required">
@@ -51,7 +54,7 @@
                             <g:message code="fahrzeug.farbe.label" default="Farbe"/>
                             <span class="required-indicator">*</span>
                         </label>
-                        <g:field name="farbe" type="text" value="${fahrzeugInstance?.farbe}" required=""/>
+                        <g:field name="farbe" type="text" value="${fahrzeugInstance?.farbe}" size="50" required=""/>
                     </div>
 
                     <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'baujahr', 'error')} ">
@@ -59,7 +62,7 @@
                             <g:message code="fahrzeug.baujahr.label" default="Baujahr"/>
 
                         </label>
-                        <g:field name="baujahr" type="text" value="${fahrzeugInstance?.baujahr}"/>
+                        <g:field name="baujahr" type="text" value="${fahrzeugInstance?.baujahr}" size="50"/>
                     </div>
 
                     <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'kw', 'error')} required">
@@ -67,7 +70,7 @@
                             <g:message code="fahrzeug.kw.label" default="Kw"/>
                             <span class="required-indicator">*</span>
                         </label>
-                        <g:field name="kw" type="number" value="${fahrzeugInstance.kw}" required=""/>
+                        <g:field name="kw" type="number" value="${fahrzeugInstance.kw}" size="50" required=""/>
                     </div>
 
                     <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'kmStand', 'error')} ">
@@ -75,7 +78,7 @@
                             <g:message code="fahrzeug.kmStand.label" default="Km Stand"/>
 
                         </label>
-                        <g:field name="kmStand" type="number" value="${fahrzeugInstance.kmStand}"/>
+                        <g:field name="kmStand" type="number" value="${fahrzeugInstance.kmStand}" size="50"/>
                     </div>
 
                     <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'preis', 'error')} required">
@@ -83,7 +86,7 @@
                             <g:message code="fahrzeug.preis.label" default="Preis"/>
                             <span class="required-indicator">*</span>
                         </label>
-                        <g:field name="preis" type="number" value="${fieldValue(bean: fahrzeugInstance, field: 'preis')}" required=""/>
+                        <g:field name="preis" type="number" value="${fieldValue(bean: fahrzeugInstance, field: 'preis')}" size="50" required=""/>
                     </div>
 
                     <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'ausstattung', 'error')} required">
@@ -99,7 +102,7 @@
                             <g:message code="fahrzeug.kombiniert.label" default="Kombiniert"/>
                             <span class="required-indicator">*</span>
                         </label>
-                        <g:field name="kombiniert" type="text" required="" value="${fahrzeugInstance?.kombiniert}"/>
+                        <g:field name="kombiniert" type="text" required="" value="${fahrzeugInstance?.kombiniert}" size="50"/>
                     </div>
 
                     <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'innerorts', 'error')} required">
@@ -107,7 +110,7 @@
                             <g:message code="fahrzeug.innerorts.label" default="Innerorts"/>
                             <span class="required-indicator">*</span>
                         </label>
-                        <g:field name="innerorts" type="text" required="" value="${fahrzeugInstance?.innerorts}"/>
+                        <g:field name="innerorts" type="text" required="" value="${fahrzeugInstance?.innerorts}" size="50"/>
                     </div>
 
                     <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'ausserorts', 'error')} required">
@@ -115,7 +118,7 @@
                             <g:message code="fahrzeug.ausserorts.label" default="Ausserorts"/>
                             <span class="required-indicator">*</span>
                         </label>
-                        <g:field name="ausserorts" type="text" required="" value="${fahrzeugInstance?.ausserorts}"/>
+                        <g:field name="ausserorts" type="text" required="" value="${fahrzeugInstance?.ausserorts}" size="50"/>
                     </div>
 
                     <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'co2', 'error')} required">
@@ -123,7 +126,7 @@
                             <g:message code="fahrzeug.co2.label" default="CO2"/>
                             <span class="required-indicator">*</span>
                         </label>
-                        <g:field name="co2" type="text" required="" value="${fahrzeugInstance?.co2}"/>
+                        <g:field name="co2" type="text" required="" value="${fahrzeugInstance?.co2}" size="50"/>
                     </div>
 
                     <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'fahrzeugmasse', 'error')} ">
@@ -131,7 +134,7 @@
                             <g:message code="fahrzeug.fahrzeugmasse.label" default="Fahrzeugmasse"/>
 
                         </label>
-                        <g:field name="fahrzeugmasse" type="text" value="${fahrzeugInstance?.fahrzeugmasse}"/>
+                        <g:field name="fahrzeugmasse" type="text" value="${fahrzeugInstance?.fahrzeugmasse}" size="50"/>
                     </div>
 
                     <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'jahressteuer', 'error')} ">
@@ -139,7 +142,7 @@
                             <g:message code="fahrzeug.jahressteuer.label" default="Jahressteuer"/>
 
                         </label>
-                        <g:field name="jahressteuer" type="text" value="${fahrzeugInstance?.jahressteuer}"/>
+                        <g:field name="jahressteuer" type="text" value="${fahrzeugInstance?.jahressteuer}" size="50"/>
                     </div>
 
                     <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'energietraegerkosten', 'error')} ">
@@ -147,7 +150,7 @@
                             <g:message code="fahrzeug.energietraegerkosten.label" default="Energietraegerkosten"/>
 
                         </label>
-                        <g:field name="energietraegerkosten" type="text" value="${fahrzeugInstance?.energietraegerkosten}"/>
+                        <g:field name="energietraegerkosten" type="text" value="${fahrzeugInstance?.energietraegerkosten}" size="50"/>
                     </div>
 
                     <div class="fieldcontain ${hasErrors(bean: fahrzeugInstance, field: 'co2Effizienz', 'error')} ">

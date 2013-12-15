@@ -41,7 +41,7 @@ class FahrzeugController
 
         if(!fahrzeug)
 		{
-            flash.message = "Fahrzeug mit der ID ${params.id} konnte nicht gefunden werden!"
+            flash.error = "Fahrzeug mit der ID ${params.id} konnte nicht gefunden werden!"
             redirect(action:list)
         }
         else
@@ -62,7 +62,7 @@ class FahrzeugController
         }
         else
 		{
-            flash.message = "Fahrzeug mit der ID ${params.id} konnte nicht gefunden werden!"
+            flash.error = "Fahrzeug mit der ID ${params.id} konnte nicht gefunden werden!"
             redirect(action:list)
         }
     }
@@ -73,7 +73,7 @@ class FahrzeugController
 
         if(!fahrzeug)
 		{
-            flash.message = "Fahrzeug mit der ID ${params.id} konnte nicht gefunden werden!"
+            flash.error = "Fahrzeug mit der ID ${params.id} konnte nicht gefunden werden!"
             redirect(action:list)
         }
         else
@@ -112,7 +112,7 @@ class FahrzeugController
         }
         else
 		{
-            flash.message = "Fahrzeug mit der ID ${params.id} konnte nicht gefunden werden!"
+            flash.error = "Fahrzeug mit der ID ${params.id} konnte nicht gefunden werden!"
             redirect(action:edit,id:params.id)
         }
     }
@@ -469,12 +469,12 @@ class FahrzeugController
 		println paramsMap.neu
 		if ( paramsMap.gebraucht && paramsMap.gebraucht == 'on' && paramsMap.neu && paramsMap.neu == 'on' )
 		{
-			flash.message = "Fahrzeug kann nicht gleichzeitig gebraucht und neu sein!"
+			flash.error = "Fahrzeug kann nicht gleichzeitig gebraucht und neu sein!"
 			return false
 		}
 		else if(!paramsMap.gebraucht && !paramsMap.neu)
 		{
-			flash.message = "Fahrzeug muss entweder als gebraucht oder neu markiert sein!"
+			flash.error = "Fahrzeug muss entweder als gebraucht oder neu markiert sein!"
 			return false
 		}
 		return true
@@ -500,7 +500,7 @@ class FahrzeugController
 
         if(!fahrzeug)
 		{
-            flash.message = "Fahrzeug konnte nicht gefunden werden!"
+            flash.error = "Fahrzeug konnte nicht gefunden werden!"
             
 			redirect(action:list)
         }

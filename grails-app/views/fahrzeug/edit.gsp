@@ -22,6 +22,9 @@
                 <g:renderErrors bean="${fahrzeug}" as="list" />
             </div>
             </g:hasErrors>
+            <g:if test="${flash.error}">
+                <div class="errors" role="status">${flash.error}</div>
+            </g:if>
             <g:form method="post" >
                 <input type="hidden" name="id" value="${fahrzeug?.id}" />
                 <div class="dialog">
@@ -42,7 +45,7 @@
                                     <label for="modell">Modell:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'modell','errors')}">
-                                    <input type="text" id="modell" name="modell" value="${fieldValue(bean:fahrzeug,field:'modell')}"/>
+                                    <input type="text" id="modell" name="modell" value="${fieldValue(bean:fahrzeug,field:'modell')}" size="50"/>
                                 </td>
                             </tr> 
                         
@@ -51,7 +54,7 @@
                                     <label for="farbe">Farbe:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'farbe','errors')}">
-                                    <input type="text" id="farbe" name="farbe" value="${fieldValue(bean:fahrzeug,field:'farbe')}"/>
+                                    <input type="text" id="farbe" name="farbe" value="${fieldValue(bean:fahrzeug,field:'farbe')}" size="50"/>
                                 </td>
                             </tr> 
                         
@@ -60,7 +63,7 @@
                                     <label for="baujahr">Baujahr:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'baujahr','errors')}">
-                                    <input type="text" id="baujahr" name="baujahr" value="${fieldValue(bean:fahrzeug,field:'baujahr')}"/>
+                                    <input type="text" id="baujahr" name="baujahr" value="${fieldValue(bean:fahrzeug,field:'baujahr')}" size="50"/>
                                 </td>
                             </tr> 
                         
@@ -69,7 +72,7 @@
                                     <label for="kw">Kw:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'kw','errors')}">
-                                    <input type="text" id="kw" name="kw" value="${formatNumber(number: fahrzeug.kw)}" />
+                                    <input type="text" id="kw" name="kw" value="${formatNumber(number: fahrzeug.kw)}" size="50" />
                                 </td>
                             </tr> 
                         
@@ -78,7 +81,7 @@
                                     <label for="kmStand">Km Stand:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'kmStand','errors')}">
-                                    <input type="text" id="kmStand" name="kmStand" value="${formatNumber(number: fahrzeug.kmStand)}" />
+                                    <input type="text" id="kmStand" name="kmStand" value="${formatNumber(number: fahrzeug.kmStand)}" size="50" />
                                 </td>
                             </tr> 
                         
@@ -87,7 +90,7 @@
                                     <label for="preis">Preis:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'preis','errors')}">
-                                    <input type="text" id="preis" name="preis" value="${fahrzeug?.preis ? ((Double)fahrzeug?.preis).intValue() : ''}" />
+                                    <input type="text" id="preis" name="preis" value="${fahrzeug?.preis ? ((Double)fahrzeug?.preis).intValue() : ''}" size="50" />
 								</td>
                             </tr> 
 
@@ -105,7 +108,7 @@
                                     <label for="kombiniert">Kombiniert:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'kombiniert','errors')}">
-                                    <input type="text" id="kombiniert" name="kombiniert" value="${fieldValue(bean:fahrzeug,field:'kombiniert')}"/>
+                                    <input type="text" id="kombiniert" name="kombiniert" value="${fieldValue(bean:fahrzeug,field:'kombiniert')}" size="50"/>
                                 </td>
                             </tr>
 
@@ -114,7 +117,7 @@
                                     <label for="innerorts">Innerorts:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'innerorts','errors')}">
-                                    <input type="text" id="innerorts" name="innerorts" value="${fieldValue(bean:fahrzeug,field:'innerorts')}"/>
+                                    <input type="text" id="innerorts" name="innerorts" value="${fieldValue(bean:fahrzeug,field:'innerorts')}" size="50"/>
                                 </td>
                             </tr>
 
@@ -123,7 +126,7 @@
                                     <label for="ausserorts">Ausserorts:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'ausserorts','errors')}">
-                                    <input type="text" id="ausserorts" name="ausserorts" value="${fieldValue(bean:fahrzeug,field:'ausserorts')}"/>
+                                    <input type="text" id="ausserorts" name="ausserorts" value="${fieldValue(bean:fahrzeug,field:'ausserorts')}" size="50"/>
                                 </td>
                             </tr>
 
@@ -132,7 +135,7 @@
                                     <label for="co2">CO2:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'co2','errors')}">
-                                    <input type="text" id="co2" name="co2" value="${fieldValue(bean:fahrzeug,field:'co2')}"/>
+                                    <input type="text" id="co2" name="co2" value="${fieldValue(bean:fahrzeug,field:'co2')}" size="50"/>
                                 </td>
                             </tr>
 
@@ -141,7 +144,7 @@
                                     <label for="fahrzeugmasse">Fahrzeugmasse:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'fahrzeugmasse','errors')}">
-                                    <input type="text" id="fahrzeugmasse" name="fahrzeugmasse" value="${fieldValue(bean:fahrzeug,field:'fahrzeugmasse')}"/>
+                                    <input type="text" id="fahrzeugmasse" name="fahrzeugmasse" value="${fieldValue(bean:fahrzeug,field:'fahrzeugmasse')}" size="50"/>
                                 </td>
                             </tr>
 
@@ -150,7 +153,7 @@
                                     <label for="jahressteuer">Jahressteuer:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'jahressteuer','errors')}">
-                                    <input type="text" id="jahressteuer" name="jahressteuer" value="${fieldValue(bean:fahrzeug,field:'jahressteuer')}"/>
+                                    <input type="text" id="jahressteuer" name="jahressteuer" value="${fieldValue(bean:fahrzeug,field:'jahressteuer')}" size="50"/>
                                 </td>
                             </tr>
 
@@ -159,7 +162,7 @@
                                     <label for="energietraegerkosten">Energietr&auml;gerkosten:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:fahrzeug,field:'energietraegerkosten','errors')}">
-									<input type="text" id="energietraegerkosten" name="energietraegerkosten" value="${fieldValue(bean:fahrzeug,field:'energietraegerkosten')}"/>
+									<input type="text" id="energietraegerkosten" name="energietraegerkosten" value="${fieldValue(bean:fahrzeug,field:'energietraegerkosten')}" size="50"/>
                                 </td>
                             </tr>
 
