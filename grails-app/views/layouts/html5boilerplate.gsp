@@ -126,7 +126,7 @@
                     <ul>
                         <li>
 
-                            <a href="http://www.dat.de/gebraucht.html" target="_blank">DAT Gebrauchtfahrzeugbewertung</a>
+                            <a href="http://www.dat.de/online-services/service-fuer-verbraucher/gebrauchtfahrzeugwerte.html" target="_blank">DAT Gebrauchtfahrzeugbewertung</a>
 
                         </li>
 
