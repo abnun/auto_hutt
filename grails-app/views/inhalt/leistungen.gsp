@@ -1,14 +1,18 @@
 <html>
 <head>
 	<meta name="layout" content="html5boilerplate" />
-	<style type="text/css">
+	<r:style>
 		/* ... file-local CSS props ... */
 		#leistung_table {
 			border: none;
-			width: 620px;
+			width: 600px;
 			background: url('${resource(dir: 'images', file: 'leistungen.gif')}') no-repeat 170px 120px;
 		}
-	</style>
+
+        th:hover, tr:hover {
+            background: none;
+        }
+	</r:style>
 </head>
 
 <body>
