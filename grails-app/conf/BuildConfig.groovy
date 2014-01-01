@@ -73,12 +73,14 @@ grails.project.dependency.resolution = {
         // plugins needed at runtime but not for compilation
         runtime ":hibernate:3.6.10.4" // or ":hibernate4:4.1.11.4"
         runtime ":database-migration:1.3.8"
-        runtime ":jquery:1.10.2"
+        runtime ":jquery:1.10.2.2"
         runtime ":resources:1.2.1"
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
         //runtime ":cached-resources:1.1"
         //runtime ":yui-minify-resources:0.1.5"
+
+        compile ":platform-core:1.0.RC6"
 
         compile (":photo-album:0.9") {
             transitive = false

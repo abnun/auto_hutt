@@ -155,7 +155,8 @@ ul {
 }
 
 #naviDiv ul li a:active,
-	#footerDiv ul li a:active {
+    #naviDiv ul li a.active,
+    #footerDiv ul li a:active {
 	color: white;
 	display: block;
 	font-size: 80%;
@@ -164,6 +165,10 @@ ul {
 	margin-right: 0;
     background: transparent url( "../images/menue_list_hover.jpg" ) no-repeat scroll left center;
     padding-left: 18px;
+}
+
+.naviUl {
+    /* just a placeholder */
 }
 
 #contentDiv {

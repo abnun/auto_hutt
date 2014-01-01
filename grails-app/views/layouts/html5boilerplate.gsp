@@ -46,7 +46,7 @@
     <header>
         <div class="container_12">
             <div class="grid_12" style="border: 1px solid #666;">
-                <map name="auto_hutt" id="auto_hutt"><area shape="circle" coords="134,90,85" href="${createLink(uri: '/')}"  alt="" title="Zurück zur Startseite"></map>
+                <map name="auto_hutt" id="auto_hutt"><area shape="circle" coords="127,85,90" href="${createLink(uri: '/')}"  alt="" title="Zurück zur Startseite"></map>
                 <r:img dir="images" file="auto_hutt_header_1000px.jpg" alt="Auto Hutt GmbH | 1a Autoservice" width="940" usemap="#auto_hutt" />
             </div>
         </div>
@@ -57,142 +57,82 @@
             <div class="grid_12" style="border: 1px solid #4B4B49; background-color: #AAA7A7;">
                 <div class="grid_4 alpha">
                     <div id="naviDiv">
-                    <div class="textcenter">
-                        <img src="${resource(dir: 'images', file: 'menue_header.gif')}" alt="Auto Hutt GmbH | 1a Autoservice" style="margin-top: 10px;" />
-                    </div>
+                        <div class="textcenter">
+                            <img src="${resource(dir: 'images', file: 'menue_header.gif')}"
+                                 alt="Auto Hutt GmbH | 1a Autoservice" style="margin-top: 10px;"/>
+                        </div>
 
-                    <div>
+                        <div>
 
-                        <!--<br />-->
-                        <h4 style="margin-top: 10px;">
-                            Fahrzeugangebot:
-                        </h4>
+                            <!--<br />-->
+                            <h4 style="margin-top: 10px;">
+                                Fahrzeugangebot:
+                            </h4>
 
-                    </div>
+                        </div>
 
-                    <ul>
+                        <nav:primary class="naviUl" scope="fahrzeugAngebot" custom="true">
+                            <li>
+                                <g:if test="${item.data.blank}">
+                                    <a href="${p.callTag(tag: 'g:createLink', attrs: linkArgs + [class: active ? 'active' : ''])}" target="_blank">
+                                        <nav:title item="${item}"/>
+                                    </a>
+                                </g:if>
+                                <g:else>
+                                    <p:callTag tag="g:link" attrs="${linkArgs + [class: active ? 'active' : '']}">
+                                        <nav:title item="${item}"/>
+                                    </p:callTag>
+                                </g:else>
+                            </li>
+                        </nav:primary>
 
-                        <li>
+                        <div>
 
-                            <g:link controller="fahrzeug" action="lagerfahrzeuge">EU-Neufahrzeuge ab Lager Leingarten</g:link>
+                            <h4>
+                                Unser Service:
+                            </h4>
 
-                        </li>
+                        </div>
 
-                        <li>
+                        <nav:primary class="naviUl" scope="service" custom="true">
+                            <li>
+                                <g:if test="${item.data.blank}">
+                                    <a href="${p.callTag(tag: 'g:createLink', attrs: linkArgs + [class: active ? 'active' : ''])}" target="_blank">
+                                        <nav:title item="${item}"/>
+                                    </a>
+                                </g:if>
+                                <g:else>
+                                    <p:callTag tag="g:link" attrs="${linkArgs + [class: active ? 'active' : '']}">
+                                        <nav:title item="${item}"/>
+                                    </p:callTag>
+                                </g:else>
+                            </li>
+                        </nav:primary>
 
-                            <a href="http://www.partner.apec-sales.de/index.php?parid=759&amp;verify=209876302872759&amp;p=1" target="_blank">EU-Neufahrzeuge ab Lager I</a>
+                        <div>
 
-                        </li>
+                            <h4>
+                                Wie Sie uns erreichen:
+                            </h4>
 
-                        <li>
-                            <a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/124" target="_blank">EU-Neufahrzeuge ab Lager I, F, DK</a>
+                        </div>
 
-                        </li>
-
-                        <li>
-
-                            <a href="http://server7.autrado.de/vp-autohutt.de/" target="_blank">EU-Neufahrzeuge ab Lager NL</a>
-
-                        <li>
-                            <a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/2" target="_blank">EU-Bestellfahrzeuge</a>
-                        </li>
-                        <li>
-                            <g:link controller="inhalt" action="bestellfahrzeuge">Deutsche Bestellfahrzeuge zu Top Konditionen</g:link>
-                            %{--<a href="http://webspace1.ssis.de/22658eln/-/deutsche-bestellangebote.html" target="_blank">Deutsche Bestellfahrzeuge zu Top Konditionen</a>--}%
-                        </li>
-                        <li>
-                            <a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/1" target="_blank">Nutzfahrzeuge</a>
-                        </li>
-                        <li>
-                            <a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/124" target="_blank">Jahresfahrzeuge</a>
-                            %{--<g:link controller="inhalt" action="jahresfahrzeuge">Jahresfahrzeuge</g:link>--}%
-                        </li>
-
-                        <li>
-                            %{--<a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/124" target="_blank">Gebrauchtfahrzeuge</a>--}%
-                            <g:link controller="inhalt" action="gebrauchtfahrzeuge">Gebrauchtfahrzeuge</g:link>
-                        </li>
-
-                    </ul>
-
-                    <div>
-
-                        <h4>
-                            Unser Service:
-                        </h4>
-
-                    </div>
-
-                    <ul>
-                        <li>
-
-                            <a href="http://www.dat.de/online-services/service-fuer-verbraucher/gebrauchtfahrzeugwerte.html" target="_blank">DAT Gebrauchtfahrzeugbewertung</a>
-
-                        </li>
-
-                        <li>
-
-                            <a href="https://fibot.creditplus.de/fibot/frontend?startMask=MiniRechner&amp;HNr=310460&amp;kondition=pkwR01&amp;anzahlung=ja&amp;rsv=ja" target="_blank">Kreditrechner</a>
-                            %{--<g:link controller="inhalt" action="kreditrechner">Kreditrechner</g:link>--}%
-
-                        </li>
-
-                        <li>
-
-                            <g:link controller="inhalt" action="leistungen">Leistungen</g:link>
-
-                        </li>
-
-                        <li>
-
-                            <a href="http://www.go1a.de/" target="_blank">Aktuelle Angebote</a>
-                            %{--<g:link controller="inhalt" action="aktuelle_angebote">Aktuelle Angebote</g:link>--}%
-
-                        </li>
-
-                        <li>
-
-                            <g:link controller="inhalt" action="hauptuntersuchung_au">Hauptuntersuchung &amp; AU</g:link>
-
-                        </li>
-
-                    </ul>
-
-                    <div>
-
-                        <h4>
-                            Wie Sie uns erreichen:
-                        </h4>
+                        <nav:primary class="naviUl" scope="wie_sie_uns_erreichen" custom="true">
+                            <li>
+                                <g:if test="${item.data.blank}">
+                                    <a href="${p.callTag(tag: 'g:createLink', attrs: linkArgs + [class: active ? 'active' : ''])}" target="_blank">
+                                        <nav:title item="${item}"/>
+                                    </a>
+                                </g:if>
+                                <g:else>
+                                    <p:callTag tag="g:link" attrs="${linkArgs + [class: active ? 'active' : '']}">
+                                        <nav:title item="${item}"/>
+                                    </p:callTag>
+                                </g:else>
+                            </li>
+                        </nav:primary>
 
                     </div>
-
-                    <ul>
-
-                        <li>
-
-                            <g:link controller="inhalt" action="kontakt">Kontakt &amp; &Ouml;ffnungszeiten</g:link>
-
-                        </li>
-
-                        <li>
-
-                            <g:link controller="inhalt" action="anfahrt">Anfahrt</g:link>
-
-                        </li>
-
-                    </ul>
-
-                    <ul>
-
-                        <li>
-
-                            <g:link controller="inhalt" action="impressum">Impressum</g:link>
-
-                        </li>
-
-                    </ul>
-
-                </div>
                 </div>
                 <div class="grid_8 omega" id="contentDiv">
                     <g:layoutBody/>

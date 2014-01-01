@@ -1,6 +1,8 @@
 package de.autohutt.controllers
 class ExcelController
 {
+    static navigationScope = 'admin'
+
 	def excelService
 
 	def index =

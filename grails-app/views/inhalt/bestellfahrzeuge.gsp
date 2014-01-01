@@ -11,14 +11,20 @@
 		</h1>
 
 		<div>
-			<ul>
-				<li>
-					<a href="http://webspace1.ssis.de/22658eln/-/deutsche-bestellangebote.html" target="_blank" style="text-decoration: underline;">ELN Neuwagen</a>
-				</li>
-				<li>
-					 <a href="http://213.131.235.48/marken?h=9a0534dc2799431d9bf01a68dea1ffc6b3dc41da" target="_blank" style="text-decoration: underline;">PRO Neuwagen</a>
-				</li>
-			</ul>
+            <nav:secondary scope="fahrzeugAngebot" class="naviUl" custom="true">
+                <li>
+                    <g:if test="${item.data.blank}">
+                        <a href="${p.callTag(tag: 'g:createLink', attrs: linkArgs + [class: active ? 'active' : ''])}" target="_blank">
+                            <nav:title item="${item}"/>
+                        </a>
+                    </g:if>
+                    <g:else>
+                        <p:callTag tag="g:link" attrs="${linkArgs + [class: active ? 'active' : '']}">
+                            <nav:title item="${item}"/>
+                        </p:callTag>
+                    </g:else>
+                </li>
+            </nav:secondary>
 		</div>
 
 	</body>

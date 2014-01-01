@@ -11,18 +11,20 @@
 		</h1>
 
 		<div>
-			<ul>
-				<li>
-					<g:link controller="liste" action="gebrauchtfahrzeuge" style="text-decoration: underline;">Gebrauchtfahrzeuge am Standort Leingarten</g:link>
-				</li>
-				<li>
-                    <a href="http://webspace1.ssis.de/22658eln/-/fahrzeugangebote/124" style="text-decoration: underline;" target="_blank">Gebrauchtfahrzeuge 3 - 5 Jahre kurzfristig lieferbar (ELN-Autob&ouml;rse)</a>
-                    %{--<a href="${createLink(controller: 'fahrzeug', action: 'gebrauchtfahrzeuge3Bis5Jahre')}" style="text-decoration: underline;">Gebrauchtfahrzeuge 3 - 5 Jahre kurzfristig lieferbar (ELN-Autob&ouml;rse)</a>--}%
-				</li>
-				%{--<li>
-                    <a href="http://euro-auto-boerse.net/db2/start.php3?username=953a&quickauth=user%22%3Ezugang%3C" target="_blank" style="text-decoration: underline;">... ab 5 Jahre</a>
-				</li>--}%
-			</ul>
+            <nav:secondary scope="fahrzeugAngebot" class="naviUl" custom="true">
+                <li>
+                    <g:if test="${item.data.blank}">
+                        <a href="${p.callTag(tag: 'g:createLink', attrs: linkArgs + [class: active ? 'active' : ''])}" target="_blank">
+                            <nav:title item="${item}"/>
+                        </a>
+                    </g:if>
+                    <g:else>
+                        <p:callTag tag="g:link" attrs="${linkArgs + [class: active ? 'active' : '']}">
+                            <nav:title item="${item}"/>
+                        </p:callTag>
+                    </g:else>
+                </li>
+            </nav:secondary>
 		</div>
 
 	</body>

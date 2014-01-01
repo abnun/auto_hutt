@@ -13,6 +13,8 @@ class FahrzeugMarkeController
     // the delete, save and update actions only accept POST requests
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
+    static navigationScope = 'admin'
+
     def list =
 	{
         //if(!params.max) params.max = 10
