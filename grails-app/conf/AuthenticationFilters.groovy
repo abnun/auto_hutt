@@ -18,7 +18,23 @@ class AuthenticationFilters
             }
         }
 
-		car(controller:'fahrzeug', action:'*')
+        admin(controller: '*', controllerExclude: 'inhalt|authentication', action: '*', actionExclude: 'anzeigen|gebrauchtfahrzeuge|lagerfahrzeuge|bestellfahrzeugeFreiKonfigurierbar|fahrzeugeImVorlauf|gebrauchtfahrzeuge3Bis5Jahre|jahreswagen|neuUndJahreswagenBis24Monate|neuwagenOhneZulassung') {
+            before = {
+                if (!session.user) {
+                    log.info("no access -> $params")
+                    session.oldController = params.controller
+                    session.oldAction = params.action
+
+                    redirect(controller: 'authentication', action: 'login')
+                    return false
+                } else {
+                    log.info("access granted -> $params")
+                    return true
+                }
+            }
+        }
+
+		/*car(controller:'fahrzeug', action:'*')
 		{
 			before =
 			{
@@ -101,6 +117,6 @@ class AuthenticationFilters
 					return false
 				}
 			}
-		}
+		}*/
 	}
 }
