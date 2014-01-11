@@ -53,6 +53,8 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.24'
         runtime "org.apache.ant:ant:1.8.4"
         runtime "org.apache.ant:ant-launcher:1.8.4"
+
+        build("org.tmatesoft.svnkit:svnkit:1.7.11")
     }
 
     credentials {
@@ -80,11 +82,10 @@ grails.project.dependency.resolution = {
         //runtime ":cached-resources:1.1"
         //runtime ":yui-minify-resources:0.1.5"
 
+        compile ":external-config-reload:1.4.1"
         compile ":platform-core:1.0.RC6"
 
-        compile (":photo-album:0.9") {
-            transitive = false
-        }
+        compile ":photo-album:0.9.1"
 
         compile ":html-five-boilerplate:1.0"
         compile ":modernizr:1.7.2"
