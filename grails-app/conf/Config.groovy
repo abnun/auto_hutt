@@ -95,17 +95,16 @@ grails.gsp.enable.reload=true
 environments {
     development {
         grails.logging.jul.usebridge = true
+        grails.config.locations = ["file:${userHome}/Documents/dropbox/projekte/firmen/${appName}/config/${appName}-config.groovy"]
     }
     production {
         grails.logging.jul.usebridge = false
 
         grails.serverURL = "http://www.autohutt.de"
         media.save.dir="/opt/tomcat/webapps/auto_hutt/medias/"
+        grails.config.locations = ["file:/root/${appName}-config.groovy"]
     }
 }
-
-// HACK for serverURL
-grails.config.locations = ["file:${userHome}/${appName}-config.groovy"]
 
 media.dir="/medias/"
 no.pic.available = "icon.no_photo_available.png"

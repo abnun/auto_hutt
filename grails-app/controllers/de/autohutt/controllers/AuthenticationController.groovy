@@ -35,9 +35,9 @@ class AuthenticationController
 		{
 			session.user = user
 			println("set session user -> ${session.user}")
-			if(session.oldAction && session.oldController)
+			if(session.oldController || (session.oldController && session.oldAction))
 			{
-				redirect(controller: session.oldController, action: session.oldAction)
+				redirect(controller: session.oldController, action: session.oldAction ?: 'index')
 			}
 			else
 			{
