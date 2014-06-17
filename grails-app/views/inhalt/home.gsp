@@ -1,6 +1,19 @@
 <html>
     <head>
         <meta name="layout" content="html5boilerplate" />
+        <style type="text/css">
+
+        /* ... file-local CSS props ... */
+
+        #addressDiv h4 {
+            font-size: 13px;
+        }
+
+        #addressDiv h4.sub {
+            font-size: 12px;
+            margin-top: 15px;
+        }
+        </style>
     </head>
 
     <body>

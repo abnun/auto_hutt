@@ -24,6 +24,14 @@
 			font-size: 80%;
 		}
 
+        #address h4 {
+            font-size: 13px;
+        }
+
+        #address h4.sub {
+            font-size: 12px;
+        }
+
 		</style>
 	</head>
 
