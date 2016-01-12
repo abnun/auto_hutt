@@ -34,14 +34,15 @@ grails.project.dependency.resolution = {
 
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
-
+        grailsRepo("http://svn.webmpuls.de/grails-svn/plugins/", "myRepository")
+	grailsRepo "http://grails.org/plugins"
         grailsPlugins()
         grailsHome()
         mavenLocal()
         grailsCentral()
         mavenCentral()
 
-		grailsRepo("http://83.169.2.186/grails-svn/plugins/", "myRepository")
+	mavenRepo "https://repo.grails.org/grails/plugins"		
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
@@ -59,7 +60,7 @@ grails.project.dependency.resolution = {
 
     credentials {
         realm = "myRepository"
-        host = "83.169.2.186"
+        host = "svn.webmpuls.de"
         username = "markus"
         password = "kermit"
     }
@@ -102,8 +103,8 @@ grails.project.war.destFile = "auto_hutt.war"
 //grails.server.host="127.0.0.1"
 
 // Plugin repository
-grails.plugin.repos.discovery.myRepository="http://markus:kermit@83.169.2.186/grails-svn/plugins/"
-grails.plugin.repos.distribution.myRepository="http://markus:kermit@83.169.2.186/grails-svn/plugins/"
+grails.plugin.repos.discovery.myRepository="http://markus:kermit@svn.webmpuls.de/grails-svn/plugins/"
+grails.plugin.repos.distribution.myRepository="http://markus:kermit@svn.webmpuls.de/grails-svn/plugins/"
 
 grails.plugin.repos.resolveOrder=['myRepository', 'default', 'core'/*, 'myRepository'*/]
 
