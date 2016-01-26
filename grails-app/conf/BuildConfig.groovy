@@ -35,18 +35,19 @@ grails.project.dependency.resolution = {
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
         grailsRepo("http://svn.webmpuls.de/grails-svn/plugins/", "myRepository")
-	grailsRepo "http://grails.org/plugins"
+        grailsRepo "http://grails.org/plugins"
         grailsPlugins()
         grailsHome()
         mavenLocal()
         grailsCentral()
         mavenCentral()
 
-	mavenRepo "https://repo.grails.org/grails/plugins"		
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo "http://nexus.openqa.org/content/repositories/releases/"
+        mavenRepo "https://repo.grails.org/grails/plugins"
     }
 
     dependencies {
@@ -56,6 +57,8 @@ grails.project.dependency.resolution = {
         runtime "org.apache.ant:ant-launcher:1.8.4"
 
         build("org.tmatesoft.svnkit:svnkit:1.7.11")
+
+        runtime "org.postgresql:postgresql:9.4.1207.jre7"
     }
 
     credentials {
